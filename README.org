@@ -1,0 +1,14 @@
+* cl-webgpu
+
+Common Lisp bindings to WebGPU (via [[https://github.com/gfx-rs/wgpu-native][wgpu-native]]) (WIP)
+
+High-level bindings are in the ~webgpu~ package (currently only supports Linux
+and X11).
+
+Low-level bindings are in the ~webgpu.ffi~ package (auto generated using
+~cffi/c2ffi~).
+
+** Setup
+
+Currently expects ~libwgpu_native.so~ to be available in the system (e.g. in
+~/usr/lib~ for Linux).
