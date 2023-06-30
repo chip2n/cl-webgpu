@@ -36,6 +36,10 @@
 (defclass webgpu-instance ()
   ((handle :initarg :handle)))
 
+(defun create-instance ()
+  #+linux (create-x11-instance)
+  #+darwin (create-metal-instance))
+
 (defmethod drop-instance ((instance webgpu-instance))
   (ffi::instance-drop (slot-value instance 'handle)))
 
@@ -103,7 +107,7 @@
 
 ;; TODO This currently creates X11 instance, but should create an appropriate
 ;; instance for current platform
-(defun create-instance ()
+(defun create-x11-instance ()
   (cffi:with-foreign-object (desc 'ffi::instance-descriptor)
     ;; (setf (cffi:foreign-slot-value desc 'ffi::instance-descriptor 'ffi::next-in-chain) extras)
     (setf (cffi:foreign-slot-value desc 'ffi::instance-descriptor 'ffi::next-in-chain) (cffi:null-pointer))

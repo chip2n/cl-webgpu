@@ -12,7 +12,7 @@
   (setup-repl)
   (w:with-engine
     (glfw:with-init-window (:title "Window test" :width 800 :height 600 :client-api :no-api)
-      (let* ((instance (w::create-metal-instance))
+      (let* ((instance (w::create-instance))
              (metal-layer (init-metal (glfw-get-cocoa-window glfw:*window*)))
              (surface (webgpu::create-metal-surface instance metal-layer)))
         (loop until (glfw:window-should-close-p)
