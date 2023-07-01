@@ -14,6 +14,12 @@
          (setup-thread)
          ,@body))))
 
+(defmacro with-instance ((instance) &body body)
+  (check-type instance symbol)
+  `(let ((,instance (create-instance)))
+     (unwind-protect ,@body
+       (drop-instance ,instance))))
+
 ;; * Initialization
 
 ;; NOTE This is a workaround for this issue: https://github.com/cffi/cffi/issues/262
@@ -52,21 +58,6 @@
         (error 'webgpu-init-error))
       (make-instance 'webgpu-metal-instance :handle instance))))
 
-(defun create-metal-surface (instance metal-layer)
-  (with-foreign-objects ((type 'ffi::chained-struct)
-                         (desc 'ffi::surface-descriptor)
-                         (metal-surface-desc 'ffi::surface-descriptor-from-metal-layer))
-    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::next) (null-pointer))
-    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-surface-descriptor-from-metal-layer)
-
-    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::chain) type)
-    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::layer) metal-layer)
-
-    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::next-in-chain) metal-surface-desc)
-    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::label) (null-pointer))
-
-    (ffi::instance-create-surface (slot-value instance 'handle) desc)))
-
 ;;; * Linux X11
 
 (defclass webgpu-x11-instance (webgpu-instance) ())
@@ -79,6 +70,8 @@
       (when (null-pointer-p instance)
         (error 'webgpu-init-error))
       (make-instance 'webgpu-x11-instance :handle instance))))
+
+;;; * Surface
 
 (defun create-x11-surface (instance x11-display x11-window)
   (with-foreign-objects ((type 'ffi::chained-struct)
@@ -96,7 +89,27 @@
 
     (ffi::instance-create-surface (slot-value instance 'handle) desc)))
 
+(defun create-metal-surface (instance metal-layer)
+  (with-foreign-objects ((type 'ffi::chained-struct)
+                         (desc 'ffi::surface-descriptor)
+                         (metal-surface-desc 'ffi::surface-descriptor-from-metal-layer))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::next) (null-pointer))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-surface-descriptor-from-metal-layer)
+
+    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::chain) type)
+    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::layer) metal-layer)
+
+    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::next-in-chain) metal-surface-desc)
+    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::label) (null-pointer))
+
+    (ffi::instance-create-surface (slot-value instance 'handle) desc)))
+
+(defun surface-release (surface)
+  (ffi::surface-release surface))
+
 ;;; * Adapter
+
+(defvar *request-adapter-callback* nil)
 
 (defcallback handle-request-adapter :void
     ((status ffi::request-adapter-status)
@@ -104,21 +117,25 @@
      (message :string)
      (userdata :pointer))
   (declare (ignore adapter userdata))
-  (format t "STATUS: ~A (~A)~%" status message))
+  (format t "STATUS: ~A (~A)~%" status message)
+  (a:when-let ((callback *request-adapter-callback*))
+    (format t "calling callback~%")
+    (funcall callback)))
 
-(defmethod instance-request-adapter ((instance webgpu-instance) surface)
+(defmethod instance-request-adapter ((instance webgpu-instance) surface &key callback)
   (with-foreign-object (options 'ffi::request-adapter-options)
     (with-foreign-slots (((next-in-chain ffi::next-in-chain)
-                               (compatible-surface ffi::compatible-surface)
-                               (power-preference ffi::power-preference)
-                               (force-fallback-adapter ffi::force-fallback-adapter))
-                              options
-                              ffi::request-adapter-options)
+                          (compatible-surface ffi::compatible-surface)
+                          (power-preference ffi::power-preference)
+                          (force-fallback-adapter ffi::force-fallback-adapter))
+                         options
+                         ffi::request-adapter-options)
       (setf next-in-chain (null-pointer))
       (setf compatible-surface (null-pointer))
       (setf power-preference ffi::power-preference-undefined)
       (setf force-fallback-adapter nil))
-    (ffi::instance-request-adapter (slot-value instance 'handle)
-                                   options
-                                   (callback handle-request-adapter)
-                                   (null-pointer))))
+    (let ((*request-adapter-callback* callback))
+      (ffi::instance-request-adapter (slot-value instance 'handle)
+                                     options
+                                     (callback handle-request-adapter)
+                                     (null-pointer)))))

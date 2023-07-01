@@ -396,244 +396,524 @@
 
 ;; Skipped "max_align_t" due to filters
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:63:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:79:18"
 (CFFI:DEFCTYPE FLAGS UINT32_T)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:65:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:81:16"
 (CFFI:DEFCSTRUCT (ADAPTER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:65:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:81:33"
 (CFFI:DEFCSTRUCT (ADAPTER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE ADAPTER (:POINTER (:STRUCT ADAPTER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:66:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:82:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:66:35"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:82:35"
 (CFFI:DEFCSTRUCT (BIND-GROUP-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE BIND-GROUP (:POINTER (:STRUCT BIND-GROUP-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:67:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:83:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:67:41"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:83:41"
 (CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE BIND-GROUP-LAYOUT (:POINTER (:STRUCT BIND-GROUP-LAYOUT-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:68:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:84:16"
 (CFFI:DEFCSTRUCT (BUFFER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:68:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:84:32"
 (CFFI:DEFCSTRUCT (BUFFER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE BUFFER (:POINTER (:STRUCT BUFFER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:69:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:85:16"
 (CFFI:DEFCSTRUCT (COMMAND-BUFFER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:69:39"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:85:39"
 (CFFI:DEFCSTRUCT (COMMAND-BUFFER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE COMMAND-BUFFER (:POINTER (:STRUCT COMMAND-BUFFER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:70:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:86:16"
 (CFFI:DEFCSTRUCT (COMMAND-ENCODER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:70:40"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:86:40"
 (CFFI:DEFCSTRUCT (COMMAND-ENCODER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE COMMAND-ENCODER (:POINTER (:STRUCT COMMAND-ENCODER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:71:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:87:16"
 (CFFI:DEFCSTRUCT (COMPUTE-PASS-ENCODER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:71:44"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:87:44"
 (CFFI:DEFCSTRUCT (COMPUTE-PASS-ENCODER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE COMPUTE-PASS-ENCODER
                (:POINTER (:STRUCT COMPUTE-PASS-ENCODER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:72:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:88:16"
 (CFFI:DEFCSTRUCT (COMPUTE-PIPELINE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:72:41"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:88:41"
 (CFFI:DEFCSTRUCT (COMPUTE-PIPELINE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE COMPUTE-PIPELINE (:POINTER (:STRUCT COMPUTE-PIPELINE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:73:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:89:16"
 (CFFI:DEFCSTRUCT (DEVICE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:73:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:89:32"
 (CFFI:DEFCSTRUCT (DEVICE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE DEVICE (:POINTER (:STRUCT DEVICE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:74:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:90:16"
 (CFFI:DEFCSTRUCT (INSTANCE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:74:34"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:90:34"
 (CFFI:DEFCSTRUCT (INSTANCE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE INSTANCE (:POINTER (:STRUCT INSTANCE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:75:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:91:16"
 (CFFI:DEFCSTRUCT (PIPELINE-LAYOUT-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:75:40"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:91:40"
 (CFFI:DEFCSTRUCT (PIPELINE-LAYOUT-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE PIPELINE-LAYOUT (:POINTER (:STRUCT PIPELINE-LAYOUT-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:76:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:92:16"
 (CFFI:DEFCSTRUCT (QUERY-SET-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:76:34"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:92:34"
 (CFFI:DEFCSTRUCT (QUERY-SET-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE QUERY-SET (:POINTER (:STRUCT QUERY-SET-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:77:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:93:16"
 (CFFI:DEFCSTRUCT (QUEUE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:77:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:93:31"
 (CFFI:DEFCSTRUCT (QUEUE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE QUEUE (:POINTER (:STRUCT QUEUE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:78:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:94:16"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:78:38"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:94:38"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE RENDER-BUNDLE (:POINTER (:STRUCT RENDER-BUNDLE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:79:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:95:16"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-ENCODER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:79:45"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:95:45"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-ENCODER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE RENDER-BUNDLE-ENCODER
                (:POINTER (:STRUCT RENDER-BUNDLE-ENCODER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:80:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:96:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-ENCODER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:80:43"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:96:43"
 (CFFI:DEFCSTRUCT (RENDER-PASS-ENCODER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE RENDER-PASS-ENCODER
                (:POINTER (:STRUCT RENDER-PASS-ENCODER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:81:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:97:16"
 (CFFI:DEFCSTRUCT (RENDER-PIPELINE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:81:40"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:97:40"
 (CFFI:DEFCSTRUCT (RENDER-PIPELINE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE RENDER-PIPELINE (:POINTER (:STRUCT RENDER-PIPELINE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:82:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:98:16"
 (CFFI:DEFCSTRUCT (SAMPLER-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:82:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:98:33"
 (CFFI:DEFCSTRUCT (SAMPLER-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE SAMPLER (:POINTER (:STRUCT SAMPLER-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:83:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:99:16"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:83:38"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:99:38"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE SHADER-MODULE (:POINTER (:STRUCT SHADER-MODULE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:84:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:100:16"
 (CFFI:DEFCSTRUCT (SURFACE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:84:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:100:33"
 (CFFI:DEFCSTRUCT (SURFACE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE SURFACE (:POINTER (:STRUCT SURFACE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:85:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:101:16"
 (CFFI:DEFCSTRUCT (SWAP-CHAIN-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:85:35"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:101:35"
 (CFFI:DEFCSTRUCT (SWAP-CHAIN-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE SWAP-CHAIN (:POINTER (:STRUCT SWAP-CHAIN-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:86:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:102:16"
 (CFFI:DEFCSTRUCT (TEXTURE-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:86:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:102:33"
 (CFFI:DEFCSTRUCT (TEXTURE-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE TEXTURE (:POINTER (:STRUCT TEXTURE-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:87:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:103:16"
 (CFFI:DEFCSTRUCT (TEXTURE-VIEW-IMPL :SIZE 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:87:37"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:103:37"
 (CFFI:DEFCSTRUCT (TEXTURE-VIEW-IMPL :SIZE 0))
 
 (CFFI:DEFCTYPE TEXTURE-VIEW (:POINTER (:STRUCT TEXTURE-VIEW-IMPL)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:89:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:106:8"
+(CFFI:DEFCSTRUCT (ADAPTER-PROPERTIES :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:107:8"
+(CFFI:DEFCSTRUCT (BIND-GROUP-ENTRY :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:108:8"
+(CFFI:DEFCSTRUCT (BLEND-COMPONENT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:109:8"
+(CFFI:DEFCSTRUCT (BUFFER-BINDING-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:110:8"
+(CFFI:DEFCSTRUCT (BUFFER-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:111:8"
+(CFFI:DEFCSTRUCT (COLOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:112:8"
+(CFFI:DEFCSTRUCT (COMMAND-BUFFER-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:113:8"
+(CFFI:DEFCSTRUCT (COMMAND-ENCODER-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:114:8"
+(CFFI:DEFCSTRUCT (COMPILATION-MESSAGE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:115:8"
+(CFFI:DEFCSTRUCT (COMPUTE-PASS-TIMESTAMP-WRITE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:116:8"
+(CFFI:DEFCSTRUCT (CONSTANT-ENTRY :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:117:8"
+(CFFI:DEFCSTRUCT (EXTENT3-D :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:118:8"
+(CFFI:DEFCSTRUCT (INSTANCE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:119:8"
+(CFFI:DEFCSTRUCT (LIMITS :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:120:8"
+(CFFI:DEFCSTRUCT (MULTISAMPLE-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:121:8"
+(CFFI:DEFCSTRUCT (ORIGIN3-D :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:122:8"
+(CFFI:DEFCSTRUCT (PIPELINE-LAYOUT-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:123:8"
+(CFFI:DEFCSTRUCT (PRIMITIVE-DEPTH-CLIP-CONTROL :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:124:8"
+(CFFI:DEFCSTRUCT (PRIMITIVE-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:125:8"
+(CFFI:DEFCSTRUCT (QUERY-SET-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:126:8"
+(CFFI:DEFCSTRUCT (QUEUE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:127:8"
+(CFFI:DEFCSTRUCT (RENDER-BUNDLE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:128:8"
+(CFFI:DEFCSTRUCT (RENDER-BUNDLE-ENCODER-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:129:8"
+(CFFI:DEFCSTRUCT (RENDER-PASS-DEPTH-STENCIL-ATTACHMENT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:130:8"
+(CFFI:DEFCSTRUCT (RENDER-PASS-DESCRIPTOR-MAX-DRAW-COUNT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:131:8"
+(CFFI:DEFCSTRUCT (RENDER-PASS-TIMESTAMP-WRITE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:132:8"
+(CFFI:DEFCSTRUCT (REQUEST-ADAPTER-OPTIONS :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:133:8"
+(CFFI:DEFCSTRUCT (SAMPLER-BINDING-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:134:8"
+(CFFI:DEFCSTRUCT (SAMPLER-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:135:8"
+(CFFI:DEFCSTRUCT (SHADER-MODULE-COMPILATION-HINT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:136:8"
+(CFFI:DEFCSTRUCT (SHADER-MODULE-S-P-I-R-V-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:137:8"
+(CFFI:DEFCSTRUCT (SHADER-MODULE-W-G-S-L-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:138:8"
+(CFFI:DEFCSTRUCT (STENCIL-FACE-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:139:8"
+(CFFI:DEFCSTRUCT (STORAGE-TEXTURE-BINDING-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:140:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:141:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-ANDROID-NATIVE-WINDOW :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:142:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-CANVAS-H-T-M-L-SELECTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:143:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-METAL-LAYER :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:144:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-WAYLAND-SURFACE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:145:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-WINDOWS-H-W-N-D :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:146:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-XCB-WINDOW :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:147:8"
+(CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-XLIB-WINDOW :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:148:8"
+(CFFI:DEFCSTRUCT (SWAP-CHAIN-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:149:8"
+(CFFI:DEFCSTRUCT (TEXTURE-BINDING-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:150:8"
+(CFFI:DEFCSTRUCT (TEXTURE-DATA-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:151:8"
+(CFFI:DEFCSTRUCT (TEXTURE-VIEW-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:152:8"
+(CFFI:DEFCSTRUCT (VERTEX-ATTRIBUTE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:153:8"
+(CFFI:DEFCSTRUCT (BIND-GROUP-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:154:8"
+(CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-ENTRY :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:155:8"
+(CFFI:DEFCSTRUCT (BLEND-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:156:8"
+(CFFI:DEFCSTRUCT (COMPILATION-INFO :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:157:8"
+(CFFI:DEFCSTRUCT (COMPUTE-PASS-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:158:8"
+(CFFI:DEFCSTRUCT (DEPTH-STENCIL-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:159:8"
+(CFFI:DEFCSTRUCT (IMAGE-COPY-BUFFER :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:160:8"
+(CFFI:DEFCSTRUCT (IMAGE-COPY-TEXTURE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:161:8"
+(CFFI:DEFCSTRUCT (PROGRAMMABLE-STAGE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:162:8"
+(CFFI:DEFCSTRUCT (RENDER-PASS-COLOR-ATTACHMENT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:163:8"
+(CFFI:DEFCSTRUCT (REQUIRED-LIMITS :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:164:8"
+(CFFI:DEFCSTRUCT (SHADER-MODULE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:165:8"
+(CFFI:DEFCSTRUCT (SUPPORTED-LIMITS :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:166:8"
+(CFFI:DEFCSTRUCT (TEXTURE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:167:8"
+(CFFI:DEFCSTRUCT (VERTEX-BUFFER-LAYOUT :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:168:8"
+(CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:169:8"
+(CFFI:DEFCSTRUCT (COLOR-TARGET-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:170:8"
+(CFFI:DEFCSTRUCT (COMPUTE-PIPELINE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:171:8"
+(CFFI:DEFCSTRUCT (DEVICE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:172:8"
+(CFFI:DEFCSTRUCT (RENDER-PASS-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:173:8"
+(CFFI:DEFCSTRUCT (VERTEX-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:174:8"
+(CFFI:DEFCSTRUCT (FRAGMENT-STATE :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:175:8"
+(CFFI:DEFCSTRUCT (RENDER-PIPELINE-DESCRIPTOR :SIZE 0))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:177:14"
 (CFFI:DEFCENUM ADAPTER-TYPE
   (ADAPTER-TYPE-DISCRETE-G-P-U 0)
   (ADAPTER-TYPE-INTEGRATED-G-P-U 1)
@@ -642,11 +922,11 @@
   (ADAPTER-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:95:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:183:3"
 (CFFI:DEFCTYPE ADAPTER-TYPE ADAPTER-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:97:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:185:14"
 (CFFI:DEFCENUM ADDRESS-MODE
   (ADDRESS-MODE-REPEAT 0)
   (ADDRESS-MODE-MIRROR-REPEAT 1)
@@ -654,28 +934,29 @@
   (ADDRESS-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:102:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:190:3"
 (CFFI:DEFCTYPE ADDRESS-MODE ADDRESS-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:104:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:192:14"
 (CFFI:DEFCENUM BACKEND-TYPE
-  (BACKEND-TYPE-NULL 0)
-  (BACKENDTYPEWEBGPU 1)
-  (BACKEND-TYPE-D3-D11 2)
-  (BACKEND-TYPE-D3-D12 3)
-  (BACKEND-TYPE-METAL 4)
-  (BACKEND-TYPE-VULKAN 5)
-  (BACKEND-TYPE-OPEN-G-L 6)
-  (BACKENDTYPEOPENGLES 7)
+  (BACKEND-TYPE-UNDEFINED 0)
+  (BACKEND-TYPE-NULL 1)
+  (BACKENDTYPEWEBGPU 2)
+  (BACKEND-TYPE-D3-D11 3)
+  (BACKEND-TYPE-D3-D12 4)
+  (BACKEND-TYPE-METAL 5)
+  (BACKEND-TYPE-VULKAN 6)
+  (BACKEND-TYPE-OPEN-G-L 7)
+  (BACKENDTYPEOPENGLES 8)
   (BACKEND-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:114:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:203:3"
 (CFFI:DEFCTYPE BACKEND-TYPE BACKEND-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:116:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:205:14"
 (CFFI:DEFCENUM BLEND-FACTOR
   (BLEND-FACTOR-ZERO 0)
   (BLEND-FACTOR-ONE 1)
@@ -693,11 +974,11 @@
   (BLEND-FACTOR-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:131:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:220:3"
 (CFFI:DEFCTYPE BLEND-FACTOR BLEND-FACTOR)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:133:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:222:14"
 (CFFI:DEFCENUM BLEND-OPERATION
   (BLEND-OPERATION-ADD 0)
   (BLEND-OPERATION-SUBTRACT 1)
@@ -707,11 +988,11 @@
   (BLEND-OPERATION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:140:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:229:3"
 (CFFI:DEFCTYPE BLEND-OPERATION BLEND-OPERATION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:142:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:231:14"
 (CFFI:DEFCENUM BUFFER-BINDING-TYPE
   (BUFFER-BINDING-TYPE-UNDEFINED 0)
   (BUFFER-BINDING-TYPE-UNIFORM 1)
@@ -720,26 +1001,29 @@
   (BUFFER-BINDING-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:148:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:237:3"
 (CFFI:DEFCTYPE BUFFER-BINDING-TYPE BUFFER-BINDING-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:150:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:239:14"
 (CFFI:DEFCENUM BUFFER-MAP-ASYNC-STATUS
   (BUFFER-MAP-ASYNC-STATUS-SUCCESS 0)
-  (BUFFER-MAP-ASYNC-STATUS-ERROR 1)
+  (BUFFER-MAP-ASYNC-STATUS-VALIDATION-ERROR 1)
   (BUFFER-MAP-ASYNC-STATUS-UNKNOWN 2)
   (BUFFER-MAP-ASYNC-STATUS-DEVICE-LOST 3)
   (BUFFER-MAP-ASYNC-STATUS-DESTROYED-BEFORE-CALLBACK 4)
   (BUFFER-MAP-ASYNC-STATUS-UNMAPPED-BEFORE-CALLBACK 5)
+  (BUFFER-MAP-ASYNC-STATUS-MAPPING-ALREADY-PENDING 6)
+  (BUFFER-MAP-ASYNC-STATUS-OFFSET-OUT-OF-RANGE 7)
+  (BUFFER-MAP-ASYNC-STATUS-SIZE-OUT-OF-RANGE 8)
   (BUFFER-MAP-ASYNC-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:158:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:250:3"
 (CFFI:DEFCTYPE BUFFER-MAP-ASYNC-STATUS BUFFER-MAP-ASYNC-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:160:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:252:14"
 (CFFI:DEFCENUM BUFFER-MAP-STATE
   (BUFFER-MAP-STATE-UNMAPPED 0)
   (BUFFER-MAP-STATE-PENDING 1)
@@ -747,11 +1031,11 @@
   (BUFFER-MAP-STATE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:165:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:257:3"
 (CFFI:DEFCTYPE BUFFER-MAP-STATE BUFFER-MAP-STATE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:167:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:259:14"
 (CFFI:DEFCENUM COMPARE-FUNCTION
   (COMPARE-FUNCTION-UNDEFINED 0)
   (COMPARE-FUNCTION-NEVER 1)
@@ -765,11 +1049,11 @@
   (COMPARE-FUNCTION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:178:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:270:3"
 (CFFI:DEFCTYPE COMPARE-FUNCTION COMPARE-FUNCTION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:180:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:272:14"
 (CFFI:DEFCENUM COMPILATION-INFO-REQUEST-STATUS
   (COMPILATION-INFO-REQUEST-STATUS-SUCCESS 0)
   (COMPILATION-INFO-REQUEST-STATUS-ERROR 1)
@@ -778,11 +1062,11 @@
   (COMPILATION-INFO-REQUEST-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:186:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:278:3"
 (CFFI:DEFCTYPE COMPILATION-INFO-REQUEST-STATUS COMPILATION-INFO-REQUEST-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:188:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:280:14"
 (CFFI:DEFCENUM COMPILATION-MESSAGE-TYPE
   (COMPILATION-MESSAGE-TYPE-ERROR 0)
   (COMPILATION-MESSAGE-TYPE-WARNING 1)
@@ -790,22 +1074,22 @@
   (COMPILATION-MESSAGE-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:193:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:285:3"
 (CFFI:DEFCTYPE COMPILATION-MESSAGE-TYPE COMPILATION-MESSAGE-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:195:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:287:14"
 (CFFI:DEFCENUM COMPUTE-PASS-TIMESTAMP-LOCATION
   (COMPUTE-PASS-TIMESTAMP-LOCATION-BEGINNING 0)
   (COMPUTE-PASS-TIMESTAMP-LOCATION-END 1)
   (COMPUTE-PASS-TIMESTAMP-LOCATION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:199:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:291:3"
 (CFFI:DEFCTYPE COMPUTE-PASS-TIMESTAMP-LOCATION COMPUTE-PASS-TIMESTAMP-LOCATION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:201:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:293:14"
 (CFFI:DEFCENUM CREATE-PIPELINE-ASYNC-STATUS
   (CREATE-PIPELINE-ASYNC-STATUS-SUCCESS 0)
   (CREATE-PIPELINE-ASYNC-STATUS-VALIDATION-ERROR 1)
@@ -816,11 +1100,11 @@
   (CREATE-PIPELINE-ASYNC-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:209:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:301:3"
 (CFFI:DEFCTYPE CREATE-PIPELINE-ASYNC-STATUS CREATE-PIPELINE-ASYNC-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:211:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:303:14"
 (CFFI:DEFCENUM CULL-MODE
   (CULL-MODE-NONE 0)
   (CULL-MODE-FRONT 1)
@@ -828,22 +1112,22 @@
   (CULL-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:216:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:308:3"
 (CFFI:DEFCTYPE CULL-MODE CULL-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:218:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:310:14"
 (CFFI:DEFCENUM DEVICE-LOST-REASON
   (DEVICE-LOST-REASON-UNDEFINED 0)
   (DEVICE-LOST-REASON-DESTROYED 1)
   (DEVICE-LOST-REASON-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:222:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:314:3"
 (CFFI:DEFCTYPE DEVICE-LOST-REASON DEVICE-LOST-REASON)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:224:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:316:14"
 (CFFI:DEFCENUM ERROR-FILTER
   (ERROR-FILTER-VALIDATION 0)
   (ERROR-FILTER-OUT-OF-MEMORY 1)
@@ -851,11 +1135,11 @@
   (ERROR-FILTER-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:229:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:321:3"
 (CFFI:DEFCTYPE ERROR-FILTER ERROR-FILTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:231:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:323:14"
 (CFFI:DEFCENUM ERROR-TYPE
   (ERROR-TYPE-NO-ERROR 0)
   (ERROR-TYPE-VALIDATION 1)
@@ -866,11 +1150,11 @@
   (ERROR-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:239:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:331:3"
 (CFFI:DEFCTYPE ERROR-TYPE ERROR-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:241:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:333:14"
 (CFFI:DEFCENUM FEATURE-NAME
   (FEATURE-NAME-UNDEFINED 0)
   (FEATURE-NAME-DEPTH-CLIP-CONTROL 1)
@@ -884,36 +1168,37 @@
   (FEATURE-NAME-SHADER-F16 9)
   (FEATURE-NAME-R-G11-B10-UFLOAT-RENDERABLE 10)
   (FEATURE-NAME-B-G-R-A8-UNORM-STORAGE 11)
+  (FEATURE-NAME-FLOAT32-FILTERABLE 12)
   (FEATURE-NAME-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:255:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:348:3"
 (CFFI:DEFCTYPE FEATURE-NAME FEATURE-NAME)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:257:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:350:14"
 (CFFI:DEFCENUM FILTER-MODE
   (FILTER-MODE-NEAREST 0)
   (FILTER-MODE-LINEAR 1)
   (FILTER-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:261:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:354:3"
 (CFFI:DEFCTYPE FILTER-MODE FILTER-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:263:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:356:14"
 (CFFI:DEFCENUM FRONT-FACE
   (FRONTFACECCW 0)
   (FRONTFACECW 1)
   (FRONT-FACE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:267:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:360:3"
 (CFFI:DEFCTYPE FRONT-FACE FRONT-FACE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:269:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:362:14"
 (CFFI:DEFCENUM INDEX-FORMAT
   (INDEX-FORMAT-UNDEFINED 0)
   (INDEX-FORMAT-UINT16 1)
@@ -921,11 +1206,11 @@
   (INDEX-FORMAT-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:274:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:367:3"
 (CFFI:DEFCTYPE INDEX-FORMAT INDEX-FORMAT)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:276:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:369:14"
 (CFFI:DEFCENUM LOAD-OP
   (LOAD-OP-UNDEFINED 0)
   (LOAD-OP-CLEAR 1)
@@ -933,22 +1218,22 @@
   (LOAD-OP-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:281:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:374:3"
 (CFFI:DEFCTYPE LOAD-OP LOAD-OP)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:283:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:376:14"
 (CFFI:DEFCENUM MIPMAP-FILTER-MODE
   (MIPMAP-FILTER-MODE-NEAREST 0)
   (MIPMAP-FILTER-MODE-LINEAR 1)
   (MIPMAP-FILTER-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:287:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:380:3"
 (CFFI:DEFCTYPE MIPMAP-FILTER-MODE MIPMAP-FILTER-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:289:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:382:14"
 (CFFI:DEFCENUM PIPELINE-STATISTIC-NAME
   (PIPELINE-STATISTIC-NAME-VERTEX-SHADER-INVOCATIONS 0)
   (PIPELINE-STATISTIC-NAME-CLIPPER-INVOCATIONS 1)
@@ -958,11 +1243,11 @@
   (PIPELINE-STATISTIC-NAME-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:296:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:389:3"
 (CFFI:DEFCTYPE PIPELINE-STATISTIC-NAME PIPELINE-STATISTIC-NAME)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:298:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:391:14"
 (CFFI:DEFCENUM POWER-PREFERENCE
   (POWER-PREFERENCE-UNDEFINED 0)
   (POWER-PREFERENCE-LOW-POWER 1)
@@ -970,11 +1255,11 @@
   (POWER-PREFERENCE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:303:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:396:3"
 (CFFI:DEFCTYPE POWER-PREFERENCE POWER-PREFERENCE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:305:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:398:14"
 (CFFI:DEFCENUM PRESENT-MODE
   (PRESENT-MODE-IMMEDIATE 0)
   (PRESENT-MODE-MAILBOX 1)
@@ -982,11 +1267,11 @@
   (PRESENT-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:310:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:403:3"
 (CFFI:DEFCTYPE PRESENT-MODE PRESENT-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:312:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:405:14"
 (CFFI:DEFCENUM PRIMITIVE-TOPOLOGY
   (PRIMITIVE-TOPOLOGY-POINT-LIST 0)
   (PRIMITIVE-TOPOLOGY-LINE-LIST 1)
@@ -996,11 +1281,11 @@
   (PRIMITIVE-TOPOLOGY-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:319:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:412:3"
 (CFFI:DEFCTYPE PRIMITIVE-TOPOLOGY PRIMITIVE-TOPOLOGY)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:321:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:414:14"
 (CFFI:DEFCENUM QUERY-TYPE
   (QUERY-TYPE-OCCLUSION 0)
   (QUERY-TYPE-PIPELINE-STATISTICS 1)
@@ -1008,11 +1293,11 @@
   (QUERY-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:326:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:419:3"
 (CFFI:DEFCTYPE QUERY-TYPE QUERY-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:328:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:421:14"
 (CFFI:DEFCENUM QUEUE-WORK-DONE-STATUS
   (QUEUE-WORK-DONE-STATUS-SUCCESS 0)
   (QUEUE-WORK-DONE-STATUS-ERROR 1)
@@ -1021,22 +1306,22 @@
   (QUEUE-WORK-DONE-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:334:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:427:3"
 (CFFI:DEFCTYPE QUEUE-WORK-DONE-STATUS QUEUE-WORK-DONE-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:336:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:429:14"
 (CFFI:DEFCENUM RENDER-PASS-TIMESTAMP-LOCATION
   (RENDER-PASS-TIMESTAMP-LOCATION-BEGINNING 0)
   (RENDER-PASS-TIMESTAMP-LOCATION-END 1)
   (RENDER-PASS-TIMESTAMP-LOCATION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:340:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:433:3"
 (CFFI:DEFCTYPE RENDER-PASS-TIMESTAMP-LOCATION RENDER-PASS-TIMESTAMP-LOCATION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:342:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:435:14"
 (CFFI:DEFCENUM REQUEST-ADAPTER-STATUS
   (REQUEST-ADAPTER-STATUS-SUCCESS 0)
   (REQUEST-ADAPTER-STATUS-UNAVAILABLE 1)
@@ -1045,11 +1330,11 @@
   (REQUEST-ADAPTER-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:348:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:441:3"
 (CFFI:DEFCTYPE REQUEST-ADAPTER-STATUS REQUEST-ADAPTER-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:350:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:443:14"
 (CFFI:DEFCENUM REQUEST-DEVICE-STATUS
   (REQUEST-DEVICE-STATUS-SUCCESS 0)
   (REQUEST-DEVICE-STATUS-ERROR 1)
@@ -1057,11 +1342,11 @@
   (REQUEST-DEVICE-STATUS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:355:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:448:3"
 (CFFI:DEFCTYPE REQUEST-DEVICE-STATUS REQUEST-DEVICE-STATUS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:357:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:450:14"
 (CFFI:DEFCENUM STYPE
   (S-TYPE-INVALID 0)
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-METAL-LAYER 1)
@@ -1078,11 +1363,11 @@
   (S-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:371:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:464:3"
 (CFFI:DEFCTYPE STYPE STYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:373:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:466:14"
 (CFFI:DEFCENUM SAMPLER-BINDING-TYPE
   (SAMPLER-BINDING-TYPE-UNDEFINED 0)
   (SAMPLER-BINDING-TYPE-FILTERING 1)
@@ -1091,11 +1376,11 @@
   (SAMPLER-BINDING-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:379:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:472:3"
 (CFFI:DEFCTYPE SAMPLER-BINDING-TYPE SAMPLER-BINDING-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:381:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:474:14"
 (CFFI:DEFCENUM STENCIL-OPERATION
   (STENCIL-OPERATION-KEEP 0)
   (STENCIL-OPERATION-ZERO 1)
@@ -1108,22 +1393,22 @@
   (STENCIL-OPERATION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:391:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:484:3"
 (CFFI:DEFCTYPE STENCIL-OPERATION STENCIL-OPERATION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:393:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:486:14"
 (CFFI:DEFCENUM STORAGE-TEXTURE-ACCESS
   (STORAGE-TEXTURE-ACCESS-UNDEFINED 0)
   (STORAGE-TEXTURE-ACCESS-WRITE-ONLY 1)
   (STORAGE-TEXTURE-ACCESS-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:397:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:490:3"
 (CFFI:DEFCTYPE STORAGE-TEXTURE-ACCESS STORAGE-TEXTURE-ACCESS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:399:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:492:14"
 (CFFI:DEFCENUM STORE-OP
   (STORE-OP-UNDEFINED 0)
   (STORE-OP-STORE 1)
@@ -1131,11 +1416,11 @@
   (STORE-OP-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:404:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:497:3"
 (CFFI:DEFCTYPE STORE-OP STORE-OP)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:406:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:499:14"
 (CFFI:DEFCENUM TEXTURE-ASPECT
   (TEXTURE-ASPECT-ALL 0)
   (TEXTURE-ASPECT-STENCIL-ONLY 1)
@@ -1143,24 +1428,11 @@
   (TEXTURE-ASPECT-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:411:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:504:3"
 (CFFI:DEFCTYPE TEXTURE-ASPECT TEXTURE-ASPECT)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:413:14"
-(CFFI:DEFCENUM TEXTURE-COMPONENT-TYPE
-  (TEXTURE-COMPONENT-TYPE-FLOAT 0)
-  (TEXTURE-COMPONENT-TYPE-SINT 1)
-  (TEXTURE-COMPONENT-TYPE-UINT 2)
-  (TEXTURE-COMPONENT-TYPE-DEPTH-COMPARISON 3)
-  (TEXTURE-COMPONENT-TYPE-FORCE32 2147483647))
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:419:3"
-(CFFI:DEFCTYPE TEXTURE-COMPONENT-TYPE TEXTURE-COMPONENT-TYPE)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:421:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:506:14"
 (CFFI:DEFCENUM TEXTURE-DIMENSION
   (TEXTURE-DIMENSION1-D 0)
   (TEXTURE-DIMENSION2-D 1)
@@ -1168,11 +1440,11 @@
   (TEXTURE-DIMENSION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:426:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:511:3"
 (CFFI:DEFCTYPE TEXTURE-DIMENSION TEXTURE-DIMENSION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:428:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:513:14"
 (CFFI:DEFCENUM TEXTURE-FORMAT
   (TEXTURE-FORMAT-UNDEFINED 0)
   (TEXTURE-FORMAT-R8-UNORM 1)
@@ -1272,11 +1544,11 @@
   (TEXTURE-FORMAT-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:525:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:610:3"
 (CFFI:DEFCTYPE TEXTURE-FORMAT TEXTURE-FORMAT)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:527:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:612:14"
 (CFFI:DEFCENUM TEXTURE-SAMPLE-TYPE
   (TEXTURE-SAMPLE-TYPE-UNDEFINED 0)
   (TEXTURE-SAMPLE-TYPE-FLOAT 1)
@@ -1287,11 +1559,11 @@
   (TEXTURE-SAMPLE-TYPE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:535:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:620:3"
 (CFFI:DEFCTYPE TEXTURE-SAMPLE-TYPE TEXTURE-SAMPLE-TYPE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:537:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:622:14"
 (CFFI:DEFCENUM TEXTURE-VIEW-DIMENSION
   (TEXTURE-VIEW-DIMENSION-UNDEFINED 0)
   (TEXTURE-VIEW-DIMENSION1-D 1)
@@ -1303,11 +1575,11 @@
   (TEXTURE-VIEW-DIMENSION-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:546:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:631:3"
 (CFFI:DEFCTYPE TEXTURE-VIEW-DIMENSION TEXTURE-VIEW-DIMENSION)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:548:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:633:14"
 (CFFI:DEFCENUM VERTEX-FORMAT
   (VERTEX-FORMAT-UNDEFINED 0)
   (VERTEX-FORMAT-UINT8X2 1)
@@ -1343,11 +1615,11 @@
   (VERTEX-FORMAT-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:581:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:666:3"
 (CFFI:DEFCTYPE VERTEX-FORMAT VERTEX-FORMAT)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:583:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:668:14"
 (CFFI:DEFCENUM VERTEX-STEP-MODE
   (VERTEX-STEP-MODE-VERTEX 0)
   (VERTEX-STEP-MODE-INSTANCE 1)
@@ -1355,11 +1627,11 @@
   (VERTEX-STEP-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:588:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:673:3"
 (CFFI:DEFCTYPE VERTEX-STEP-MODE VERTEX-STEP-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:590:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:675:14"
 (CFFI:DEFBITFIELD BUFFER-USAGE
   (BUFFER-USAGE-NONE 0)
   (BUFFER-USAGE-MAP-READ 1)
@@ -1375,15 +1647,15 @@
   (BUFFER-USAGE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:603:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:688:3"
 (CFFI:DEFCTYPE BUFFER-USAGE BUFFER-USAGE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:604:19"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:689:19"
 (CFFI:DEFCTYPE BUFFER-USAGE-FLAGS FLAGS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:606:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:691:14"
 (CFFI:DEFCENUM COLOR-WRITE-MASK
   (COLOR-WRITE-MASK-NONE 0)
   (COLOR-WRITE-MASK-RED 1)
@@ -1394,15 +1666,15 @@
   (COLOR-WRITE-MASK-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:614:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:699:3"
 (CFFI:DEFCTYPE COLOR-WRITE-MASK COLOR-WRITE-MASK)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:615:19"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:700:19"
 (CFFI:DEFCTYPE COLOR-WRITE-MASK-FLAGS FLAGS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:617:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:702:14"
 (CFFI:DEFCENUM MAP-MODE
   (MAP-MODE-NONE 0)
   (MAP-MODE-READ 1)
@@ -1410,15 +1682,15 @@
   (MAP-MODE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:622:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:707:3"
 (CFFI:DEFCTYPE MAP-MODE MAP-MODE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:623:19"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:708:19"
 (CFFI:DEFCTYPE MAP-MODE-FLAGS FLAGS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:625:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:710:14"
 (CFFI:DEFCENUM SHADER-STAGE
   (SHADER-STAGE-NONE 0)
   (SHADER-STAGE-VERTEX 1)
@@ -1427,15 +1699,15 @@
   (SHADER-STAGE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:631:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:716:3"
 (CFFI:DEFCTYPE SHADER-STAGE SHADER-STAGE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:632:19"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:717:19"
 (CFFI:DEFCTYPE SHADER-STAGE-FLAGS FLAGS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:634:14"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:719:14"
 (CFFI:DEFCENUM TEXTURE-USAGE
   (TEXTURE-USAGE-NONE 0)
   (TEXTURE-USAGE-COPY-SRC 1)
@@ -1446,35 +1718,75 @@
   (TEXTURE-USAGE-FORCE32 2147483647))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:642:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:727:3"
 (CFFI:DEFCTYPE TEXTURE-USAGE TEXTURE-USAGE)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:643:19"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:728:19"
 (CFFI:DEFCTYPE TEXTURE-USAGE-FLAGS FLAGS)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:645:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:730:16"
+(CFFI:DEFCTYPE BUFFER-MAP-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:731:16"
+(CFFI:DEFCTYPE COMPILATION-INFO-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:732:16"
+(CFFI:DEFCTYPE CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:733:16"
+(CFFI:DEFCTYPE CREATE-RENDER-PIPELINE-ASYNC-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:734:16"
+(CFFI:DEFCTYPE DEVICE-LOST-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:735:16"
+(CFFI:DEFCTYPE ERROR-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:736:16"
+(CFFI:DEFCTYPE PROC FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:737:16"
+(CFFI:DEFCTYPE QUEUE-WORK-DONE-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:738:16"
+(CFFI:DEFCTYPE REQUEST-ADAPTER-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:739:16"
+(CFFI:DEFCTYPE REQUEST-DEVICE-CALLBACK FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:741:16"
 (CFFI:DEFCSTRUCT (CHAINED-STRUCT :SIZE 16)
   (NEXT (:POINTER :VOID) :OFFSET 0)
   (S-TYPE STYPE :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:648:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:744:3"
 (CFFI:DEFCTYPE CHAINED-STRUCT (:STRUCT CHAINED-STRUCT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:650:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:746:16"
 (CFFI:DEFCSTRUCT (CHAINED-STRUCT-OUT :SIZE 16)
   (NEXT (:POINTER :VOID) :OFFSET 0)
   (S-TYPE STYPE :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:653:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:749:3"
 (CFFI:DEFCTYPE CHAINED-STRUCT-OUT (:STRUCT CHAINED-STRUCT-OUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:655:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:751:16"
 (CFFI:DEFCSTRUCT (ADAPTER-PROPERTIES :SIZE 64)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT-OUT) :OFFSET 0)
   (VENDOR-I-D UINT32_T :OFFSET 8)
@@ -1487,11 +1799,11 @@
   (BACKEND-TYPE BACKEND-TYPE :OFFSET 60))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:665:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:761:3"
 (CFFI:DEFCTYPE ADAPTER-PROPERTIES (:STRUCT ADAPTER-PROPERTIES))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:667:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:763:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-ENTRY :SIZE 56)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (BINDING UINT32_T :OFFSET 8)
@@ -1502,22 +1814,22 @@
   (TEXTURE-VIEW TEXTURE-VIEW :OFFSET 48))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:675:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:771:3"
 (CFFI:DEFCTYPE BIND-GROUP-ENTRY (:STRUCT BIND-GROUP-ENTRY))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:677:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:773:16"
 (CFFI:DEFCSTRUCT (BLEND-COMPONENT :SIZE 12)
   (OPERATION BLEND-OPERATION :OFFSET 0)
   (SRC-FACTOR BLEND-FACTOR :OFFSET 4)
   (DST-FACTOR BLEND-FACTOR :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:681:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:777:3"
 (CFFI:DEFCTYPE BLEND-COMPONENT (:STRUCT BLEND-COMPONENT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:683:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:779:16"
 (CFFI:DEFCSTRUCT (BUFFER-BINDING-LAYOUT :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (TYPE BUFFER-BINDING-TYPE :OFFSET 8)
@@ -1525,11 +1837,11 @@
   (MIN-BINDING-SIZE UINT64_T :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:688:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:784:3"
 (CFFI:DEFCTYPE BUFFER-BINDING-LAYOUT (:STRUCT BUFFER-BINDING-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:690:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:786:16"
 (CFFI:DEFCSTRUCT (BUFFER-DESCRIPTOR :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -1538,11 +1850,11 @@
   (MAPPED-AT-CREATION :BOOL :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:696:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:792:3"
 (CFFI:DEFCTYPE BUFFER-DESCRIPTOR (:STRUCT BUFFER-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:698:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:794:16"
 (CFFI:DEFCSTRUCT (COLOR :SIZE 32)
   (R :DOUBLE :OFFSET 0)
   (G :DOUBLE :OFFSET 8)
@@ -1550,31 +1862,31 @@
   (A :DOUBLE :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:703:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:799:3"
 (CFFI:DEFCTYPE COLOR (:STRUCT COLOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:705:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:801:16"
 (CFFI:DEFCSTRUCT (COMMAND-BUFFER-DESCRIPTOR :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:708:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:804:3"
 (CFFI:DEFCTYPE COMMAND-BUFFER-DESCRIPTOR (:STRUCT COMMAND-BUFFER-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:710:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:806:16"
 (CFFI:DEFCSTRUCT (COMMAND-ENCODER-DESCRIPTOR :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:713:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:809:3"
 (CFFI:DEFCTYPE COMMAND-ENCODER-DESCRIPTOR (:STRUCT COMMAND-ENCODER-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:715:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:811:16"
 (CFFI:DEFCSTRUCT (COMPILATION-MESSAGE :SIZE 80)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (MESSAGE :STRING :OFFSET 8)
@@ -1588,54 +1900,54 @@
   (UTF16-LENGTH UINT64_T :OFFSET 72))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:726:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:822:3"
 (CFFI:DEFCTYPE COMPILATION-MESSAGE (:STRUCT COMPILATION-MESSAGE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:728:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:824:16"
 (CFFI:DEFCSTRUCT (COMPUTE-PASS-TIMESTAMP-WRITE :SIZE 16)
   (QUERY-SET QUERY-SET :OFFSET 0)
   (QUERY-INDEX UINT32_T :OFFSET 8)
   (LOCATION COMPUTE-PASS-TIMESTAMP-LOCATION :OFFSET 12))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:732:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:828:3"
 (CFFI:DEFCTYPE COMPUTE-PASS-TIMESTAMP-WRITE
                (:STRUCT COMPUTE-PASS-TIMESTAMP-WRITE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:734:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:830:16"
 (CFFI:DEFCSTRUCT (CONSTANT-ENTRY :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (KEY :STRING :OFFSET 8)
   (VALUE :DOUBLE :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:738:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:834:3"
 (CFFI:DEFCTYPE CONSTANT-ENTRY (:STRUCT CONSTANT-ENTRY))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:740:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:836:16"
 (CFFI:DEFCSTRUCT (EXTENT3-D :SIZE 12)
   (WIDTH UINT32_T :OFFSET 0)
   (HEIGHT UINT32_T :OFFSET 4)
   (DEPTH-OR-ARRAY-LAYERS UINT32_T :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:744:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:840:3"
 (CFFI:DEFCTYPE EXTENT3-D (:STRUCT EXTENT3-D))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:746:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:842:16"
 (CFFI:DEFCSTRUCT (INSTANCE-DESCRIPTOR :SIZE 8)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:748:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:844:3"
 (CFFI:DEFCTYPE INSTANCE-DESCRIPTOR (:STRUCT INSTANCE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:750:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:846:16"
 (CFFI:DEFCSTRUCT (LIMITS :SIZE 144)
   (MAX-TEXTURE-DIMENSION1-D UINT32_T :OFFSET 0)
   (MAX-TEXTURE-DIMENSION2-D UINT32_T :OFFSET 4)
@@ -1670,11 +1982,11 @@
   (MAX-COMPUTE-WORKGROUPS-PER-DIMENSION UINT32_T :OFFSET 140))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:782:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:878:3"
 (CFFI:DEFCTYPE LIMITS (:STRUCT LIMITS))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:784:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:880:16"
 (CFFI:DEFCSTRUCT (MULTISAMPLE-STATE :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (COUNT UINT32_T :OFFSET 8)
@@ -1682,45 +1994,45 @@
   (ALPHA-TO-COVERAGE-ENABLED :BOOL :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:789:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:885:3"
 (CFFI:DEFCTYPE MULTISAMPLE-STATE (:STRUCT MULTISAMPLE-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:791:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:887:16"
 (CFFI:DEFCSTRUCT (ORIGIN3-D :SIZE 12)
   (X UINT32_T :OFFSET 0)
   (Y UINT32_T :OFFSET 4)
   (Z UINT32_T :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:795:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:891:3"
 (CFFI:DEFCTYPE ORIGIN3-D (:STRUCT ORIGIN3-D))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:797:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:893:16"
 (CFFI:DEFCSTRUCT (PIPELINE-LAYOUT-DESCRIPTOR :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (BIND-GROUP-LAYOUT-COUNT UINT32_T :OFFSET 16)
+  (BIND-GROUP-LAYOUT-COUNT SIZE_T :OFFSET 16)
   (BIND-GROUP-LAYOUTS (:POINTER BIND-GROUP-LAYOUT) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:802:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:898:3"
 (CFFI:DEFCTYPE PIPELINE-LAYOUT-DESCRIPTOR (:STRUCT PIPELINE-LAYOUT-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:805:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:901:16"
 (CFFI:DEFCSTRUCT (PRIMITIVE-DEPTH-CLIP-CONTROL :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (UNCLIPPED-DEPTH :BOOL :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:808:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:904:3"
 (CFFI:DEFCTYPE PRIMITIVE-DEPTH-CLIP-CONTROL
                (:STRUCT PRIMITIVE-DEPTH-CLIP-CONTROL))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:810:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:906:16"
 (CFFI:DEFCSTRUCT (PRIMITIVE-STATE :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (TOPOLOGY PRIMITIVE-TOPOLOGY :OFFSET 8)
@@ -1729,49 +2041,49 @@
   (CULL-MODE CULL-MODE :OFFSET 20))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:816:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:912:3"
 (CFFI:DEFCTYPE PRIMITIVE-STATE (:STRUCT PRIMITIVE-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:818:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:914:16"
 (CFFI:DEFCSTRUCT (QUERY-SET-DESCRIPTOR :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
   (TYPE QUERY-TYPE :OFFSET 16)
   (COUNT UINT32_T :OFFSET 20)
   (PIPELINE-STATISTICS (:POINTER PIPELINE-STATISTIC-NAME) :OFFSET 24)
-  (PIPELINE-STATISTICS-COUNT UINT32_T :OFFSET 32))
+  (PIPELINE-STATISTICS-COUNT SIZE_T :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:825:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:921:3"
 (CFFI:DEFCTYPE QUERY-SET-DESCRIPTOR (:STRUCT QUERY-SET-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:827:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:923:16"
 (CFFI:DEFCSTRUCT (QUEUE-DESCRIPTOR :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:830:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:926:3"
 (CFFI:DEFCTYPE QUEUE-DESCRIPTOR (:STRUCT QUEUE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:832:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:928:16"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-DESCRIPTOR :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:835:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:931:3"
 (CFFI:DEFCTYPE RENDER-BUNDLE-DESCRIPTOR (:STRUCT RENDER-BUNDLE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:837:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:933:16"
 (CFFI:DEFCSTRUCT (RENDER-BUNDLE-ENCODER-DESCRIPTOR :SIZE 48)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (COLOR-FORMATS-COUNT UINT32_T :OFFSET 16)
+  (COLOR-FORMATS-COUNT SIZE_T :OFFSET 16)
   (COLOR-FORMATS (:POINTER TEXTURE-FORMAT) :OFFSET 24)
   (DEPTH-STENCIL-FORMAT TEXTURE-FORMAT :OFFSET 32)
   (SAMPLE-COUNT UINT32_T :OFFSET 36)
@@ -1779,12 +2091,12 @@
   (STENCIL-READ-ONLY :BOOL :OFFSET 41))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:846:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:942:3"
 (CFFI:DEFCTYPE RENDER-BUNDLE-ENCODER-DESCRIPTOR
                (:STRUCT RENDER-BUNDLE-ENCODER-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:848:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:944:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-DEPTH-STENCIL-ATTACHMENT :SIZE 40)
   (VIEW TEXTURE-VIEW :OFFSET 0)
   (DEPTH-LOAD-OP LOAD-OP :OFFSET 8)
@@ -1797,57 +2109,58 @@
   (STENCIL-READ-ONLY :BOOL :OFFSET 36))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:858:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:954:3"
 (CFFI:DEFCTYPE RENDER-PASS-DEPTH-STENCIL-ATTACHMENT
                (:STRUCT RENDER-PASS-DEPTH-STENCIL-ATTACHMENT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:861:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:957:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-DESCRIPTOR-MAX-DRAW-COUNT :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (MAX-DRAW-COUNT UINT64_T :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:864:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:960:3"
 (CFFI:DEFCTYPE RENDER-PASS-DESCRIPTOR-MAX-DRAW-COUNT
                (:STRUCT RENDER-PASS-DESCRIPTOR-MAX-DRAW-COUNT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:866:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:962:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-TIMESTAMP-WRITE :SIZE 16)
   (QUERY-SET QUERY-SET :OFFSET 0)
   (QUERY-INDEX UINT32_T :OFFSET 8)
   (LOCATION RENDER-PASS-TIMESTAMP-LOCATION :OFFSET 12))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:870:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:966:3"
 (CFFI:DEFCTYPE RENDER-PASS-TIMESTAMP-WRITE
                (:STRUCT RENDER-PASS-TIMESTAMP-WRITE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:872:16"
-(CFFI:DEFCSTRUCT (REQUEST-ADAPTER-OPTIONS :SIZE 24)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:968:16"
+(CFFI:DEFCSTRUCT (REQUEST-ADAPTER-OPTIONS :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (COMPATIBLE-SURFACE SURFACE :OFFSET 8)
   (POWER-PREFERENCE POWER-PREFERENCE :OFFSET 16)
-  (FORCE-FALLBACK-ADAPTER :BOOL :OFFSET 20))
+  (BACKEND-TYPE BACKEND-TYPE :OFFSET 20)
+  (FORCE-FALLBACK-ADAPTER :BOOL :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:877:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:974:3"
 (CFFI:DEFCTYPE REQUEST-ADAPTER-OPTIONS (:STRUCT REQUEST-ADAPTER-OPTIONS))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:879:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:976:16"
 (CFFI:DEFCSTRUCT (SAMPLER-BINDING-LAYOUT :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (TYPE SAMPLER-BINDING-TYPE :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:882:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:979:3"
 (CFFI:DEFCTYPE SAMPLER-BINDING-LAYOUT (:STRUCT SAMPLER-BINDING-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:884:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:981:16"
 (CFFI:DEFCSTRUCT (SAMPLER-DESCRIPTOR :SIZE 56)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -1863,46 +2176,46 @@
   (MAX-ANISOTROPY UINT16_T :OFFSET 52))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:897:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:994:3"
 (CFFI:DEFCTYPE SAMPLER-DESCRIPTOR (:STRUCT SAMPLER-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:899:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:996:16"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-COMPILATION-HINT :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (ENTRY-POINT :STRING :OFFSET 8)
   (LAYOUT PIPELINE-LAYOUT :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:903:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1000:3"
 (CFFI:DEFCTYPE SHADER-MODULE-COMPILATION-HINT
                (:STRUCT SHADER-MODULE-COMPILATION-HINT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:906:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1003:16"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-S-P-I-R-V-DESCRIPTOR :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (CODE-SIZE UINT32_T :OFFSET 16)
   (CODE (:POINTER UINT32_T) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:910:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1007:3"
 (CFFI:DEFCTYPE SHADER-MODULE-S-P-I-R-V-DESCRIPTOR
                (:STRUCT SHADER-MODULE-S-P-I-R-V-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:913:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1010:16"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-W-G-S-L-DESCRIPTOR :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (CODE :STRING :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:916:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1013:3"
 (CFFI:DEFCTYPE SHADER-MODULE-W-G-S-L-DESCRIPTOR
                (:STRUCT SHADER-MODULE-W-G-S-L-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:918:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1015:16"
 (CFFI:DEFCSTRUCT (STENCIL-FACE-STATE :SIZE 16)
   (COMPARE COMPARE-FUNCTION :OFFSET 0)
   (FAIL-OP STENCIL-OPERATION :OFFSET 4)
@@ -1910,11 +2223,11 @@
   (PASS-OP STENCIL-OPERATION :OFFSET 12))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:923:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1020:3"
 (CFFI:DEFCTYPE STENCIL-FACE-STATE (:STRUCT STENCIL-FACE-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:925:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1022:16"
 (CFFI:DEFCSTRUCT (STORAGE-TEXTURE-BINDING-LAYOUT :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (ACCESS STORAGE-TEXTURE-ACCESS :OFFSET 8)
@@ -1922,103 +2235,103 @@
   (VIEW-DIMENSION TEXTURE-VIEW-DIMENSION :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:930:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1027:3"
 (CFFI:DEFCTYPE STORAGE-TEXTURE-BINDING-LAYOUT
                (:STRUCT STORAGE-TEXTURE-BINDING-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:932:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1029:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR :SIZE 16)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:935:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1032:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR (:STRUCT SURFACE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:938:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1035:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-ANDROID-NATIVE-WINDOW :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (WINDOW (:POINTER :VOID) :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:941:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1038:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-ANDROID-NATIVE-WINDOW
                (:STRUCT SURFACE-DESCRIPTOR-FROM-ANDROID-NATIVE-WINDOW))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:944:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1041:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-CANVAS-H-T-M-L-SELECTOR :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (SELECTOR :STRING :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:947:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1044:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-CANVAS-H-T-M-L-SELECTOR
                (:STRUCT SURFACE-DESCRIPTOR-FROM-CANVAS-H-T-M-L-SELECTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:950:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1047:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-METAL-LAYER :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (LAYER (:POINTER :VOID) :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:953:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1050:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-METAL-LAYER
                (:STRUCT SURFACE-DESCRIPTOR-FROM-METAL-LAYER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:956:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1053:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-WAYLAND-SURFACE :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (DISPLAY (:POINTER :VOID) :OFFSET 16)
   (SURFACE (:POINTER :VOID) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:960:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1057:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-WAYLAND-SURFACE
                (:STRUCT SURFACE-DESCRIPTOR-FROM-WAYLAND-SURFACE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:963:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1060:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-WINDOWS-H-W-N-D :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (HINSTANCE (:POINTER :VOID) :OFFSET 16)
   (HWND (:POINTER :VOID) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:967:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1064:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-WINDOWS-H-W-N-D
                (:STRUCT SURFACE-DESCRIPTOR-FROM-WINDOWS-H-W-N-D))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:970:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1067:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-XCB-WINDOW :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (CONNECTION (:POINTER :VOID) :OFFSET 16)
   (WINDOW UINT32_T :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:974:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1071:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-XCB-WINDOW
                (:STRUCT SURFACE-DESCRIPTOR-FROM-XCB-WINDOW))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:977:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1074:16"
 (CFFI:DEFCSTRUCT (SURFACE-DESCRIPTOR-FROM-XLIB-WINDOW :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (DISPLAY (:POINTER :VOID) :OFFSET 16)
   (WINDOW UINT32_T :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:981:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1078:3"
 (CFFI:DEFCTYPE SURFACE-DESCRIPTOR-FROM-XLIB-WINDOW
                (:STRUCT SURFACE-DESCRIPTOR-FROM-XLIB-WINDOW))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:983:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1080:16"
 (CFFI:DEFCSTRUCT (SWAP-CHAIN-DESCRIPTOR :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -2029,11 +2342,11 @@
   (PRESENT-MODE PRESENT-MODE :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:991:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1088:3"
 (CFFI:DEFCTYPE SWAP-CHAIN-DESCRIPTOR (:STRUCT SWAP-CHAIN-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:993:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1090:16"
 (CFFI:DEFCSTRUCT (TEXTURE-BINDING-LAYOUT :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (SAMPLE-TYPE TEXTURE-SAMPLE-TYPE :OFFSET 8)
@@ -2041,11 +2354,11 @@
   (MULTISAMPLED :BOOL :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:998:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1095:3"
 (CFFI:DEFCTYPE TEXTURE-BINDING-LAYOUT (:STRUCT TEXTURE-BINDING-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1000:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1097:16"
 (CFFI:DEFCSTRUCT (TEXTURE-DATA-LAYOUT :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (OFFSET UINT64_T :OFFSET 8)
@@ -2053,11 +2366,11 @@
   (ROWS-PER-IMAGE UINT32_T :OFFSET 20))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1005:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1102:3"
 (CFFI:DEFCTYPE TEXTURE-DATA-LAYOUT (:STRUCT TEXTURE-DATA-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1007:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1104:16"
 (CFFI:DEFCSTRUCT (TEXTURE-VIEW-DESCRIPTOR :SIZE 48)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -2070,35 +2383,35 @@
   (ASPECT TEXTURE-ASPECT :OFFSET 40))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1017:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1114:3"
 (CFFI:DEFCTYPE TEXTURE-VIEW-DESCRIPTOR (:STRUCT TEXTURE-VIEW-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1019:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1116:16"
 (CFFI:DEFCSTRUCT (VERTEX-ATTRIBUTE :SIZE 24)
   (FORMAT VERTEX-FORMAT :OFFSET 0)
   (OFFSET UINT64_T :OFFSET 8)
   (SHADER-LOCATION UINT32_T :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1023:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1120:3"
 (CFFI:DEFCTYPE VERTEX-ATTRIBUTE (:STRUCT VERTEX-ATTRIBUTE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1025:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1122:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-DESCRIPTOR :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
   (LAYOUT BIND-GROUP-LAYOUT :OFFSET 16)
-  (ENTRY-COUNT UINT32_T :OFFSET 24)
+  (ENTRY-COUNT SIZE_T :OFFSET 24)
   (ENTRIES (:POINTER BIND-GROUP-ENTRY) :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1031:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1128:3"
 (CFFI:DEFCTYPE BIND-GROUP-DESCRIPTOR (:STRUCT BIND-GROUP-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1033:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1130:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-ENTRY :SIZE 104)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (BINDING UINT32_T :OFFSET 8)
@@ -2109,44 +2422,44 @@
   (STORAGE-TEXTURE STORAGE-TEXTURE-BINDING-LAYOUT :OFFSET 80))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1041:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1138:3"
 (CFFI:DEFCTYPE BIND-GROUP-LAYOUT-ENTRY (:STRUCT BIND-GROUP-LAYOUT-ENTRY))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1043:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1140:16"
 (CFFI:DEFCSTRUCT (BLEND-STATE :SIZE 24)
   (COLOR BLEND-COMPONENT :OFFSET 0)
   (ALPHA BLEND-COMPONENT :OFFSET 12))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1046:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1143:3"
 (CFFI:DEFCTYPE BLEND-STATE (:STRUCT BLEND-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1048:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1145:16"
 (CFFI:DEFCSTRUCT (COMPILATION-INFO :SIZE 24)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
-  (MESSAGE-COUNT UINT32_T :OFFSET 8)
+  (MESSAGE-COUNT SIZE_T :OFFSET 8)
   (MESSAGES (:POINTER COMPILATION-MESSAGE) :OFFSET 16))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1052:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1149:3"
 (CFFI:DEFCTYPE COMPILATION-INFO (:STRUCT COMPILATION-INFO))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1054:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1151:16"
 (CFFI:DEFCSTRUCT (COMPUTE-PASS-DESCRIPTOR :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (TIMESTAMP-WRITE-COUNT UINT32_T :OFFSET 16)
+  (TIMESTAMP-WRITE-COUNT SIZE_T :OFFSET 16)
   (TIMESTAMP-WRITES (:POINTER COMPUTE-PASS-TIMESTAMP-WRITE) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1059:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1156:3"
 (CFFI:DEFCTYPE COMPUTE-PASS-DESCRIPTOR (:STRUCT COMPUTE-PASS-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1061:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1158:16"
 (CFFI:DEFCSTRUCT (DEPTH-STENCIL-STATE :SIZE 72)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (FORMAT TEXTURE-FORMAT :OFFSET 8)
@@ -2161,22 +2474,22 @@
   (DEPTH-BIAS-CLAMP :FLOAT :OFFSET 68))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1073:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1170:3"
 (CFFI:DEFCTYPE DEPTH-STENCIL-STATE (:STRUCT DEPTH-STENCIL-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1075:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1172:16"
 (CFFI:DEFCSTRUCT (IMAGE-COPY-BUFFER :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LAYOUT TEXTURE-DATA-LAYOUT :OFFSET 8)
   (BUFFER BUFFER :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1079:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1176:3"
 (CFFI:DEFCTYPE IMAGE-COPY-BUFFER (:STRUCT IMAGE-COPY-BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1081:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1178:16"
 (CFFI:DEFCSTRUCT (IMAGE-COPY-TEXTURE :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (TEXTURE TEXTURE :OFFSET 8)
@@ -2185,25 +2498,25 @@
   (ASPECT TEXTURE-ASPECT :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1087:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1184:3"
 (CFFI:DEFCTYPE IMAGE-COPY-TEXTURE (:STRUCT IMAGE-COPY-TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1089:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1186:16"
 (CFFI:DEFCSTRUCT (PROGRAMMABLE-STAGE-DESCRIPTOR :SIZE 40)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (MODULE SHADER-MODULE :OFFSET 8)
   (ENTRY-POINT :STRING :OFFSET 16)
-  (CONSTANT-COUNT UINT32_T :OFFSET 24)
+  (CONSTANT-COUNT SIZE_T :OFFSET 24)
   (CONSTANTS (:POINTER CONSTANT-ENTRY) :OFFSET 32))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1095:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1192:3"
 (CFFI:DEFCTYPE PROGRAMMABLE-STAGE-DESCRIPTOR
                (:STRUCT PROGRAMMABLE-STAGE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1097:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1194:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-COLOR-ATTACHMENT :SIZE 56)
   (VIEW TEXTURE-VIEW :OFFSET 0)
   (RESOLVE-TARGET TEXTURE-VIEW :OFFSET 8)
@@ -2212,44 +2525,44 @@
   (CLEAR-VALUE COLOR :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1103:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1200:3"
 (CFFI:DEFCTYPE RENDER-PASS-COLOR-ATTACHMENT
                (:STRUCT RENDER-PASS-COLOR-ATTACHMENT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1105:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1202:16"
 (CFFI:DEFCSTRUCT (REQUIRED-LIMITS :SIZE 152)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LIMITS LIMITS :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1108:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1205:3"
 (CFFI:DEFCTYPE REQUIRED-LIMITS (:STRUCT REQUIRED-LIMITS))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1110:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1207:16"
 (CFFI:DEFCSTRUCT (SHADER-MODULE-DESCRIPTOR :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (HINT-COUNT UINT32_T :OFFSET 16)
+  (HINT-COUNT SIZE_T :OFFSET 16)
   (HINTS (:POINTER SHADER-MODULE-COMPILATION-HINT) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1115:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1212:3"
 (CFFI:DEFCTYPE SHADER-MODULE-DESCRIPTOR (:STRUCT SHADER-MODULE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1117:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1214:16"
 (CFFI:DEFCSTRUCT (SUPPORTED-LIMITS :SIZE 152)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT-OUT) :OFFSET 0)
   (LIMITS LIMITS :OFFSET 8))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1120:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1217:3"
 (CFFI:DEFCTYPE SUPPORTED-LIMITS (:STRUCT SUPPORTED-LIMITS))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1122:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1219:16"
 (CFFI:DEFCSTRUCT (TEXTURE-DESCRIPTOR :SIZE 64)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -2259,40 +2572,40 @@
   (FORMAT TEXTURE-FORMAT :OFFSET 36)
   (MIP-LEVEL-COUNT UINT32_T :OFFSET 40)
   (SAMPLE-COUNT UINT32_T :OFFSET 44)
-  (VIEW-FORMAT-COUNT UINT32_T :OFFSET 48)
+  (VIEW-FORMAT-COUNT SIZE_T :OFFSET 48)
   (VIEW-FORMATS (:POINTER TEXTURE-FORMAT) :OFFSET 56))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1133:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1230:3"
 (CFFI:DEFCTYPE TEXTURE-DESCRIPTOR (:STRUCT TEXTURE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1135:16"
-(CFFI:DEFCSTRUCT (VERTEX-BUFFER-LAYOUT :SIZE 24)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1232:16"
+(CFFI:DEFCSTRUCT (VERTEX-BUFFER-LAYOUT :SIZE 32)
   (ARRAY-STRIDE UINT64_T :OFFSET 0)
   (STEP-MODE VERTEX-STEP-MODE :OFFSET 8)
-  (ATTRIBUTE-COUNT UINT32_T :OFFSET 12)
-  (ATTRIBUTES (:POINTER VERTEX-ATTRIBUTE) :OFFSET 16))
+  (ATTRIBUTE-COUNT SIZE_T :OFFSET 16)
+  (ATTRIBUTES (:POINTER VERTEX-ATTRIBUTE) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1140:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1237:3"
 (CFFI:DEFCTYPE VERTEX-BUFFER-LAYOUT (:STRUCT VERTEX-BUFFER-LAYOUT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1142:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1239:16"
 (CFFI:DEFCSTRUCT (BIND-GROUP-LAYOUT-DESCRIPTOR :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (ENTRY-COUNT UINT32_T :OFFSET 16)
+  (ENTRY-COUNT SIZE_T :OFFSET 16)
   (ENTRIES (:POINTER BIND-GROUP-LAYOUT-ENTRY) :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1147:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1244:3"
 (CFFI:DEFCTYPE BIND-GROUP-LAYOUT-DESCRIPTOR
                (:STRUCT BIND-GROUP-LAYOUT-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1149:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1246:16"
 (CFFI:DEFCSTRUCT (COLOR-TARGET-STATE :SIZE 32)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (FORMAT TEXTURE-FORMAT :OFFSET 8)
@@ -2300,11 +2613,11 @@
   (WRITE-MASK COLOR-WRITE-MASK-FLAGS :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1154:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1251:3"
 (CFFI:DEFCTYPE COLOR-TARGET-STATE (:STRUCT COLOR-TARGET-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1156:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1253:16"
 (CFFI:DEFCSTRUCT (COMPUTE-PIPELINE-DESCRIPTOR :SIZE 64)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -2312,73 +2625,75 @@
   (COMPUTE PROGRAMMABLE-STAGE-DESCRIPTOR :OFFSET 24))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1161:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1258:3"
 (CFFI:DEFCTYPE COMPUTE-PIPELINE-DESCRIPTOR
                (:STRUCT COMPUTE-PIPELINE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1163:16"
-(CFFI:DEFCSTRUCT (DEVICE-DESCRIPTOR :SIZE 56)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1260:16"
+(CFFI:DEFCSTRUCT (DEVICE-DESCRIPTOR :SIZE 72)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (REQUIRED-FEATURES-COUNT UINT32_T :OFFSET 16)
+  (REQUIRED-FEATURES-COUNT SIZE_T :OFFSET 16)
   (REQUIRED-FEATURES (:POINTER FEATURE-NAME) :OFFSET 24)
   (REQUIRED-LIMITS (:POINTER REQUIRED-LIMITS) :OFFSET 32)
-  (DEFAULT-QUEUE QUEUE-DESCRIPTOR :OFFSET 40))
+  (DEFAULT-QUEUE QUEUE-DESCRIPTOR :OFFSET 40)
+  (DEVICE-LOST-CALLBACK DEVICE-LOST-CALLBACK :OFFSET 56)
+  (DEVICE-LOST-USERDATA (:POINTER :VOID) :OFFSET 64))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1170:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1269:3"
 (CFFI:DEFCTYPE DEVICE-DESCRIPTOR (:STRUCT DEVICE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1172:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1271:16"
 (CFFI:DEFCSTRUCT (RENDER-PASS-DESCRIPTOR :SIZE 64)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
-  (COLOR-ATTACHMENT-COUNT UINT32_T :OFFSET 16)
+  (COLOR-ATTACHMENT-COUNT SIZE_T :OFFSET 16)
   (COLOR-ATTACHMENTS (:POINTER RENDER-PASS-COLOR-ATTACHMENT) :OFFSET 24)
   (DEPTH-STENCIL-ATTACHMENT (:POINTER RENDER-PASS-DEPTH-STENCIL-ATTACHMENT)
    :OFFSET 32)
   (OCCLUSION-QUERY-SET QUERY-SET :OFFSET 40)
-  (TIMESTAMP-WRITE-COUNT UINT32_T :OFFSET 48)
+  (TIMESTAMP-WRITE-COUNT SIZE_T :OFFSET 48)
   (TIMESTAMP-WRITES (:POINTER RENDER-PASS-TIMESTAMP-WRITE) :OFFSET 56))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1181:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1280:3"
 (CFFI:DEFCTYPE RENDER-PASS-DESCRIPTOR (:STRUCT RENDER-PASS-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1183:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1282:16"
 (CFFI:DEFCSTRUCT (VERTEX-STATE :SIZE 56)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (MODULE SHADER-MODULE :OFFSET 8)
   (ENTRY-POINT :STRING :OFFSET 16)
-  (CONSTANT-COUNT UINT32_T :OFFSET 24)
+  (CONSTANT-COUNT SIZE_T :OFFSET 24)
   (CONSTANTS (:POINTER CONSTANT-ENTRY) :OFFSET 32)
-  (BUFFER-COUNT UINT32_T :OFFSET 40)
+  (BUFFER-COUNT SIZE_T :OFFSET 40)
   (BUFFERS (:POINTER VERTEX-BUFFER-LAYOUT) :OFFSET 48))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1191:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1290:3"
 (CFFI:DEFCTYPE VERTEX-STATE (:STRUCT VERTEX-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1193:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1292:16"
 (CFFI:DEFCSTRUCT (FRAGMENT-STATE :SIZE 56)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (MODULE SHADER-MODULE :OFFSET 8)
   (ENTRY-POINT :STRING :OFFSET 16)
-  (CONSTANT-COUNT UINT32_T :OFFSET 24)
+  (CONSTANT-COUNT SIZE_T :OFFSET 24)
   (CONSTANTS (:POINTER CONSTANT-ENTRY) :OFFSET 32)
-  (TARGET-COUNT UINT32_T :OFFSET 40)
+  (TARGET-COUNT SIZE_T :OFFSET 40)
   (TARGETS (:POINTER COLOR-TARGET-STATE) :OFFSET 48))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1201:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1300:3"
 (CFFI:DEFCTYPE FRAGMENT-STATE (:STRUCT FRAGMENT-STATE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1203:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1302:16"
 (CFFI:DEFCSTRUCT (RENDER-PIPELINE-DESCRIPTOR :SIZE 144)
   (NEXT-IN-CHAIN (:POINTER CHAINED-STRUCT) :OFFSET 0)
   (LABEL :STRING :OFFSET 8)
@@ -2390,654 +2705,798 @@
   (FRAGMENT (:POINTER FRAGMENT-STATE) :OFFSET 136))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1212:3"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1311:3"
 (CFFI:DEFCTYPE RENDER-PIPELINE-DESCRIPTOR (:STRUCT RENDER-PIPELINE-DESCRIPTOR))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1218:16"
-(CFFI:DEFCTYPE BUFFER-MAP-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1219:16"
-(CFFI:DEFCTYPE COMPILATION-INFO-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1220:16"
-(CFFI:DEFCTYPE CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1221:16"
-(CFFI:DEFCTYPE CREATE-RENDER-PIPELINE-ASYNC-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1222:16"
-(CFFI:DEFCTYPE DEVICE-LOST-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1223:16"
-(CFFI:DEFCTYPE ERROR-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1224:16"
-(CFFI:DEFCTYPE PROC FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1225:16"
-(CFFI:DEFCTYPE QUEUE-WORK-DONE-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1226:16"
-(CFFI:DEFCTYPE REQUEST-ADAPTER-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1227:16"
-(CFFI:DEFCTYPE REQUEST-DEVICE-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1231:24"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1319:24"
 (CFFI:DEFCTYPE PROC-CREATE-INSTANCE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1232:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1320:20"
 (CFFI:DEFCTYPE PROC-GET-PROC-ADDRESS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1235:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1323:18"
 (CFFI:DEFCTYPE PROC-ADAPTER-ENUMERATE-FEATURES FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1236:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1324:16"
 (CFFI:DEFCTYPE PROC-ADAPTER-GET-LIMITS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1237:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1325:16"
 (CFFI:DEFCTYPE PROC-ADAPTER-GET-PROPERTIES FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1238:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1326:16"
 (CFFI:DEFCTYPE PROC-ADAPTER-HAS-FEATURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1239:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1327:16"
 (CFFI:DEFCTYPE PROC-ADAPTER-REQUEST-DEVICE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1242:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1328:16"
+(CFFI:DEFCTYPE PROC-ADAPTER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1329:16"
+(CFFI:DEFCTYPE PROC-ADAPTER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1332:16"
 (CFFI:DEFCTYPE PROC-BIND-GROUP-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1245:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1333:16"
+(CFFI:DEFCTYPE PROC-BIND-GROUP-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1334:16"
+(CFFI:DEFCTYPE PROC-BIND-GROUP-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1337:16"
 (CFFI:DEFCTYPE PROC-BIND-GROUP-LAYOUT-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1248:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1338:16"
+(CFFI:DEFCTYPE PROC-BIND-GROUP-LAYOUT-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1339:16"
+(CFFI:DEFCTYPE PROC-BIND-GROUP-LAYOUT-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1342:16"
 (CFFI:DEFCTYPE PROC-BUFFER-DESTROY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1249:24"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1343:24"
 (CFFI:DEFCTYPE PROC-BUFFER-GET-CONST-MAPPED-RANGE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1250:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1344:30"
 (CFFI:DEFCTYPE PROC-BUFFER-GET-MAP-STATE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1251:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1345:18"
 (CFFI:DEFCTYPE PROC-BUFFER-GET-MAPPED-RANGE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1252:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1346:20"
 (CFFI:DEFCTYPE PROC-BUFFER-GET-SIZE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1253:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1347:32"
 (CFFI:DEFCTYPE PROC-BUFFER-GET-USAGE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1254:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1348:16"
 (CFFI:DEFCTYPE PROC-BUFFER-MAP-ASYNC FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1255:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1349:16"
 (CFFI:DEFCTYPE PROC-BUFFER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1256:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1350:16"
 (CFFI:DEFCTYPE PROC-BUFFER-UNMAP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1259:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1351:16"
+(CFFI:DEFCTYPE PROC-BUFFER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1352:16"
+(CFFI:DEFCTYPE PROC-BUFFER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1355:16"
 (CFFI:DEFCTYPE PROC-COMMAND-BUFFER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1262:34"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1356:16"
+(CFFI:DEFCTYPE PROC-COMMAND-BUFFER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1357:16"
+(CFFI:DEFCTYPE PROC-COMMAND-BUFFER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1360:34"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-BEGIN-COMPUTE-PASS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1263:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1361:33"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-BEGIN-RENDER-PASS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1264:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1362:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-CLEAR-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1265:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1363:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-COPY-BUFFER-TO-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1266:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1364:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-COPY-BUFFER-TO-TEXTURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1267:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1365:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-COPY-TEXTURE-TO-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1268:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1366:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-COPY-TEXTURE-TO-TEXTURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1269:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1367:29"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-FINISH FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1270:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1368:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-INSERT-DEBUG-MARKER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1271:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1369:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-POP-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1272:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1370:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-PUSH-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1273:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1371:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-RESOLVE-QUERY-SET FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1274:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1372:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1275:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1373:16"
 (CFFI:DEFCTYPE PROC-COMMAND-ENCODER-WRITE-TIMESTAMP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1278:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1374:16"
+(CFFI:DEFCTYPE PROC-COMMAND-ENCODER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1375:16"
+(CFFI:DEFCTYPE PROC-COMMAND-ENCODER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1378:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1279:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1379:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1280:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1380:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS-INDIRECT
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1281:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1381:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-END FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1282:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1382:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-END-PIPELINE-STATISTICS-QUERY
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1283:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1383:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-INSERT-DEBUG-MARKER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1284:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1384:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-POP-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1285:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1385:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-PUSH-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1286:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1386:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-SET-BIND-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1287:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1387:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1288:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1388:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-SET-PIPELINE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1291:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1389:16"
+(CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1390:16"
+(CFFI:DEFCTYPE PROC-COMPUTE-PASS-ENCODER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1393:31"
 (CFFI:DEFCTYPE PROC-COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1292:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1394:16"
 (CFFI:DEFCTYPE PROC-COMPUTE-PIPELINE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1295:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1395:16"
+(CFFI:DEFCTYPE PROC-COMPUTE-PIPELINE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1396:16"
+(CFFI:DEFCTYPE PROC-COMPUTE-PIPELINE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1399:25"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-BIND-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1296:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1400:31"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-BIND-GROUP-LAYOUT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1297:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1401:22"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1298:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1402:30"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-COMMAND-ENCODER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1299:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1403:31"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-COMPUTE-PIPELINE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1300:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1404:16"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-COMPUTE-PIPELINE-ASYNC FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1301:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1405:30"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-PIPELINE-LAYOUT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1302:24"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1406:24"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-QUERY-SET FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1303:35"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1407:35"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-RENDER-BUNDLE-ENCODER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1304:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1408:30"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-RENDER-PIPELINE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1305:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1409:16"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-RENDER-PIPELINE-ASYNC FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1306:23"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1410:23"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-SAMPLER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1307:28"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1411:28"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-SHADER-MODULE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1308:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1412:25"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-SWAP-CHAIN FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1309:23"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1413:23"
 (CFFI:DEFCTYPE PROC-DEVICE-CREATE-TEXTURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1310:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1414:16"
 (CFFI:DEFCTYPE PROC-DEVICE-DESTROY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1311:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1415:18"
 (CFFI:DEFCTYPE PROC-DEVICE-ENUMERATE-FEATURES FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1312:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1416:16"
 (CFFI:DEFCTYPE PROC-DEVICE-GET-LIMITS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1313:21"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1417:21"
 (CFFI:DEFCTYPE PROC-DEVICE-GET-QUEUE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1314:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1418:16"
 (CFFI:DEFCTYPE PROC-DEVICE-HAS-FEATURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1315:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1419:16"
 (CFFI:DEFCTYPE PROC-DEVICE-POP-ERROR-SCOPE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1316:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1420:16"
 (CFFI:DEFCTYPE PROC-DEVICE-PUSH-ERROR-SCOPE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1317:16"
-(CFFI:DEFCTYPE PROC-DEVICE-SET-DEVICE-LOST-CALLBACK FUNCTION-POINTER)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1318:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1421:16"
 (CFFI:DEFCTYPE PROC-DEVICE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1319:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1422:16"
 (CFFI:DEFCTYPE PROC-DEVICE-SET-UNCAPTURED-ERROR-CALLBACK FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1322:23"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1423:16"
+(CFFI:DEFCTYPE PROC-DEVICE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1424:16"
+(CFFI:DEFCTYPE PROC-DEVICE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1427:23"
 (CFFI:DEFCTYPE PROC-INSTANCE-CREATE-SURFACE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1323:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1428:16"
 (CFFI:DEFCTYPE PROC-INSTANCE-PROCESS-EVENTS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1324:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1429:16"
 (CFFI:DEFCTYPE PROC-INSTANCE-REQUEST-ADAPTER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1327:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1430:16"
+(CFFI:DEFCTYPE PROC-INSTANCE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1431:16"
+(CFFI:DEFCTYPE PROC-INSTANCE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1434:16"
 (CFFI:DEFCTYPE PROC-PIPELINE-LAYOUT-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1330:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1435:16"
+(CFFI:DEFCTYPE PROC-PIPELINE-LAYOUT-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1436:16"
+(CFFI:DEFCTYPE PROC-PIPELINE-LAYOUT-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1439:16"
 (CFFI:DEFCTYPE PROC-QUERY-SET-DESTROY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1331:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1440:20"
 (CFFI:DEFCTYPE PROC-QUERY-SET-GET-COUNT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1332:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1441:25"
 (CFFI:DEFCTYPE PROC-QUERY-SET-GET-TYPE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1333:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1442:16"
 (CFFI:DEFCTYPE PROC-QUERY-SET-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1336:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1443:16"
+(CFFI:DEFCTYPE PROC-QUERY-SET-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1444:16"
+(CFFI:DEFCTYPE PROC-QUERY-SET-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1447:16"
 (CFFI:DEFCTYPE PROC-QUEUE-ON-SUBMITTED-WORK-DONE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1337:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1448:16"
 (CFFI:DEFCTYPE PROC-QUEUE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1338:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1449:16"
 (CFFI:DEFCTYPE PROC-QUEUE-SUBMIT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1339:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1450:16"
 (CFFI:DEFCTYPE PROC-QUEUE-WRITE-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1340:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1451:16"
 (CFFI:DEFCTYPE PROC-QUEUE-WRITE-TEXTURE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1343:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1452:16"
+(CFFI:DEFCTYPE PROC-QUEUE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1453:16"
+(CFFI:DEFCTYPE PROC-QUEUE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1456:16"
+(CFFI:DEFCTYPE PROC-RENDER-BUNDLE-SET-LABEL FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1457:16"
+(CFFI:DEFCTYPE PROC-RENDER-BUNDLE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1458:16"
+(CFFI:DEFCTYPE PROC-RENDER-BUNDLE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1461:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-DRAW FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1344:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1462:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-DRAW-INDEXED FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1345:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1463:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-DRAW-INDEXED-INDIRECT
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1346:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1464:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-DRAW-INDIRECT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1347:28"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1465:28"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-FINISH FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1348:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1466:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-INSERT-DEBUG-MARKER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1349:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1467:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-POP-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1350:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1468:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-PUSH-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1351:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1469:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-SET-BIND-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1352:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1470:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-SET-INDEX-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1353:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1471:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1354:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1472:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-SET-PIPELINE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1355:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1473:16"
 (CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1358:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1474:16"
+(CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1475:16"
+(CFFI:DEFCTYPE PROC-RENDER-BUNDLE-ENCODER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1478:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1359:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1479:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1360:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1480:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-DRAW FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1361:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1481:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-DRAW-INDEXED FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1362:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1482:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-DRAW-INDEXED-INDIRECT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1363:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1483:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-DRAW-INDIRECT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1364:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1484:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-END FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1365:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1485:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-END-OCCLUSION-QUERY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1366:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1486:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-END-PIPELINE-STATISTICS-QUERY
                FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1367:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1487:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-EXECUTE-BUNDLES FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1368:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1488:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-INSERT-DEBUG-MARKER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1369:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1489:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-POP-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1370:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1490:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-PUSH-DEBUG-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1371:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1491:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-BIND-GROUP FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1372:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1492:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-BLEND-CONSTANT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1373:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1493:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-INDEX-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1374:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1494:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1375:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1495:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-PIPELINE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1376:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1496:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-SCISSOR-RECT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1377:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1497:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-STENCIL-REFERENCE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1378:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1498:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-VERTEX-BUFFER FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1379:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1499:16"
 (CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-SET-VIEWPORT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1382:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1500:16"
+(CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1501:16"
+(CFFI:DEFCTYPE PROC-RENDER-PASS-ENCODER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1504:31"
 (CFFI:DEFCTYPE PROC-RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1383:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1505:16"
 (CFFI:DEFCTYPE PROC-RENDER-PIPELINE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1386:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1506:16"
+(CFFI:DEFCTYPE PROC-RENDER-PIPELINE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1507:16"
+(CFFI:DEFCTYPE PROC-RENDER-PIPELINE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1510:16"
 (CFFI:DEFCTYPE PROC-SAMPLER-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1389:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1511:16"
+(CFFI:DEFCTYPE PROC-SAMPLER-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1512:16"
+(CFFI:DEFCTYPE PROC-SAMPLER-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1515:16"
 (CFFI:DEFCTYPE PROC-SHADER-MODULE-GET-COMPILATION-INFO FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1390:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1516:16"
 (CFFI:DEFCTYPE PROC-SHADER-MODULE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1393:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1517:16"
+(CFFI:DEFCTYPE PROC-SHADER-MODULE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1518:16"
+(CFFI:DEFCTYPE PROC-SHADER-MODULE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1521:29"
 (CFFI:DEFCTYPE PROC-SURFACE-GET-PREFERRED-FORMAT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1396:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1522:16"
+(CFFI:DEFCTYPE PROC-SURFACE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1523:16"
+(CFFI:DEFCTYPE PROC-SURFACE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1526:27"
 (CFFI:DEFCTYPE PROC-SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1397:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1527:16"
 (CFFI:DEFCTYPE PROC-SWAP-CHAIN-PRESENT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1400:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1528:16"
+(CFFI:DEFCTYPE PROC-SWAP-CHAIN-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1529:16"
+(CFFI:DEFCTYPE PROC-SWAP-CHAIN-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1532:27"
 (CFFI:DEFCTYPE PROC-TEXTURE-CREATE-VIEW FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1401:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1533:16"
 (CFFI:DEFCTYPE PROC-TEXTURE-DESTROY FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1402:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1534:20"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-DEPTH-OR-ARRAY-LAYERS FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1403:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1535:32"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-DIMENSION FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1404:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1536:29"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-FORMAT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1405:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1537:20"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-HEIGHT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1406:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1538:20"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-MIP-LEVEL-COUNT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1407:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1539:20"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-SAMPLE-COUNT FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1408:28"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1540:33"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-USAGE FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1409:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1541:20"
 (CFFI:DEFCTYPE PROC-TEXTURE-GET-WIDTH FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1410:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1542:16"
 (CFFI:DEFCTYPE PROC-TEXTURE-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1413:16"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1543:16"
+(CFFI:DEFCTYPE PROC-TEXTURE-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1544:16"
+(CFFI:DEFCTYPE PROC-TEXTURE-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1547:16"
 (CFFI:DEFCTYPE PROC-TEXTURE-VIEW-SET-LABEL FUNCTION-POINTER)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1419:26"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1548:16"
+(CFFI:DEFCTYPE PROC-TEXTURE-VIEW-REFERENCE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1549:16"
+(CFFI:DEFCTYPE PROC-TEXTURE-VIEW-RELEASE FUNCTION-POINTER)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1555:26"
 (CFFI:DEFCFUN ("wgpuCreateInstance" CREATE-INSTANCE)
     INSTANCE
   (DESCRIPTOR (:POINTER INSTANCE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1420:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1556:22"
 (CFFI:DEFCFUN ("wgpuGetProcAddress" GET-PROC-ADDRESS)
     PROC
   (DEVICE DEVICE)
   (PROC-NAME :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1423:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1559:20"
 (CFFI:DEFCFUN ("wgpuAdapterEnumerateFeatures" ADAPTER-ENUMERATE-FEATURES)
     SIZE_T
   (ADAPTER ADAPTER)
   (FEATURES (:POINTER FEATURE-NAME)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1424:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1560:18"
 (CFFI:DEFCFUN ("wgpuAdapterGetLimits" ADAPTER-GET-LIMITS)
     :BOOL
   (ADAPTER ADAPTER)
   (LIMITS (:POINTER SUPPORTED-LIMITS)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1425:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1561:18"
 (CFFI:DEFCFUN ("wgpuAdapterGetProperties" ADAPTER-GET-PROPERTIES)
     :VOID
   (ADAPTER ADAPTER)
   (PROPERTIES (:POINTER ADAPTER-PROPERTIES)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1426:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1562:18"
 (CFFI:DEFCFUN ("wgpuAdapterHasFeature" ADAPTER-HAS-FEATURE)
     :BOOL
   (ADAPTER ADAPTER)
   (FEATURE FEATURE-NAME))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1427:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1563:18"
 (CFFI:DEFCFUN ("wgpuAdapterRequestDevice" ADAPTER-REQUEST-DEVICE)
     :VOID
   (ADAPTER ADAPTER)
@@ -3046,27 +3505,63 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1430:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1564:18"
+(CFFI:DEFCFUN ("wgpuAdapterReference" ADAPTER-REFERENCE)
+    :VOID
+  (ADAPTER ADAPTER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1565:18"
+(CFFI:DEFCFUN ("wgpuAdapterRelease" ADAPTER-RELEASE)
+    :VOID
+  (ADAPTER ADAPTER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1568:18"
 (CFFI:DEFCFUN ("wgpuBindGroupSetLabel" BIND-GROUP-SET-LABEL)
     :VOID
   (BIND-GROUP BIND-GROUP)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1433:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1569:18"
+(CFFI:DEFCFUN ("wgpuBindGroupReference" BIND-GROUP-REFERENCE)
+    :VOID
+  (BIND-GROUP BIND-GROUP))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1570:18"
+(CFFI:DEFCFUN ("wgpuBindGroupRelease" BIND-GROUP-RELEASE)
+    :VOID
+  (BIND-GROUP BIND-GROUP))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1573:18"
 (CFFI:DEFCFUN ("wgpuBindGroupLayoutSetLabel" BIND-GROUP-LAYOUT-SET-LABEL)
     :VOID
   (BIND-GROUP-LAYOUT BIND-GROUP-LAYOUT)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1436:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1574:18"
+(CFFI:DEFCFUN ("wgpuBindGroupLayoutReference" BIND-GROUP-LAYOUT-REFERENCE)
+    :VOID
+  (BIND-GROUP-LAYOUT BIND-GROUP-LAYOUT))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1575:18"
+(CFFI:DEFCFUN ("wgpuBindGroupLayoutRelease" BIND-GROUP-LAYOUT-RELEASE)
+    :VOID
+  (BIND-GROUP-LAYOUT BIND-GROUP-LAYOUT))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1578:18"
 (CFFI:DEFCFUN ("wgpuBufferDestroy" BUFFER-DESTROY)
     :VOID
   (BUFFER BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1437:26"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1579:26"
 (CFFI:DEFCFUN ("wgpuBufferGetConstMappedRange" BUFFER-GET-CONST-MAPPED-RANGE)
     (:POINTER :VOID)
   (BUFFER BUFFER)
@@ -3074,13 +3569,13 @@
   (SIZE SIZE_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1438:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1580:32"
 (CFFI:DEFCFUN ("wgpuBufferGetMapState" BUFFER-GET-MAP-STATE)
     BUFFER-MAP-STATE
   (BUFFER BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1439:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1581:20"
 (CFFI:DEFCFUN ("wgpuBufferGetMappedRange" BUFFER-GET-MAPPED-RANGE)
     (:POINTER :VOID)
   (BUFFER BUFFER)
@@ -3088,19 +3583,19 @@
   (SIZE SIZE_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1440:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1582:22"
 (CFFI:DEFCFUN ("wgpuBufferGetSize" BUFFER-GET-SIZE)
     UINT64_T
   (BUFFER BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1441:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1583:34"
 (CFFI:DEFCFUN ("wgpuBufferGetUsage" BUFFER-GET-USAGE)
-    BUFFER-USAGE
+    BUFFER-USAGE-FLAGS
   (BUFFER BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1442:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1584:18"
 (CFFI:DEFCFUN ("wgpuBufferMapAsync" BUFFER-MAP-ASYNC)
     :VOID
   (BUFFER BUFFER)
@@ -3111,27 +3606,51 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1443:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1585:18"
 (CFFI:DEFCFUN ("wgpuBufferSetLabel" BUFFER-SET-LABEL)
     :VOID
   (BUFFER BUFFER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1444:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1586:18"
 (CFFI:DEFCFUN ("wgpuBufferUnmap" BUFFER-UNMAP)
     :VOID
   (BUFFER BUFFER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1447:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1587:18"
+(CFFI:DEFCFUN ("wgpuBufferReference" BUFFER-REFERENCE)
+    :VOID
+  (BUFFER BUFFER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1588:18"
+(CFFI:DEFCFUN ("wgpuBufferRelease" BUFFER-RELEASE)
+    :VOID
+  (BUFFER BUFFER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1591:18"
 (CFFI:DEFCFUN ("wgpuCommandBufferSetLabel" COMMAND-BUFFER-SET-LABEL)
     :VOID
   (COMMAND-BUFFER COMMAND-BUFFER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1450:36"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1592:18"
+(CFFI:DEFCFUN ("wgpuCommandBufferReference" COMMAND-BUFFER-REFERENCE)
+    :VOID
+  (COMMAND-BUFFER COMMAND-BUFFER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1593:18"
+(CFFI:DEFCFUN ("wgpuCommandBufferRelease" COMMAND-BUFFER-RELEASE)
+    :VOID
+  (COMMAND-BUFFER COMMAND-BUFFER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1596:36"
 (CFFI:DEFCFUN ("wgpuCommandEncoderBeginComputePass"
                COMMAND-ENCODER-BEGIN-COMPUTE-PASS)
     COMPUTE-PASS-ENCODER
@@ -3139,7 +3658,7 @@
   (DESCRIPTOR (:POINTER COMPUTE-PASS-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1451:35"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1597:35"
 (CFFI:DEFCFUN ("wgpuCommandEncoderBeginRenderPass"
                COMMAND-ENCODER-BEGIN-RENDER-PASS)
     RENDER-PASS-ENCODER
@@ -3147,7 +3666,7 @@
   (DESCRIPTOR (:POINTER RENDER-PASS-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1452:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1598:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderClearBuffer" COMMAND-ENCODER-CLEAR-BUFFER)
     :VOID
   (COMMAND-ENCODER COMMAND-ENCODER)
@@ -3156,7 +3675,7 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1453:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1599:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderCopyBufferToBuffer"
                COMMAND-ENCODER-COPY-BUFFER-TO-BUFFER)
     :VOID
@@ -3168,7 +3687,7 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1454:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1600:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderCopyBufferToTexture"
                COMMAND-ENCODER-COPY-BUFFER-TO-TEXTURE)
     :VOID
@@ -3178,7 +3697,7 @@
   (COPY-SIZE (:POINTER EXTENT3-D)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1455:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1601:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderCopyTextureToBuffer"
                COMMAND-ENCODER-COPY-TEXTURE-TO-BUFFER)
     :VOID
@@ -3188,7 +3707,7 @@
   (COPY-SIZE (:POINTER EXTENT3-D)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1456:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1602:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderCopyTextureToTexture"
                COMMAND-ENCODER-COPY-TEXTURE-TO-TEXTURE)
     :VOID
@@ -3198,14 +3717,14 @@
   (COPY-SIZE (:POINTER EXTENT3-D)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1457:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1603:31"
 (CFFI:DEFCFUN ("wgpuCommandEncoderFinish" COMMAND-ENCODER-FINISH)
     COMMAND-BUFFER
   (COMMAND-ENCODER COMMAND-ENCODER)
   (DESCRIPTOR (:POINTER COMMAND-BUFFER-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1458:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1604:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderInsertDebugMarker"
                COMMAND-ENCODER-INSERT-DEBUG-MARKER)
     :VOID
@@ -3213,14 +3732,14 @@
   (MARKER-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1459:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1605:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderPopDebugGroup"
                COMMAND-ENCODER-POP-DEBUG-GROUP)
     :VOID
   (COMMAND-ENCODER COMMAND-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1460:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1606:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderPushDebugGroup"
                COMMAND-ENCODER-PUSH-DEBUG-GROUP)
     :VOID
@@ -3228,7 +3747,7 @@
   (GROUP-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1461:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1607:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderResolveQuerySet"
                COMMAND-ENCODER-RESOLVE-QUERY-SET)
     :VOID
@@ -3240,14 +3759,14 @@
   (DESTINATION-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1462:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1608:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderSetLabel" COMMAND-ENCODER-SET-LABEL)
     :VOID
   (COMMAND-ENCODER COMMAND-ENCODER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1463:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1609:18"
 (CFFI:DEFCFUN ("wgpuCommandEncoderWriteTimestamp"
                COMMAND-ENCODER-WRITE-TIMESTAMP)
     :VOID
@@ -3256,7 +3775,19 @@
   (QUERY-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1466:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1610:18"
+(CFFI:DEFCFUN ("wgpuCommandEncoderReference" COMMAND-ENCODER-REFERENCE)
+    :VOID
+  (COMMAND-ENCODER COMMAND-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1611:18"
+(CFFI:DEFCFUN ("wgpuCommandEncoderRelease" COMMAND-ENCODER-RELEASE)
+    :VOID
+  (COMMAND-ENCODER COMMAND-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1614:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderBeginPipelineStatisticsQuery"
                COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
     :VOID
@@ -3265,7 +3796,7 @@
   (QUERY-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1467:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1615:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderDispatchWorkgroups"
                COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS)
     :VOID
@@ -3275,7 +3806,7 @@
   (WORKGROUP-COUNT-Z UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1468:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1616:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderDispatchWorkgroupsIndirect"
                COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS-INDIRECT)
     :VOID
@@ -3284,20 +3815,20 @@
   (INDIRECT-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1469:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1617:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderEnd" COMPUTE-PASS-ENCODER-END)
     :VOID
   (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1470:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1618:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderEndPipelineStatisticsQuery"
                COMPUTE-PASS-ENCODER-END-PIPELINE-STATISTICS-QUERY)
     :VOID
   (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1471:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1619:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderInsertDebugMarker"
                COMPUTE-PASS-ENCODER-INSERT-DEBUG-MARKER)
     :VOID
@@ -3305,14 +3836,14 @@
   (MARKER-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1472:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1620:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderPopDebugGroup"
                COMPUTE-PASS-ENCODER-POP-DEBUG-GROUP)
     :VOID
   (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1473:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1621:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderPushDebugGroup"
                COMPUTE-PASS-ENCODER-PUSH-DEBUG-GROUP)
     :VOID
@@ -3320,25 +3851,25 @@
   (GROUP-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1474:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1622:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderSetBindGroup"
                COMPUTE-PASS-ENCODER-SET-BIND-GROUP)
     :VOID
   (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER)
   (GROUP-INDEX UINT32_T)
   (GROUP BIND-GROUP)
-  (DYNAMIC-OFFSET-COUNT UINT32_T)
+  (DYNAMIC-OFFSET-COUNT SIZE_T)
   (DYNAMIC-OFFSETS (:POINTER UINT32_T)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1475:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1623:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderSetLabel" COMPUTE-PASS-ENCODER-SET-LABEL)
     :VOID
   (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1476:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1624:18"
 (CFFI:DEFCFUN ("wgpuComputePassEncoderSetPipeline"
                COMPUTE-PASS-ENCODER-SET-PIPELINE)
     :VOID
@@ -3346,7 +3877,19 @@
   (PIPELINE COMPUTE-PIPELINE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1479:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1625:18"
+(CFFI:DEFCFUN ("wgpuComputePassEncoderReference" COMPUTE-PASS-ENCODER-REFERENCE)
+    :VOID
+  (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1626:18"
+(CFFI:DEFCFUN ("wgpuComputePassEncoderRelease" COMPUTE-PASS-ENCODER-RELEASE)
+    :VOID
+  (COMPUTE-PASS-ENCODER COMPUTE-PASS-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1629:33"
 (CFFI:DEFCFUN ("wgpuComputePipelineGetBindGroupLayout"
                COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT)
     BIND-GROUP-LAYOUT
@@ -3354,21 +3897,33 @@
   (GROUP-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1480:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1630:18"
 (CFFI:DEFCFUN ("wgpuComputePipelineSetLabel" COMPUTE-PIPELINE-SET-LABEL)
     :VOID
   (COMPUTE-PIPELINE COMPUTE-PIPELINE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1483:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1631:18"
+(CFFI:DEFCFUN ("wgpuComputePipelineReference" COMPUTE-PIPELINE-REFERENCE)
+    :VOID
+  (COMPUTE-PIPELINE COMPUTE-PIPELINE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1632:18"
+(CFFI:DEFCFUN ("wgpuComputePipelineRelease" COMPUTE-PIPELINE-RELEASE)
+    :VOID
+  (COMPUTE-PIPELINE COMPUTE-PIPELINE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1635:27"
 (CFFI:DEFCFUN ("wgpuDeviceCreateBindGroup" DEVICE-CREATE-BIND-GROUP)
     BIND-GROUP
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER BIND-GROUP-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1484:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1636:33"
 (CFFI:DEFCFUN ("wgpuDeviceCreateBindGroupLayout"
                DEVICE-CREATE-BIND-GROUP-LAYOUT)
     BIND-GROUP-LAYOUT
@@ -3376,28 +3931,28 @@
   (DESCRIPTOR (:POINTER BIND-GROUP-LAYOUT-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1485:24"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1637:24"
 (CFFI:DEFCFUN ("wgpuDeviceCreateBuffer" DEVICE-CREATE-BUFFER)
     BUFFER
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER BUFFER-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1486:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1638:32"
 (CFFI:DEFCFUN ("wgpuDeviceCreateCommandEncoder" DEVICE-CREATE-COMMAND-ENCODER)
     COMMAND-ENCODER
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER COMMAND-ENCODER-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1487:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1639:33"
 (CFFI:DEFCFUN ("wgpuDeviceCreateComputePipeline" DEVICE-CREATE-COMPUTE-PIPELINE)
     COMPUTE-PIPELINE
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER COMPUTE-PIPELINE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1488:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1640:18"
 (CFFI:DEFCFUN ("wgpuDeviceCreateComputePipelineAsync"
                DEVICE-CREATE-COMPUTE-PIPELINE-ASYNC)
     :VOID
@@ -3407,21 +3962,21 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1489:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1641:32"
 (CFFI:DEFCFUN ("wgpuDeviceCreatePipelineLayout" DEVICE-CREATE-PIPELINE-LAYOUT)
     PIPELINE-LAYOUT
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER PIPELINE-LAYOUT-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1490:26"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1642:26"
 (CFFI:DEFCFUN ("wgpuDeviceCreateQuerySet" DEVICE-CREATE-QUERY-SET)
     QUERY-SET
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER QUERY-SET-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1491:37"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1643:37"
 (CFFI:DEFCFUN ("wgpuDeviceCreateRenderBundleEncoder"
                DEVICE-CREATE-RENDER-BUNDLE-ENCODER)
     RENDER-BUNDLE-ENCODER
@@ -3429,14 +3984,14 @@
   (DESCRIPTOR (:POINTER RENDER-BUNDLE-ENCODER-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1492:32"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1644:32"
 (CFFI:DEFCFUN ("wgpuDeviceCreateRenderPipeline" DEVICE-CREATE-RENDER-PIPELINE)
     RENDER-PIPELINE
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER RENDER-PIPELINE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1493:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1645:18"
 (CFFI:DEFCFUN ("wgpuDeviceCreateRenderPipelineAsync"
                DEVICE-CREATE-RENDER-PIPELINE-ASYNC)
     :VOID
@@ -3446,21 +4001,21 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1494:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1646:25"
 (CFFI:DEFCFUN ("wgpuDeviceCreateSampler" DEVICE-CREATE-SAMPLER)
     SAMPLER
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER SAMPLER-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1495:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1647:30"
 (CFFI:DEFCFUN ("wgpuDeviceCreateShaderModule" DEVICE-CREATE-SHADER-MODULE)
     SHADER-MODULE
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER SHADER-MODULE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1496:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1648:27"
 (CFFI:DEFCFUN ("wgpuDeviceCreateSwapChain" DEVICE-CREATE-SWAP-CHAIN)
     SWAP-CHAIN
   (DEVICE DEVICE)
@@ -3468,78 +4023,69 @@
   (DESCRIPTOR (:POINTER SWAP-CHAIN-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1497:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1649:25"
 (CFFI:DEFCFUN ("wgpuDeviceCreateTexture" DEVICE-CREATE-TEXTURE)
     TEXTURE
   (DEVICE DEVICE)
   (DESCRIPTOR (:POINTER TEXTURE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1498:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1650:18"
 (CFFI:DEFCFUN ("wgpuDeviceDestroy" DEVICE-DESTROY)
     :VOID
   (DEVICE DEVICE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1499:20"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1651:20"
 (CFFI:DEFCFUN ("wgpuDeviceEnumerateFeatures" DEVICE-ENUMERATE-FEATURES)
     SIZE_T
   (DEVICE DEVICE)
   (FEATURES (:POINTER FEATURE-NAME)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1500:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1652:18"
 (CFFI:DEFCFUN ("wgpuDeviceGetLimits" DEVICE-GET-LIMITS)
     :BOOL
   (DEVICE DEVICE)
   (LIMITS (:POINTER SUPPORTED-LIMITS)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1501:23"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1653:23"
 (CFFI:DEFCFUN ("wgpuDeviceGetQueue" DEVICE-GET-QUEUE)
     QUEUE
   (DEVICE DEVICE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1502:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1654:18"
 (CFFI:DEFCFUN ("wgpuDeviceHasFeature" DEVICE-HAS-FEATURE)
     :BOOL
   (DEVICE DEVICE)
   (FEATURE FEATURE-NAME))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1503:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1655:18"
 (CFFI:DEFCFUN ("wgpuDevicePopErrorScope" DEVICE-POP-ERROR-SCOPE)
-    :BOOL
+    :VOID
   (DEVICE DEVICE)
   (CALLBACK ERROR-CALLBACK)
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1504:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1656:18"
 (CFFI:DEFCFUN ("wgpuDevicePushErrorScope" DEVICE-PUSH-ERROR-SCOPE)
     :VOID
   (DEVICE DEVICE)
   (FILTER ERROR-FILTER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1505:18"
-(CFFI:DEFCFUN ("wgpuDeviceSetDeviceLostCallback"
-               DEVICE-SET-DEVICE-LOST-CALLBACK)
-    :VOID
-  (DEVICE DEVICE)
-  (CALLBACK DEVICE-LOST-CALLBACK)
-  (USERDATA (:POINTER :VOID)))
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1506:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1657:18"
 (CFFI:DEFCFUN ("wgpuDeviceSetLabel" DEVICE-SET-LABEL)
     :VOID
   (DEVICE DEVICE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1507:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1658:18"
 (CFFI:DEFCFUN ("wgpuDeviceSetUncapturedErrorCallback"
                DEVICE-SET-UNCAPTURED-ERROR-CALLBACK)
     :VOID
@@ -3548,20 +4094,32 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1510:25"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1659:18"
+(CFFI:DEFCFUN ("wgpuDeviceReference" DEVICE-REFERENCE)
+    :VOID
+  (DEVICE DEVICE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1660:18"
+(CFFI:DEFCFUN ("wgpuDeviceRelease" DEVICE-RELEASE)
+    :VOID
+  (DEVICE DEVICE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1663:25"
 (CFFI:DEFCFUN ("wgpuInstanceCreateSurface" INSTANCE-CREATE-SURFACE)
     SURFACE
   (INSTANCE INSTANCE)
   (DESCRIPTOR (:POINTER SURFACE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1511:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1664:18"
 (CFFI:DEFCFUN ("wgpuInstanceProcessEvents" INSTANCE-PROCESS-EVENTS)
     :VOID
   (INSTANCE INSTANCE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1512:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1665:18"
 (CFFI:DEFCFUN ("wgpuInstanceRequestAdapter" INSTANCE-REQUEST-ADAPTER)
     :VOID
   (INSTANCE INSTANCE)
@@ -3570,39 +4128,75 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1515:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1666:18"
+(CFFI:DEFCFUN ("wgpuInstanceReference" INSTANCE-REFERENCE)
+    :VOID
+  (INSTANCE INSTANCE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1667:18"
+(CFFI:DEFCFUN ("wgpuInstanceRelease" INSTANCE-RELEASE)
+    :VOID
+  (INSTANCE INSTANCE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1670:18"
 (CFFI:DEFCFUN ("wgpuPipelineLayoutSetLabel" PIPELINE-LAYOUT-SET-LABEL)
     :VOID
   (PIPELINE-LAYOUT PIPELINE-LAYOUT)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1518:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1671:18"
+(CFFI:DEFCFUN ("wgpuPipelineLayoutReference" PIPELINE-LAYOUT-REFERENCE)
+    :VOID
+  (PIPELINE-LAYOUT PIPELINE-LAYOUT))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1672:18"
+(CFFI:DEFCFUN ("wgpuPipelineLayoutRelease" PIPELINE-LAYOUT-RELEASE)
+    :VOID
+  (PIPELINE-LAYOUT PIPELINE-LAYOUT))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1675:18"
 (CFFI:DEFCFUN ("wgpuQuerySetDestroy" QUERY-SET-DESTROY)
     :VOID
   (QUERY-SET QUERY-SET))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1519:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1676:22"
 (CFFI:DEFCFUN ("wgpuQuerySetGetCount" QUERY-SET-GET-COUNT)
     UINT32_T
   (QUERY-SET QUERY-SET))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1520:27"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1677:27"
 (CFFI:DEFCFUN ("wgpuQuerySetGetType" QUERY-SET-GET-TYPE)
     QUERY-TYPE
   (QUERY-SET QUERY-SET))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1521:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1678:18"
 (CFFI:DEFCFUN ("wgpuQuerySetSetLabel" QUERY-SET-SET-LABEL)
     :VOID
   (QUERY-SET QUERY-SET)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1524:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1679:18"
+(CFFI:DEFCFUN ("wgpuQuerySetReference" QUERY-SET-REFERENCE)
+    :VOID
+  (QUERY-SET QUERY-SET))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1680:18"
+(CFFI:DEFCFUN ("wgpuQuerySetRelease" QUERY-SET-RELEASE)
+    :VOID
+  (QUERY-SET QUERY-SET))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1683:18"
 (CFFI:DEFCFUN ("wgpuQueueOnSubmittedWorkDone" QUEUE-ON-SUBMITTED-WORK-DONE)
     :VOID
   (QUEUE QUEUE)
@@ -3610,22 +4204,22 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1525:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1684:18"
 (CFFI:DEFCFUN ("wgpuQueueSetLabel" QUEUE-SET-LABEL)
     :VOID
   (QUEUE QUEUE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1526:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1685:18"
 (CFFI:DEFCFUN ("wgpuQueueSubmit" QUEUE-SUBMIT)
     :VOID
   (QUEUE QUEUE)
-  (COMMAND-COUNT UINT32_T)
+  (COMMAND-COUNT SIZE_T)
   (COMMANDS (:POINTER COMMAND-BUFFER)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1527:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1686:18"
 (CFFI:DEFCFUN ("wgpuQueueWriteBuffer" QUEUE-WRITE-BUFFER)
     :VOID
   (QUEUE QUEUE)
@@ -3635,7 +4229,7 @@
   (SIZE SIZE_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1528:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1687:18"
 (CFFI:DEFCFUN ("wgpuQueueWriteTexture" QUEUE-WRITE-TEXTURE)
     :VOID
   (QUEUE QUEUE)
@@ -3646,7 +4240,38 @@
   (WRITE-SIZE (:POINTER EXTENT3-D)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1531:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1688:18"
+(CFFI:DEFCFUN ("wgpuQueueReference" QUEUE-REFERENCE)
+    :VOID
+  (QUEUE QUEUE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1689:18"
+(CFFI:DEFCFUN ("wgpuQueueRelease" QUEUE-RELEASE)
+    :VOID
+  (QUEUE QUEUE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1692:18"
+(CFFI:DEFCFUN ("wgpuRenderBundleSetLabel" RENDER-BUNDLE-SET-LABEL)
+    :VOID
+  (RENDER-BUNDLE RENDER-BUNDLE)
+  (LABEL :STRING))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1693:18"
+(CFFI:DEFCFUN ("wgpuRenderBundleReference" RENDER-BUNDLE-REFERENCE)
+    :VOID
+  (RENDER-BUNDLE RENDER-BUNDLE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1694:18"
+(CFFI:DEFCFUN ("wgpuRenderBundleRelease" RENDER-BUNDLE-RELEASE)
+    :VOID
+  (RENDER-BUNDLE RENDER-BUNDLE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1697:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderDraw" RENDER-BUNDLE-ENCODER-DRAW)
     :VOID
   (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER)
@@ -3656,7 +4281,7 @@
   (FIRST-INSTANCE UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1532:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1698:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderDrawIndexed"
                RENDER-BUNDLE-ENCODER-DRAW-INDEXED)
     :VOID
@@ -3668,7 +4293,7 @@
   (FIRST-INSTANCE UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1533:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1699:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderDrawIndexedIndirect"
                RENDER-BUNDLE-ENCODER-DRAW-INDEXED-INDIRECT)
     :VOID
@@ -3677,7 +4302,7 @@
   (INDIRECT-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1534:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1700:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderDrawIndirect"
                RENDER-BUNDLE-ENCODER-DRAW-INDIRECT)
     :VOID
@@ -3686,14 +4311,14 @@
   (INDIRECT-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1535:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1701:30"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderFinish" RENDER-BUNDLE-ENCODER-FINISH)
     RENDER-BUNDLE
   (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER)
   (DESCRIPTOR (:POINTER RENDER-BUNDLE-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1536:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1702:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderInsertDebugMarker"
                RENDER-BUNDLE-ENCODER-INSERT-DEBUG-MARKER)
     :VOID
@@ -3701,14 +4326,14 @@
   (MARKER-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1537:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1703:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderPopDebugGroup"
                RENDER-BUNDLE-ENCODER-POP-DEBUG-GROUP)
     :VOID
   (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1538:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1704:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderPushDebugGroup"
                RENDER-BUNDLE-ENCODER-PUSH-DEBUG-GROUP)
     :VOID
@@ -3716,18 +4341,18 @@
   (GROUP-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1539:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1705:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderSetBindGroup"
                RENDER-BUNDLE-ENCODER-SET-BIND-GROUP)
     :VOID
   (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER)
   (GROUP-INDEX UINT32_T)
   (GROUP BIND-GROUP)
-  (DYNAMIC-OFFSET-COUNT UINT32_T)
+  (DYNAMIC-OFFSET-COUNT SIZE_T)
   (DYNAMIC-OFFSETS (:POINTER UINT32_T)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1540:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1706:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderSetIndexBuffer"
                RENDER-BUNDLE-ENCODER-SET-INDEX-BUFFER)
     :VOID
@@ -3738,7 +4363,7 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1541:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1707:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderSetLabel"
                RENDER-BUNDLE-ENCODER-SET-LABEL)
     :VOID
@@ -3746,7 +4371,7 @@
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1542:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1708:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderSetPipeline"
                RENDER-BUNDLE-ENCODER-SET-PIPELINE)
     :VOID
@@ -3754,7 +4379,7 @@
   (PIPELINE RENDER-PIPELINE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1543:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1709:18"
 (CFFI:DEFCFUN ("wgpuRenderBundleEncoderSetVertexBuffer"
                RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER)
     :VOID
@@ -3765,7 +4390,20 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1546:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1710:18"
+(CFFI:DEFCFUN ("wgpuRenderBundleEncoderReference"
+               RENDER-BUNDLE-ENCODER-REFERENCE)
+    :VOID
+  (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1711:18"
+(CFFI:DEFCFUN ("wgpuRenderBundleEncoderRelease" RENDER-BUNDLE-ENCODER-RELEASE)
+    :VOID
+  (RENDER-BUNDLE-ENCODER RENDER-BUNDLE-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1714:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderBeginOcclusionQuery"
                RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY)
     :VOID
@@ -3773,7 +4411,7 @@
   (QUERY-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1547:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1715:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderBeginPipelineStatisticsQuery"
                RENDER-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
     :VOID
@@ -3782,7 +4420,7 @@
   (QUERY-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1548:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1716:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderDraw" RENDER-PASS-ENCODER-DRAW)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER)
@@ -3792,7 +4430,7 @@
   (FIRST-INSTANCE UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1549:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1717:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderDrawIndexed"
                RENDER-PASS-ENCODER-DRAW-INDEXED)
     :VOID
@@ -3804,7 +4442,7 @@
   (FIRST-INSTANCE UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1550:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1718:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderDrawIndexedIndirect"
                RENDER-PASS-ENCODER-DRAW-INDEXED-INDIRECT)
     :VOID
@@ -3813,7 +4451,7 @@
   (INDIRECT-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1551:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1719:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderDrawIndirect"
                RENDER-PASS-ENCODER-DRAW-INDIRECT)
     :VOID
@@ -3822,36 +4460,36 @@
   (INDIRECT-OFFSET UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1552:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1720:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderEnd" RENDER-PASS-ENCODER-END)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1553:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1721:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderEndOcclusionQuery"
                RENDER-PASS-ENCODER-END-OCCLUSION-QUERY)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1554:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1722:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderEndPipelineStatisticsQuery"
                RENDER-PASS-ENCODER-END-PIPELINE-STATISTICS-QUERY)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1555:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1723:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderExecuteBundles"
                RENDER-PASS-ENCODER-EXECUTE-BUNDLES)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER)
-  (BUNDLE-COUNT UINT32_T)
+  (BUNDLE-COUNT SIZE_T)
   (BUNDLES (:POINTER RENDER-BUNDLE)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1556:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1724:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderInsertDebugMarker"
                RENDER-PASS-ENCODER-INSERT-DEBUG-MARKER)
     :VOID
@@ -3859,14 +4497,14 @@
   (MARKER-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1557:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1725:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderPopDebugGroup"
                RENDER-PASS-ENCODER-POP-DEBUG-GROUP)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1558:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1726:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderPushDebugGroup"
                RENDER-PASS-ENCODER-PUSH-DEBUG-GROUP)
     :VOID
@@ -3874,18 +4512,18 @@
   (GROUP-LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1559:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1727:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetBindGroup"
                RENDER-PASS-ENCODER-SET-BIND-GROUP)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER)
   (GROUP-INDEX UINT32_T)
   (GROUP BIND-GROUP)
-  (DYNAMIC-OFFSET-COUNT UINT32_T)
+  (DYNAMIC-OFFSET-COUNT SIZE_T)
   (DYNAMIC-OFFSETS (:POINTER UINT32_T)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1560:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1728:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetBlendConstant"
                RENDER-PASS-ENCODER-SET-BLEND-CONSTANT)
     :VOID
@@ -3893,7 +4531,7 @@
   (COLOR (:POINTER COLOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1561:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1729:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetIndexBuffer"
                RENDER-PASS-ENCODER-SET-INDEX-BUFFER)
     :VOID
@@ -3904,14 +4542,14 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1562:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1730:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetLabel" RENDER-PASS-ENCODER-SET-LABEL)
     :VOID
   (RENDER-PASS-ENCODER RENDER-PASS-ENCODER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1563:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1731:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetPipeline"
                RENDER-PASS-ENCODER-SET-PIPELINE)
     :VOID
@@ -3919,7 +4557,7 @@
   (PIPELINE RENDER-PIPELINE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1564:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1732:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetScissorRect"
                RENDER-PASS-ENCODER-SET-SCISSOR-RECT)
     :VOID
@@ -3930,7 +4568,7 @@
   (HEIGHT UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1565:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1733:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetStencilReference"
                RENDER-PASS-ENCODER-SET-STENCIL-REFERENCE)
     :VOID
@@ -3938,7 +4576,7 @@
   (REFERENCE UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1566:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1734:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetVertexBuffer"
                RENDER-PASS-ENCODER-SET-VERTEX-BUFFER)
     :VOID
@@ -3949,7 +4587,7 @@
   (SIZE UINT64_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1567:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1735:18"
 (CFFI:DEFCFUN ("wgpuRenderPassEncoderSetViewport"
                RENDER-PASS-ENCODER-SET-VIEWPORT)
     :VOID
@@ -3962,7 +4600,19 @@
   (MAX-DEPTH :FLOAT))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1570:33"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1736:18"
+(CFFI:DEFCFUN ("wgpuRenderPassEncoderReference" RENDER-PASS-ENCODER-REFERENCE)
+    :VOID
+  (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1737:18"
+(CFFI:DEFCFUN ("wgpuRenderPassEncoderRelease" RENDER-PASS-ENCODER-RELEASE)
+    :VOID
+  (RENDER-PASS-ENCODER RENDER-PASS-ENCODER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1740:33"
 (CFFI:DEFCFUN ("wgpuRenderPipelineGetBindGroupLayout"
                RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT)
     BIND-GROUP-LAYOUT
@@ -3970,21 +4620,45 @@
   (GROUP-INDEX UINT32_T))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1571:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1741:18"
 (CFFI:DEFCFUN ("wgpuRenderPipelineSetLabel" RENDER-PIPELINE-SET-LABEL)
     :VOID
   (RENDER-PIPELINE RENDER-PIPELINE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1574:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1742:18"
+(CFFI:DEFCFUN ("wgpuRenderPipelineReference" RENDER-PIPELINE-REFERENCE)
+    :VOID
+  (RENDER-PIPELINE RENDER-PIPELINE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1743:18"
+(CFFI:DEFCFUN ("wgpuRenderPipelineRelease" RENDER-PIPELINE-RELEASE)
+    :VOID
+  (RENDER-PIPELINE RENDER-PIPELINE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1746:18"
 (CFFI:DEFCFUN ("wgpuSamplerSetLabel" SAMPLER-SET-LABEL)
     :VOID
   (SAMPLER SAMPLER)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1577:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1747:18"
+(CFFI:DEFCFUN ("wgpuSamplerReference" SAMPLER-REFERENCE)
+    :VOID
+  (SAMPLER SAMPLER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1748:18"
+(CFFI:DEFCFUN ("wgpuSamplerRelease" SAMPLER-RELEASE)
+    :VOID
+  (SAMPLER SAMPLER))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1751:18"
 (CFFI:DEFCFUN ("wgpuShaderModuleGetCompilationInfo"
                SHADER-MODULE-GET-COMPILATION-INFO)
     :VOID
@@ -3993,107 +4667,167 @@
   (USERDATA (:POINTER :VOID)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1578:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1752:18"
 (CFFI:DEFCFUN ("wgpuShaderModuleSetLabel" SHADER-MODULE-SET-LABEL)
     :VOID
   (SHADER-MODULE SHADER-MODULE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1581:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1753:18"
+(CFFI:DEFCFUN ("wgpuShaderModuleReference" SHADER-MODULE-REFERENCE)
+    :VOID
+  (SHADER-MODULE SHADER-MODULE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1754:18"
+(CFFI:DEFCFUN ("wgpuShaderModuleRelease" SHADER-MODULE-RELEASE)
+    :VOID
+  (SHADER-MODULE SHADER-MODULE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1757:31"
 (CFFI:DEFCFUN ("wgpuSurfaceGetPreferredFormat" SURFACE-GET-PREFERRED-FORMAT)
     TEXTURE-FORMAT
   (SURFACE SURFACE)
   (ADAPTER ADAPTER))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1584:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1758:18"
+(CFFI:DEFCFUN ("wgpuSurfaceReference" SURFACE-REFERENCE)
+    :VOID
+  (SURFACE SURFACE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1759:18"
+(CFFI:DEFCFUN ("wgpuSurfaceRelease" SURFACE-RELEASE)
+    :VOID
+  (SURFACE SURFACE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1762:29"
 (CFFI:DEFCFUN ("wgpuSwapChainGetCurrentTextureView"
                SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW)
     TEXTURE-VIEW
   (SWAP-CHAIN SWAP-CHAIN))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1585:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1763:18"
 (CFFI:DEFCFUN ("wgpuSwapChainPresent" SWAP-CHAIN-PRESENT)
     :VOID
   (SWAP-CHAIN SWAP-CHAIN))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1588:29"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1764:18"
+(CFFI:DEFCFUN ("wgpuSwapChainReference" SWAP-CHAIN-REFERENCE)
+    :VOID
+  (SWAP-CHAIN SWAP-CHAIN))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1765:18"
+(CFFI:DEFCFUN ("wgpuSwapChainRelease" SWAP-CHAIN-RELEASE)
+    :VOID
+  (SWAP-CHAIN SWAP-CHAIN))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1768:29"
 (CFFI:DEFCFUN ("wgpuTextureCreateView" TEXTURE-CREATE-VIEW)
     TEXTURE-VIEW
   (TEXTURE TEXTURE)
   (DESCRIPTOR (:POINTER TEXTURE-VIEW-DESCRIPTOR)))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1589:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1769:18"
 (CFFI:DEFCFUN ("wgpuTextureDestroy" TEXTURE-DESTROY)
     :VOID
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1590:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1770:22"
 (CFFI:DEFCFUN ("wgpuTextureGetDepthOrArrayLayers"
                TEXTURE-GET-DEPTH-OR-ARRAY-LAYERS)
     UINT32_T
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1591:34"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1771:34"
 (CFFI:DEFCFUN ("wgpuTextureGetDimension" TEXTURE-GET-DIMENSION)
     TEXTURE-DIMENSION
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1592:31"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1772:31"
 (CFFI:DEFCFUN ("wgpuTextureGetFormat" TEXTURE-GET-FORMAT)
     TEXTURE-FORMAT
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1593:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1773:22"
 (CFFI:DEFCFUN ("wgpuTextureGetHeight" TEXTURE-GET-HEIGHT)
     UINT32_T
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1594:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1774:22"
 (CFFI:DEFCFUN ("wgpuTextureGetMipLevelCount" TEXTURE-GET-MIP-LEVEL-COUNT)
     UINT32_T
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1595:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1775:22"
 (CFFI:DEFCFUN ("wgpuTextureGetSampleCount" TEXTURE-GET-SAMPLE-COUNT)
     UINT32_T
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1596:30"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1776:35"
 (CFFI:DEFCFUN ("wgpuTextureGetUsage" TEXTURE-GET-USAGE)
-    TEXTURE-USAGE
+    TEXTURE-USAGE-FLAGS
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1597:22"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1777:22"
 (CFFI:DEFCFUN ("wgpuTextureGetWidth" TEXTURE-GET-WIDTH)
     UINT32_T
   (TEXTURE TEXTURE))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1598:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1778:18"
 (CFFI:DEFCFUN ("wgpuTextureSetLabel" TEXTURE-SET-LABEL)
     :VOID
   (TEXTURE TEXTURE)
   (LABEL :STRING))
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1601:18"
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1779:18"
+(CFFI:DEFCFUN ("wgpuTextureReference" TEXTURE-REFERENCE)
+    :VOID
+  (TEXTURE TEXTURE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1780:18"
+(CFFI:DEFCFUN ("wgpuTextureRelease" TEXTURE-RELEASE)
+    :VOID
+  (TEXTURE TEXTURE))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1783:18"
 (CFFI:DEFCFUN ("wgpuTextureViewSetLabel" TEXTURE-VIEW-SET-LABEL)
     :VOID
   (TEXTURE-VIEW TEXTURE-VIEW)
   (LABEL :STRING))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1784:18"
+(CFFI:DEFCFUN ("wgpuTextureViewReference" TEXTURE-VIEW-REFERENCE)
+    :VOID
+  (TEXTURE-VIEW TEXTURE-VIEW))
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:1785:18"
+(CFFI:DEFCFUN ("wgpuTextureViewRelease" TEXTURE-VIEW-RELEASE)
+    :VOID
+  (TEXTURE-VIEW TEXTURE-VIEW))
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/wgpu.h:6:14"
@@ -4619,158 +5353,108 @@
   (TEXTURE-VIEW TEXTURE-VIEW))
 
 
-;; "/usr/include/bits/time64.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TIME64_H 1)
+;; "/usr/include/bits/typesizes.h:87:10"
+(ALEXANDRIA:DEFINE-CONSTANT __RLIM_T_MATCHES_RLIM64_T 1)
 
 
-;; "/usr/include/bits/typesizes.h:67:9"
+;; "/usr/include/stdint.h:186:11"
+(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MIN -9223372036854775808)
 
-;; "/usr/include/bits/typesizes.h:40:9"
 
-;; "/usr/include/bits/typesizes.h:39:9"
+;; "/usr/include/bits/typesizes.h:84:10"
+(ALEXANDRIA:DEFINE-CONSTANT __INO_T_MATCHES_INO64_T 1)
 
-;; "/usr/include/bits/typesizes.h:45:10"
 
-;; "/usr/include/bits/typesizes.h:43:9"
+;; "/usr/include/stdint.h:181:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_FAST64_MAX -1)
 
-;; "/usr/include/bits/typesizes.h:42:9"
 
-;; "/usr/include/bits/typesizes.h:41:9"
+;; "/usr/include/stdint.h:197:10"
+(ALEXANDRIA:DEFINE-CONSTANT INTMAX_MIN -9223372036854775808)
 
-;; "/usr/include/bits/typesizes.h:103:9"
-(ALEXANDRIA:DEFINE-CONSTANT __FD_SETSIZE 1024)
 
+;; "/usr/include/bits/typesizes.h:93:10"
+(ALEXANDRIA:DEFINE-CONSTANT __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1)
 
-;; "/usr/include/bits/libc-header-start.h:42:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_LIB_EXT2 0)
 
+;; "/usr/include/bits/typesizes.h:90:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STATFS_MATCHES_STATFS64 1)
 
-;; "/usr/include/bits/libc-header-start.h:77:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT_C2X 0)
 
+;; "/usr/include/bits/typesizes.h:74:9"
 
-;; "/usr/include/bits/libc-header-start.h:71:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT 0)
+;; "/usr/include/stdint.h:170:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MAX 9223372036854775807)
 
 
-;; "/usr/include/stdint.h:123:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT32_MAX 2147483647)
-
-
-;; "/usr/include/stdint.h:124:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT64_MAX 9223372036854775807)
-
-
-;; "/usr/include/sys/cdefs.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _SYS_CDEFS_H 1)
-
-
-;; "/usr/include/stdint.h:121:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT8_MAX 127)
-
-
-;; "/usr/include/stdint.h:127:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT8_MAX 255)
-
-
-;; "/usr/include/features.h:346:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC99 1)
-
-
-;; "/usr/include/features.h:251:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC11 1)
-
-
-;; "/usr/include/stdint.h:130:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT64_MAX -1)
-
-
-;; "/usr/include/features.h:19:9"
-(ALEXANDRIA:DEFINE-CONSTANT _FEATURES_H 1)
-
-
-;; "/usr/include/stdint.h:128:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT16_MAX 65535)
-
-
-;; "/usr/include/stdint.h:129:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT32_MAX 4294967295)
-
-
-;; "/usr/include/stdint.h:122:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT16_MAX 32767)
-
-
-;; "/usr/include/stdint.h:139:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MAX 127)
-
-
-;; "/usr/include/stdint.h:137:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:134:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MIN -128)
-
-
-;; "/usr/include/stdint.h:140:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MAX 32767)
-
-
-;; "/usr/include/stdint.h:136:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MIN -2147483648)
-
-
-;; "/usr/include/stdint.h:145:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST8_MAX 255)
-
-
-;; "/usr/include/stdint.h:135:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MIN -32768)
-
-
-;; "/usr/include/stdint.h:146:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST16_MAX 65535)
-
-
-;; "/usr/include/sys/cdefs.h:80:11"
-
-;; "/usr/include/sys/cdefs.h:79:11"
-
-;; "/usr/include/stdint.h:142:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MAX 9223372036854775807)
-
-
-;; "/usr/include/stdint.h:141:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MAX 2147483647)
-
-
-;; "/usr/include/stdint.h:152:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MIN -128)
-
-
-;; "/usr/include/stdint.h:147:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST32_MAX 4294967295)
-
-
-;; "/usr/include/features.h:342:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K 1)
+;; "/usr/include/features.h:433:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_FORTIFY_LEVEL 0)
 
 
 ;; "/usr/include/features.h:396:10"
 (ALEXANDRIA:DEFINE-CONSTANT __USE_MISC 1)
 
 
-;; "/usr/include/stdint.h:154:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MIN -9223372036854775808)
+;; "/usr/include/bits/typesizes.h:75:9"
+
+;; "/usr/include/features.h:338:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199506 1)
+
+
+;; "/usr/include/features.h:400:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ATFILE 1)
+
+
+;; "/usr/include/stdint.h:165:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:162:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MAX 127)
 
 
 ;; "/usr/include/stdint.h:148:10"
 (ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST64_MAX -1)
 
 
-;; "/usr/include/stdc-predef.h:53:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_COMPLEX__ 201404)
+;; "/usr/include/stdint.h:160:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MIN -9223372036854775808)
+
+
+;; "/usr/include/bits/typesizes.h:81:10"
+(ALEXANDRIA:DEFINE-CONSTANT __OFF_T_MATCHES_OFF64_T 1)
+
+
+;; "/usr/include/features.h:350:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K8 1)
+
+
+;; "/usr/include/stdint.h:147:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST32_MAX 4294967295)
+
+
+;; "/usr/include/bits/typesizes.h:103:9"
+(ALEXANDRIA:DEFINE-CONSTANT __FD_SETSIZE 1024)
+
+
+;; "/usr/include/features.h:334:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199309 1)
+
+
+;; "/usr/include/bits/time64.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TIME64_H 1)
+
+
+;; "/usr/include/features.h:251:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC11 1)
+
+
+;; "/usr/include/features.h:342:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K 1)
+
+
+;; "/usr/include/features.h:19:9"
+(ALEXANDRIA:DEFINE-CONSTANT _FEATURES_H 1)
 
 
 ;; "/usr/include/features.h:330:10"
@@ -4781,156 +5465,263 @@
 (ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX 1)
 
 
-;; "/usr/include/stdc-predef.h:52:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559_COMPLEX__ 1)
+;; "/usr/include/features.h:346:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC99 1)
 
 
 ;; "/usr/include/features.h:344:10"
 (ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC95 1)
 
 
+;; "/usr/include/sys/cdefs.h:656:10"
+(ALEXANDRIA:DEFINE-CONSTANT __HAVE_GENERIC_SELECTION 1)
+
+
+;; "/usr/include/stdint.h:23:9"
+(ALEXANDRIA:DEFINE-CONSTANT _STDINT_H 1)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:71:9"
+(ALEXANDRIA:DEFINE-CONSTANT ARRAYLAYERCOUNTUNDEFINED 4294967295)
+
+
+;; "/usr/include/stdint.h:146:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST16_MAX 65535)
+
+
+;; "<command line>:1:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GCC_HAVE_DWARF2_CFI_ASM 1)
+
+
+;; "/usr/include/stdint.h:152:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MIN -128)
+
+
+;; "/usr/include/bits/typesizes.h:38:9"
+
+;; "/usr/include/bits/typesizes.h:42:9"
+
+;; "/tmp/tmpGHU3ALSV-tmp.h:40:12"
+
+;; "/usr/include/bits/typesizes.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPESIZES_H 1)
+
+
+;; "/usr/include/bits/typesizes.h:34:10"
+
+;; "/usr/include/stdint.h:145:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST8_MAX 255)
+
+
+;; "/usr/include/bits/typesizes.h:35:10"
+
+;; "/usr/include/stdint.h:164:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MAX 9223372036854775807)
+
+
+;; "/usr/include/bits/typesizes.h:39:9"
+
+;; "/usr/include/bits/typesizes.h:53:9"
+
+;; "/usr/include/bits/typesizes.h:55:9"
+
+;; "/usr/include/bits/typesizes.h:56:9"
+
+;; "/usr/include/bits/typesizes.h:43:9"
+
+;; "/usr/include/bits/typesizes.h:45:10"
+
+;; "/usr/include/stdint.h:187:11"
+(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MAX 9223372036854775807)
+
+
+;; "/usr/include/bits/typesizes.h:51:9"
+
+;; "/usr/include/bits/typesizes.h:40:9"
+
+;; "/usr/include/bits/typesizes.h:46:10"
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:72:9"
+(ALEXANDRIA:DEFINE-CONSTANT COPYSTRIDEUNDEFINED 4294967295)
+
+
+;; "/usr/include/bits/typesizes.h:41:9"
+
+;; "/usr/include/bits/typesizes.h:57:9"
+
+;; "/usr/include/bits/typesizes.h:54:9"
+
+;; "/usr/include/bits/typesizes.h:58:9"
+
+;; "/usr/include/bits/typesizes.h:59:9"
+
+;; "/usr/include/bits/typesizes.h:60:9"
+
+;; "/usr/include/bits/typesizes.h:64:9"
+
+;; "/usr/include/bits/typesizes.h:69:9"
+
+;; "/usr/include/bits/typesizes.h:62:9"
+
+;; "/usr/include/bits/typesizes.h:63:9"
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:75:9"
+(ALEXANDRIA:DEFINE-CONSTANT MIPLEVELCOUNTUNDEFINED 4294967295)
+
+
+;; "/usr/include/bits/typesizes.h:61:9"
+
+;; "/usr/include/bits/typesizes.h:65:9"
+
+;; "/usr/include/bits/typesizes.h:66:9"
+
+;; "/usr/include/bits/typesizes.h:68:9"
+
 ;; "/usr/include/stdc-predef.h:43:10"
 (ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_BFP__ 201404)
 
 
-;; "/usr/include/features.h:483:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_MINOR__ 37)
+;; "/usr/include/bits/typesizes.h:70:9"
+
+;; "/usr/include/bits/typesizes.h:67:9"
+
+;; "/usr/include/bits/typesizes.h:71:9"
+
+;; "/usr/include/bits/typesizes.h:73:9"
+
+;; "/usr/include/bits/typesizes.h:52:9"
+
+;; "/usr/include/stdint.h:154:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MIN -9223372036854775808)
 
 
-;; "/usr/include/features.h:478:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GNU_LIBRARY__ 6)
+;; "/usr/include/bits/typesizes.h:72:9"
+;; Skipped "true" due to filters
+
+;; "/usr/include/stdc-predef.h:42:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559__ 1)
 
 
-;; "/usr/include/features.h:338:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199506 1)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:74:9"
+(ALEXANDRIA:DEFINE-CONSTANT LIMITU64UNDEFINED 18446744073709551615)
 
 
-;; "/usr/include/stdc-predef.h:62:9"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_ISO_10646__ 201706)
+;; "/usr/include/bits/time64.h:30:10"
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:77:9"
+(ALEXANDRIA:DEFINE-CONSTANT WHOLESIZE 18446744073709551615)
 
 
-;; "/usr/include/features.h:334:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199309 1)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:73:9"
+(ALEXANDRIA:DEFINE-CONSTANT LIMITU32UNDEFINED 4294967295)
 
 
-;; "/usr/include/features.h:482:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC__ 2)
-
-
-;; "/usr/include/features.h:350:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K8 1)
-
-
-;; "/usr/include/bits/stdint-uintn.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_UINTN_H 1)
-
-
-;; "/usr/include/stdint.h:117:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT16_MIN -32768)
-
-
-;; "/usr/include/stdint.h:116:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT8_MIN -128)
-
-
-;; "/usr/include/stdint.h:119:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT64_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:118:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT32_MIN -2147483648)
-
-
-;; "/usr/include/stdint.h:176:11"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_FAST32_MAX 18446744073709551615)
+;; "/usr/include/stdc-predef.h:19:9"
+(ALEXANDRIA:DEFINE-CONSTANT _STDC_PREDEF_H 1)
 
 
 ;; "/usr/include/stdint.h:175:11"
 (ALEXANDRIA:DEFINE-CONSTANT UINT_FAST16_MAX 18446744073709551615)
+
+;; Skipped "__bool_true_false_are_defined" due to filters
+;; Skipped "false" due to filters
+
+;; "/usr/include/stdint.h:155:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MIN -9223372036854775808)
 
 
 ;; "/usr/include/stdint.h:173:10"
 (ALEXANDRIA:DEFINE-CONSTANT UINT_FAST8_MAX 255)
 
 
-;; "/usr/include/stdint.h:170:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MAX 9223372036854775807)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:76:9"
+(ALEXANDRIA:DEFINE-CONSTANT WHOLEMAPSIZE 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:165:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MAX 9223372036854775807)
+;; "/usr/include/features.h:482:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC__ 2)
 
 
-;; "/usr/include/stdint.h:164:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MAX 9223372036854775807)
+;; "/usr/include/stdint.h:176:11"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_FAST32_MAX 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:162:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MAX 127)
+;; "/usr/include/features.h:483:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_MINOR__ 37)
 
 
-;; "/usr/include/stdint.h:160:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MIN -9223372036854775808)
+;; "/usr/include/stdc-predef.h:62:9"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_ISO_10646__ 201706)
 
 
-;; "/usr/include/stdint.h:155:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:210:11"
-(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MAX 9223372036854775807)
-
-
-;; "/usr/include/stdint.h:209:11"
-(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:202:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINTMAX_MAX -1)
-
-
-;; "/usr/include/stdint.h:199:10"
-(ALEXANDRIA:DEFINE-CONSTANT INTMAX_MAX 9223372036854775807)
-
-
-;; "/usr/include/bits/wchar.h:34:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MAX 2147483647)
-
-
-;; "/usr/include/stdint.h:197:10"
-(ALEXANDRIA:DEFINE-CONSTANT INTMAX_MIN -9223372036854775808)
-
-
-;; "/usr/include/bits/wchar.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_WCHAR_H 1)
+;; "/usr/include/features.h:478:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GNU_LIBRARY__ 6)
 
 
 ;; "/usr/include/stdint.h:188:11"
 (ALEXANDRIA:DEFINE-CONSTANT UINTPTR_MAX 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:187:11"
-(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MAX 9223372036854775807)
+;; "/usr/include/stdc-predef.h:52:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559_COMPLEX__ 1)
+
+
+;; "/usr/include/stdc-predef.h:53:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_COMPLEX__ 201404)
+
+
+;; "/usr/include/sys/cdefs.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _SYS_CDEFS_H 1)
+
+
+;; "/usr/lib/clang/15.0.7/include/stddef.h:89:11"
+(ALEXANDRIA:DEFINE-CONSTANT NULL 0)
+
+
+;; "/usr/include/sys/cdefs.h:79:11"
+
+;; "/usr/include/sys/cdefs.h:80:11"
+
+;; "/usr/include/sys/cdefs.h:128:9"
+
+;; "/usr/include/sys/cdefs.h:219:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_C99_FLEXARR_AVAILABLE 1)
+
+
+;; "/usr/include/sys/cdefs.h:218:10"
+
+;; "/usr/include/bits/stdint-intn.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_INTN_H 1)
 
 
 ;; "/usr/include/bits/wchar.h:46:10"
 (ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MIN -2147483648)
 
 
-;; "/usr/include/stdint.h:186:11"
-(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MIN -9223372036854775808)
+;; "/usr/include/bits/wchar.h:34:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MAX 2147483647)
 
 
-;; "/usr/include/bits/stdint-intn.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_INTN_H 1)
+;; "/usr/include/bits/wchar.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_WCHAR_H 1)
 
 
-;; "/usr/include/stdint.h:181:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_FAST64_MAX -1)
+;; "/usr/include/stdint.h:244:10"
+(ALEXANDRIA:DEFINE-CONSTANT WINT_MIN 0)
 
 
-;; "<command line>:1:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GCC_HAVE_DWARF2_CFI_ASM 1)
+;; "/usr/include/stdint.h:245:10"
+(ALEXANDRIA:DEFINE-CONSTANT WINT_MAX 4294967295)
+
+
+;; "/usr/include/sys/cdefs.h:310:10"
+
+;; "/usr/include/stdint.h:239:11"
+(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:240:11"
+(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MAX 2147483647)
 
 
 ;; "/usr/include/stdint.h:222:10"
@@ -4945,303 +5736,246 @@
 (ALEXANDRIA:DEFINE-CONSTANT SIZE_MAX 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:23:9"
-(ALEXANDRIA:DEFINE-CONSTANT _STDINT_H 1)
+;; "/usr/include/stdint.h:209:11"
+(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MIN -9223372036854775808)
 
 
-;; "/usr/include/stdint.h:239:11"
-(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MIN -2147483648)
+;; "/usr/include/bits/stdint-uintn.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_UINTN_H 1)
 
 
-;; "/usr/include/stdint.h:240:11"
-(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MAX 2147483647)
+;; "/usr/include/stdint.h:210:11"
+(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MAX 9223372036854775807)
 
 
-;; "/usr/include/stdint.h:244:10"
-(ALEXANDRIA:DEFINE-CONSTANT WINT_MIN 0)
+;; "/usr/include/stdint.h:199:10"
+(ALEXANDRIA:DEFINE-CONSTANT INTMAX_MAX 9223372036854775807)
 
-
-;; "/usr/include/stdint.h:245:10"
-(ALEXANDRIA:DEFINE-CONSTANT WINT_MAX 4294967295)
-
-
-;; "/usr/include/sys/cdefs.h:656:10"
-(ALEXANDRIA:DEFINE-CONSTANT __HAVE_GENERIC_SELECTION 1)
-
-;; Skipped "true" due to filters
-;; Skipped "__bool_true_false_are_defined" due to filters
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:55:9"
-(ALEXANDRIA:DEFINE-CONSTANT ARRAYLAYERCOUNTUNDEFINED 4294967295)
-
-;; Skipped "false" due to filters
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:59:9"
-(ALEXANDRIA:DEFINE-CONSTANT MIPLEVELCOUNTUNDEFINED 4294967295)
-
-
-;; "/usr/lib/clang/15.0.7/include/stddef.h:89:11"
-(ALEXANDRIA:DEFINE-CONSTANT NULL 0)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:61:9"
-(ALEXANDRIA:DEFINE-CONSTANT WHOLESIZE 18446744073709551615)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:60:9"
-(ALEXANDRIA:DEFINE-CONSTANT WHOLEMAPSIZE 18446744073709551615)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:57:9"
-(ALEXANDRIA:DEFINE-CONSTANT LIMITU32UNDEFINED 4294967295)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:56:9"
-(ALEXANDRIA:DEFINE-CONSTANT COPYSTRIDEUNDEFINED 4294967295)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:58:9"
-(ALEXANDRIA:DEFINE-CONSTANT LIMITU64UNDEFINED 18446744073709551615)
-
-
-;; "/usr/include/bits/types.h:112:9"
-
-;; "/usr/include/bits/types.h:128:10"
-
-;; "/usr/include/sys/cdefs.h:219:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_C99_FLEXARR_AVAILABLE 1)
-
-
-;; "/usr/include/bits/types.h:109:9"
-
-;; "/usr/include/bits/types.h:114:9"
-
-;; "/usr/include/sys/cdefs.h:341:10"
-
-;; "/usr/include/bits/types.h:110:9"
-
-;; "/usr/include/features.h:245:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_ISOC2X 0)
-
-
-;; "/usr/include/bits/types.h:134:10"
-
-;; "/usr/include/features.h:441:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_GETS 0)
-
-
-;; "/tmp/tmp5GEXGEG5-tmp.h:114:12"
-
-;; "/usr/include/features.h:400:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ATFILE 1)
-
-
-;; "/usr/include/features.h:464:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_SCANF 0)
-
-
-;; "/usr/include/bits/types.h:129:10"
-
-;; "/usr/include/bits/types.h:130:10"
 
 ;; "/usr/include/sys/cdefs.h:283:10"
 
-;; "/usr/include/bits/types.h:131:10"
-
-;; "/usr/include/features.h:433:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_FORTIFY_LEVEL 0)
+;; "/usr/include/stdint.h:202:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINTMAX_MAX -1)
 
 
-;; "/usr/include/sys/cdefs.h:128:9"
+;; "/usr/include/sys/cdefs.h:317:10"
 
-;; "/usr/include/features.h:352:10"
-(ALEXANDRIA:DEFINE-CONSTANT _ATFILE_SOURCE 1)
-
-
-;; "/usr/include/bits/types.h:113:9"
-
-;; "/usr/include/features.h:289:10"
-(ALEXANDRIA:DEFINE-CONSTANT _POSIX_SOURCE 1)
+;; "/usr/include/stdint.h:137:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MIN -9223372036854775808)
 
 
-;; "/usr/include/features.h:291:10"
-(ALEXANDRIA:DEFINE-CONSTANT _POSIX_C_SOURCE 200809)
+;; "/usr/include/stdint.h:139:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MAX 127)
 
 
-;; "/usr/include/bits/types.h:132:10"
-
-;; "/usr/include/features.h:286:11"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX_IMPLICITLY 1)
+;; "/usr/include/stdint.h:140:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MAX 32767)
 
 
-;; "/usr/include/bits/types.h:111:9"
-
-;; "/usr/include/bits/types.h:133:10"
-
-;; "/usr/include/bits/types.h:135:10"
-
-;; "/usr/include/bits/typesizes.h:34:10"
-
-;; "/usr/include/sys/cdefs.h:218:10"
-
-;; "/usr/include/bits/typesizes.h:35:10"
-
-;; "/usr/include/bits/typesizes.h:38:9"
-
-;; "/usr/include/features.h:237:10"
-(ALEXANDRIA:DEFINE-CONSTANT _DEFAULT_SOURCE 1)
+;; "/usr/include/stdint.h:141:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MAX 2147483647)
 
 
-;; "/usr/include/bits/typesizes.h:72:9"
+;; "/usr/include/stdint.h:142:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MAX 9223372036854775807)
 
-;; "/usr/include/bits/typesizes.h:73:9"
 
-;; "/usr/include/bits/libc-header-start.h:100:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X 0)
+;; "/usr/include/stdint.h:123:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT32_MAX 2147483647)
+
+
+;; "/usr/include/stdint.h:124:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT64_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:127:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT8_MAX 255)
+
+
+;; "/usr/include/stdint.h:128:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT16_MAX 65535)
+
+
+;; "/usr/include/stdint.h:129:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT32_MAX 4294967295)
+
+
+;; "/usr/include/stdint.h:130:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT64_MAX -1)
+
+
+;; "/usr/include/stdint.h:134:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MIN -128)
+
+
+;; "/usr/include/stdint.h:135:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MIN -32768)
+
+
+;; "/usr/include/stdint.h:136:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:116:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT8_MIN -128)
+
+
+;; "/usr/include/stdint.h:117:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT16_MIN -32768)
+
+
+;; "/usr/include/stdint.h:118:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT32_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:119:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT64_MIN -9223372036854775808)
+
+
+;; "/usr/include/stdint.h:121:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT8_MAX 127)
+
+
+;; "/usr/include/stdint.h:122:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT16_MAX 32767)
+
+
+;; "/usr/include/sys/cdefs.h:332:10"
+
+;; "/usr/include/sys/cdefs.h:323:10"
+;; Skipped "bool" due to filters
+
+;; "/usr/include/sys/cdefs.h:341:10"
+
+;; "/usr/include/sys/cdefs.h:333:10"
+
+;; "/usr/include/bits/types.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPES_H 1)
 
 
 ;; "/usr/include/bits/libc-header-start.h:94:10"
 (ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT 0)
 
 
-;; "/usr/include/bits/typesizes.h:68:9"
-
-;; "/usr/include/stdc-predef.h:42:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559__ 1)
+;; "/usr/include/bits/libc-header-start.h:83:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_EXT 0)
 
 
-;; "/usr/include/stdc-predef.h:19:9"
-(ALEXANDRIA:DEFINE-CONSTANT _STDC_PREDEF_H 1)
+;; "/usr/include/bits/libc-header-start.h:109:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_TYPES_EXT 0)
+
+
+;; "/usr/include/bits/libc-header-start.h:100:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X 0)
+
+
+;; "/usr/include/bits/libc-header-start.h:71:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT 0)
+
+
+;; "/usr/include/bits/libc-header-start.h:42:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_LIB_EXT2 0)
 
 
 ;; "/usr/include/bits/timesize.h:26:10"
 (ALEXANDRIA:DEFINE-CONSTANT __TIMESIZE 64)
 
 
-;; "/usr/include/bits/libc-header-start.h:83:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_EXT 0)
-
-
-;; "/usr/include/bits/typesizes.h:69:9"
-
 ;; "/usr/include/bits/wordsize.h:14:10"
 (ALEXANDRIA:DEFINE-CONSTANT __SYSCALL_WORDSIZE 64)
 
 
-;; "/usr/include/bits/typesizes.h:74:9"
-
-;; "/usr/include/bits/typesizes.h:71:9"
-
-;; "/usr/include/bits/long-double.h:21:9"
-(ALEXANDRIA:DEFINE-CONSTANT __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0)
+;; "/usr/include/bits/libc-header-start.h:77:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT_C2X 0)
 
 
-;; "/usr/include/bits/typesizes.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPESIZES_H 1)
-
-
-;; "/usr/include/bits/typesizes.h:90:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STATFS_MATCHES_STATFS64 1)
-
-
-;; "/usr/include/bits/typesizes.h:75:9"
-
-;; "/usr/include/bits/libc-header-start.h:109:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_TYPES_EXT 0)
-
-
-;; "/usr/include/bits/typesizes.h:81:10"
-(ALEXANDRIA:DEFINE-CONSTANT __OFF_T_MATCHES_OFF64_T 1)
-
-
-;; "/usr/include/bits/wordsize.h:12:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE_TIME64_COMPAT32 1)
-
-
-;; "/usr/include/bits/types.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPES_H 1)
-
+;; "/usr/include/sys/cdefs.h:458:11"
 
 ;; "/usr/include/bits/wordsize.h:4:10"
 (ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE 64)
 
 
-;; "/usr/include/bits/typesizes.h:70:9"
-;; Skipped "bool" due to filters
+;; "/usr/include/sys/cdefs.h:457:11"
 
-;; "/usr/include/sys/cdefs.h:332:10"
-
-;; "/usr/include/sys/cdefs.h:463:10"
-
-;; "/usr/include/bits/typesizes.h:87:10"
-(ALEXANDRIA:DEFINE-CONSTANT __RLIM_T_MATCHES_RLIM64_T 1)
+;; "/usr/include/bits/wordsize.h:12:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE_TIME64_COMPAT32 1)
 
 
-;; "/usr/include/sys/cdefs.h:458:11"
+;; "/usr/include/features.h:352:10"
+(ALEXANDRIA:DEFINE-CONSTANT _ATFILE_SOURCE 1)
 
-;; "/usr/include/bits/typesizes.h:56:9"
-
-;; "/usr/include/bits/typesizes.h:55:9"
-
-;; "/usr/include/bits/typesizes.h:57:9"
-
-;; "/usr/include/sys/cdefs.h:333:10"
 
 ;; "/usr/include/sys/cdefs.h:497:10"
 
-;; "/usr/include/bits/typesizes.h:84:10"
-(ALEXANDRIA:DEFINE-CONSTANT __INO_T_MATCHES_INO64_T 1)
+;; "/usr/include/features.h:289:10"
+(ALEXANDRIA:DEFINE-CONSTANT _POSIX_SOURCE 1)
 
 
-;; "/usr/include/sys/cdefs.h:317:10"
+;; "/usr/include/bits/types.h:134:10"
 
-;; "/usr/include/sys/cdefs.h:435:10"
+;; "/usr/include/features.h:291:10"
+(ALEXANDRIA:DEFINE-CONSTANT _POSIX_C_SOURCE 200809)
 
-;; "/usr/include/sys/cdefs.h:310:10"
 
-;; "/usr/include/bits/typesizes.h:46:10"
+;; "/usr/include/sys/cdefs.h:463:10"
 
-;; "/usr/include/bits/typesizes.h:52:9"
+;; "/usr/include/bits/types.h:133:10"
 
-;; "/usr/include/sys/cdefs.h:323:10"
+;; "/usr/include/bits/types.h:132:10"
 
-;; "/usr/include/bits/typesizes.h:53:9"
+;; "/usr/include/bits/types.h:131:10"
 
-;; "/usr/include/bits/typesizes.h:51:9"
+;; "/usr/include/features.h:286:11"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX_IMPLICITLY 1)
 
-;; "/usr/include/bits/typesizes.h:54:9"
 
-;; "/usr/include/bits/typesizes.h:58:9"
+;; "/usr/include/bits/long-double.h:21:9"
+(ALEXANDRIA:DEFINE-CONSTANT __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0)
+
+
+;; "/usr/include/bits/types.h:135:10"
+
+;; "/usr/include/bits/types.h:112:9"
+
+;; "/usr/include/bits/types.h:111:9"
+
+;; "/usr/include/bits/types.h:110:9"
+
+;; "/usr/include/features.h:237:10"
+(ALEXANDRIA:DEFINE-CONSTANT _DEFAULT_SOURCE 1)
+
+
+;; "/usr/include/bits/types.h:109:9"
+
+;; "/usr/include/sys/cdefs.h:399:10"
+
+;; "/usr/include/bits/types.h:130:10"
+
+;; "/usr/include/bits/types.h:129:10"
+
+;; "/usr/include/bits/types.h:114:9"
+
+;; "/usr/include/bits/types.h:128:10"
+
+;; "/usr/include/features.h:464:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_SCANF 0)
+
 
 ;; "/usr/include/sys/cdefs.h:408:10"
 
-;; "/usr/include/bits/typesizes.h:63:9"
+;; "/usr/include/bits/types.h:113:9"
 
-;; "/usr/include/bits/typesizes.h:93:10"
-(ALEXANDRIA:DEFINE-CONSTANT __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1)
+;; "/usr/include/sys/cdefs.h:435:10"
+
+;; "/usr/include/features.h:245:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_ISOC2X 0)
 
 
 ;; "/usr/include/sys/cdefs.h:426:10"
 
-;; "/usr/include/bits/typesizes.h:65:9"
+;; "/usr/include/features.h:441:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_GETS 0)
 
-;; "/usr/include/bits/typesizes.h:64:9"
-
-;; "/usr/include/bits/typesizes.h:66:9"
-
-;; "/usr/include/bits/time64.h:30:10"
-
-;; "/usr/include/sys/cdefs.h:457:11"
-
-;; "/usr/include/sys/cdefs.h:399:10"
-
-;; "/usr/include/bits/typesizes.h:59:9"
-
-;; "/usr/include/bits/typesizes.h:60:9"
-
-;; "/usr/include/bits/typesizes.h:61:9"
-
-;; "/usr/include/bits/typesizes.h:62:9"
 (COMMON-LISP:EXPORT 'COMMON-LISP:NIL '#:WEBGPU.FFI)
 
 (COMMON-LISP:DEFPARAMETER +FUNCTION-NAMES+
@@ -5277,7 +6011,11 @@
     ("SET-LOG-CALLBACK" . SET-LOG-CALLBACK) ("DEVICE-POLL" . DEVICE-POLL)
     ("QUEUE-SUBMIT-FOR-INDEX" . QUEUE-SUBMIT-FOR-INDEX)
     ("GENERATE-REPORT" . GENERATE-REPORT)
+    ("TEXTURE-VIEW-RELEASE" . TEXTURE-VIEW-RELEASE)
+    ("TEXTURE-VIEW-REFERENCE" . TEXTURE-VIEW-REFERENCE)
     ("TEXTURE-VIEW-SET-LABEL" . TEXTURE-VIEW-SET-LABEL)
+    ("TEXTURE-RELEASE" . TEXTURE-RELEASE)
+    ("TEXTURE-REFERENCE" . TEXTURE-REFERENCE)
     ("TEXTURE-SET-LABEL" . TEXTURE-SET-LABEL)
     ("TEXTURE-GET-WIDTH" . TEXTURE-GET-WIDTH)
     ("TEXTURE-GET-USAGE" . TEXTURE-GET-USAGE)
@@ -5289,16 +6027,28 @@
     ("TEXTURE-GET-DEPTH-OR-ARRAY-LAYERS" . TEXTURE-GET-DEPTH-OR-ARRAY-LAYERS)
     ("TEXTURE-DESTROY" . TEXTURE-DESTROY)
     ("TEXTURE-CREATE-VIEW" . TEXTURE-CREATE-VIEW)
+    ("SWAP-CHAIN-RELEASE" . SWAP-CHAIN-RELEASE)
+    ("SWAP-CHAIN-REFERENCE" . SWAP-CHAIN-REFERENCE)
     ("SWAP-CHAIN-PRESENT" . SWAP-CHAIN-PRESENT)
     ("SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW"
      . SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW)
+    ("SURFACE-RELEASE" . SURFACE-RELEASE)
+    ("SURFACE-REFERENCE" . SURFACE-REFERENCE)
     ("SURFACE-GET-PREFERRED-FORMAT" . SURFACE-GET-PREFERRED-FORMAT)
+    ("SHADER-MODULE-RELEASE" . SHADER-MODULE-RELEASE)
+    ("SHADER-MODULE-REFERENCE" . SHADER-MODULE-REFERENCE)
     ("SHADER-MODULE-SET-LABEL" . SHADER-MODULE-SET-LABEL)
     ("SHADER-MODULE-GET-COMPILATION-INFO" . SHADER-MODULE-GET-COMPILATION-INFO)
+    ("SAMPLER-RELEASE" . SAMPLER-RELEASE)
+    ("SAMPLER-REFERENCE" . SAMPLER-REFERENCE)
     ("SAMPLER-SET-LABEL" . SAMPLER-SET-LABEL)
+    ("RENDER-PIPELINE-RELEASE" . RENDER-PIPELINE-RELEASE)
+    ("RENDER-PIPELINE-REFERENCE" . RENDER-PIPELINE-REFERENCE)
     ("RENDER-PIPELINE-SET-LABEL" . RENDER-PIPELINE-SET-LABEL)
     ("RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT"
      . RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT)
+    ("RENDER-PASS-ENCODER-RELEASE" . RENDER-PASS-ENCODER-RELEASE)
+    ("RENDER-PASS-ENCODER-REFERENCE" . RENDER-PASS-ENCODER-REFERENCE)
     ("RENDER-PASS-ENCODER-SET-VIEWPORT" . RENDER-PASS-ENCODER-SET-VIEWPORT)
     ("RENDER-PASS-ENCODER-SET-VERTEX-BUFFER"
      . RENDER-PASS-ENCODER-SET-VERTEX-BUFFER)
@@ -5335,6 +6085,8 @@
      . RENDER-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
     ("RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY"
      . RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY)
+    ("RENDER-BUNDLE-ENCODER-RELEASE" . RENDER-BUNDLE-ENCODER-RELEASE)
+    ("RENDER-BUNDLE-ENCODER-REFERENCE" . RENDER-BUNDLE-ENCODER-REFERENCE)
     ("RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER"
      . RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER)
     ("RENDER-BUNDLE-ENCODER-SET-PIPELINE" . RENDER-BUNDLE-ENCODER-SET-PIPELINE)
@@ -5356,22 +6108,32 @@
      . RENDER-BUNDLE-ENCODER-DRAW-INDEXED-INDIRECT)
     ("RENDER-BUNDLE-ENCODER-DRAW-INDEXED" . RENDER-BUNDLE-ENCODER-DRAW-INDEXED)
     ("RENDER-BUNDLE-ENCODER-DRAW" . RENDER-BUNDLE-ENCODER-DRAW)
+    ("RENDER-BUNDLE-RELEASE" . RENDER-BUNDLE-RELEASE)
+    ("RENDER-BUNDLE-REFERENCE" . RENDER-BUNDLE-REFERENCE)
+    ("RENDER-BUNDLE-SET-LABEL" . RENDER-BUNDLE-SET-LABEL)
+    ("QUEUE-RELEASE" . QUEUE-RELEASE) ("QUEUE-REFERENCE" . QUEUE-REFERENCE)
     ("QUEUE-WRITE-TEXTURE" . QUEUE-WRITE-TEXTURE)
     ("QUEUE-WRITE-BUFFER" . QUEUE-WRITE-BUFFER) ("QUEUE-SUBMIT" . QUEUE-SUBMIT)
     ("QUEUE-SET-LABEL" . QUEUE-SET-LABEL)
     ("QUEUE-ON-SUBMITTED-WORK-DONE" . QUEUE-ON-SUBMITTED-WORK-DONE)
+    ("QUERY-SET-RELEASE" . QUERY-SET-RELEASE)
+    ("QUERY-SET-REFERENCE" . QUERY-SET-REFERENCE)
     ("QUERY-SET-SET-LABEL" . QUERY-SET-SET-LABEL)
     ("QUERY-SET-GET-TYPE" . QUERY-SET-GET-TYPE)
     ("QUERY-SET-GET-COUNT" . QUERY-SET-GET-COUNT)
     ("QUERY-SET-DESTROY" . QUERY-SET-DESTROY)
+    ("PIPELINE-LAYOUT-RELEASE" . PIPELINE-LAYOUT-RELEASE)
+    ("PIPELINE-LAYOUT-REFERENCE" . PIPELINE-LAYOUT-REFERENCE)
     ("PIPELINE-LAYOUT-SET-LABEL" . PIPELINE-LAYOUT-SET-LABEL)
+    ("INSTANCE-RELEASE" . INSTANCE-RELEASE)
+    ("INSTANCE-REFERENCE" . INSTANCE-REFERENCE)
     ("INSTANCE-REQUEST-ADAPTER" . INSTANCE-REQUEST-ADAPTER)
     ("INSTANCE-PROCESS-EVENTS" . INSTANCE-PROCESS-EVENTS)
     ("INSTANCE-CREATE-SURFACE" . INSTANCE-CREATE-SURFACE)
+    ("DEVICE-RELEASE" . DEVICE-RELEASE) ("DEVICE-REFERENCE" . DEVICE-REFERENCE)
     ("DEVICE-SET-UNCAPTURED-ERROR-CALLBACK"
      . DEVICE-SET-UNCAPTURED-ERROR-CALLBACK)
     ("DEVICE-SET-LABEL" . DEVICE-SET-LABEL)
-    ("DEVICE-SET-DEVICE-LOST-CALLBACK" . DEVICE-SET-DEVICE-LOST-CALLBACK)
     ("DEVICE-PUSH-ERROR-SCOPE" . DEVICE-PUSH-ERROR-SCOPE)
     ("DEVICE-POP-ERROR-SCOPE" . DEVICE-POP-ERROR-SCOPE)
     ("DEVICE-HAS-FEATURE" . DEVICE-HAS-FEATURE)
@@ -5397,9 +6159,13 @@
     ("DEVICE-CREATE-BUFFER" . DEVICE-CREATE-BUFFER)
     ("DEVICE-CREATE-BIND-GROUP-LAYOUT" . DEVICE-CREATE-BIND-GROUP-LAYOUT)
     ("DEVICE-CREATE-BIND-GROUP" . DEVICE-CREATE-BIND-GROUP)
+    ("COMPUTE-PIPELINE-RELEASE" . COMPUTE-PIPELINE-RELEASE)
+    ("COMPUTE-PIPELINE-REFERENCE" . COMPUTE-PIPELINE-REFERENCE)
     ("COMPUTE-PIPELINE-SET-LABEL" . COMPUTE-PIPELINE-SET-LABEL)
     ("COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT"
      . COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT)
+    ("COMPUTE-PASS-ENCODER-RELEASE" . COMPUTE-PASS-ENCODER-RELEASE)
+    ("COMPUTE-PASS-ENCODER-REFERENCE" . COMPUTE-PASS-ENCODER-REFERENCE)
     ("COMPUTE-PASS-ENCODER-SET-PIPELINE" . COMPUTE-PASS-ENCODER-SET-PIPELINE)
     ("COMPUTE-PASS-ENCODER-SET-LABEL" . COMPUTE-PASS-ENCODER-SET-LABEL)
     ("COMPUTE-PASS-ENCODER-SET-BIND-GROUP"
@@ -5419,6 +6185,8 @@
      . COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS)
     ("COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY"
      . COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
+    ("COMMAND-ENCODER-RELEASE" . COMMAND-ENCODER-RELEASE)
+    ("COMMAND-ENCODER-REFERENCE" . COMMAND-ENCODER-REFERENCE)
     ("COMMAND-ENCODER-WRITE-TIMESTAMP" . COMMAND-ENCODER-WRITE-TIMESTAMP)
     ("COMMAND-ENCODER-SET-LABEL" . COMMAND-ENCODER-SET-LABEL)
     ("COMMAND-ENCODER-RESOLVE-QUERY-SET" . COMMAND-ENCODER-RESOLVE-QUERY-SET)
@@ -5438,7 +6206,10 @@
     ("COMMAND-ENCODER-CLEAR-BUFFER" . COMMAND-ENCODER-CLEAR-BUFFER)
     ("COMMAND-ENCODER-BEGIN-RENDER-PASS" . COMMAND-ENCODER-BEGIN-RENDER-PASS)
     ("COMMAND-ENCODER-BEGIN-COMPUTE-PASS" . COMMAND-ENCODER-BEGIN-COMPUTE-PASS)
+    ("COMMAND-BUFFER-RELEASE" . COMMAND-BUFFER-RELEASE)
+    ("COMMAND-BUFFER-REFERENCE" . COMMAND-BUFFER-REFERENCE)
     ("COMMAND-BUFFER-SET-LABEL" . COMMAND-BUFFER-SET-LABEL)
+    ("BUFFER-RELEASE" . BUFFER-RELEASE) ("BUFFER-REFERENCE" . BUFFER-REFERENCE)
     ("BUFFER-UNMAP" . BUFFER-UNMAP) ("BUFFER-SET-LABEL" . BUFFER-SET-LABEL)
     ("BUFFER-MAP-ASYNC" . BUFFER-MAP-ASYNC)
     ("BUFFER-GET-USAGE" . BUFFER-GET-USAGE)
@@ -5447,8 +6218,14 @@
     ("BUFFER-GET-MAP-STATE" . BUFFER-GET-MAP-STATE)
     ("BUFFER-GET-CONST-MAPPED-RANGE" . BUFFER-GET-CONST-MAPPED-RANGE)
     ("BUFFER-DESTROY" . BUFFER-DESTROY)
+    ("BIND-GROUP-LAYOUT-RELEASE" . BIND-GROUP-LAYOUT-RELEASE)
+    ("BIND-GROUP-LAYOUT-REFERENCE" . BIND-GROUP-LAYOUT-REFERENCE)
     ("BIND-GROUP-LAYOUT-SET-LABEL" . BIND-GROUP-LAYOUT-SET-LABEL)
+    ("BIND-GROUP-RELEASE" . BIND-GROUP-RELEASE)
+    ("BIND-GROUP-REFERENCE" . BIND-GROUP-REFERENCE)
     ("BIND-GROUP-SET-LABEL" . BIND-GROUP-SET-LABEL)
+    ("ADAPTER-RELEASE" . ADAPTER-RELEASE)
+    ("ADAPTER-REFERENCE" . ADAPTER-REFERENCE)
     ("ADAPTER-REQUEST-DEVICE" . ADAPTER-REQUEST-DEVICE)
     ("ADAPTER-HAS-FEATURE" . ADAPTER-HAS-FEATURE)
     ("ADAPTER-GET-PROPERTIES" . ADAPTER-GET-PROPERTIES)
@@ -5471,6 +6248,8 @@
     ("REQUIRED-LIMITS-EXTRAS" . REQUIRED-LIMITS-EXTRAS)
     ("DEVICE-EXTRAS" . DEVICE-EXTRAS) ("ADAPTER-EXTRAS" . ADAPTER-EXTRAS)
     ("INSTANCE-EXTRAS" . INSTANCE-EXTRAS)
+    ("CHAINED-STRUCT-OUT" . CHAINED-STRUCT-OUT)
+    ("CHAINED-STRUCT" . CHAINED-STRUCT)
     ("RENDER-PIPELINE-DESCRIPTOR" . RENDER-PIPELINE-DESCRIPTOR)
     ("FRAGMENT-STATE" . FRAGMENT-STATE) ("VERTEX-STATE" . VERTEX-STATE)
     ("RENDER-PASS-DESCRIPTOR" . RENDER-PASS-DESCRIPTOR)
@@ -5543,8 +6322,6 @@
     ("BLEND-COMPONENT" . BLEND-COMPONENT)
     ("BIND-GROUP-ENTRY" . BIND-GROUP-ENTRY)
     ("ADAPTER-PROPERTIES" . ADAPTER-PROPERTIES)
-    ("CHAINED-STRUCT-OUT" . CHAINED-STRUCT-OUT)
-    ("CHAINED-STRUCT" . CHAINED-STRUCT)
     ("TEXTURE-VIEW-IMPL" . TEXTURE-VIEW-IMPL) ("TEXTURE-IMPL" . TEXTURE-IMPL)
     ("SWAP-CHAIN-IMPL" . SWAP-CHAIN-IMPL) ("SURFACE-IMPL" . SURFACE-IMPL)
     ("SHADER-MODULE-IMPL" . SHADER-MODULE-IMPL) ("SAMPLER-IMPL" . SAMPLER-IMPL)
@@ -5587,7 +6364,11 @@
     ("INSTANCE-BACKEND-FLAGS" . INSTANCE-BACKEND-FLAGS)
     ("INSTANCE-BACKEND" . INSTANCE-BACKEND) ("LOG-LEVEL" . LOG-LEVEL)
     ("NATIVE-FEATURE" . NATIVE-FEATURE) ("NATIVE-S-TYPE" . NATIVE-S-TYPE)
+    ("PROC-TEXTURE-VIEW-RELEASE" . PROC-TEXTURE-VIEW-RELEASE)
+    ("PROC-TEXTURE-VIEW-REFERENCE" . PROC-TEXTURE-VIEW-REFERENCE)
     ("PROC-TEXTURE-VIEW-SET-LABEL" . PROC-TEXTURE-VIEW-SET-LABEL)
+    ("PROC-TEXTURE-RELEASE" . PROC-TEXTURE-RELEASE)
+    ("PROC-TEXTURE-REFERENCE" . PROC-TEXTURE-REFERENCE)
     ("PROC-TEXTURE-SET-LABEL" . PROC-TEXTURE-SET-LABEL)
     ("PROC-TEXTURE-GET-WIDTH" . PROC-TEXTURE-GET-WIDTH)
     ("PROC-TEXTURE-GET-USAGE" . PROC-TEXTURE-GET-USAGE)
@@ -5600,17 +6381,29 @@
      . PROC-TEXTURE-GET-DEPTH-OR-ARRAY-LAYERS)
     ("PROC-TEXTURE-DESTROY" . PROC-TEXTURE-DESTROY)
     ("PROC-TEXTURE-CREATE-VIEW" . PROC-TEXTURE-CREATE-VIEW)
+    ("PROC-SWAP-CHAIN-RELEASE" . PROC-SWAP-CHAIN-RELEASE)
+    ("PROC-SWAP-CHAIN-REFERENCE" . PROC-SWAP-CHAIN-REFERENCE)
     ("PROC-SWAP-CHAIN-PRESENT" . PROC-SWAP-CHAIN-PRESENT)
     ("PROC-SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW"
      . PROC-SWAP-CHAIN-GET-CURRENT-TEXTURE-VIEW)
+    ("PROC-SURFACE-RELEASE" . PROC-SURFACE-RELEASE)
+    ("PROC-SURFACE-REFERENCE" . PROC-SURFACE-REFERENCE)
     ("PROC-SURFACE-GET-PREFERRED-FORMAT" . PROC-SURFACE-GET-PREFERRED-FORMAT)
+    ("PROC-SHADER-MODULE-RELEASE" . PROC-SHADER-MODULE-RELEASE)
+    ("PROC-SHADER-MODULE-REFERENCE" . PROC-SHADER-MODULE-REFERENCE)
     ("PROC-SHADER-MODULE-SET-LABEL" . PROC-SHADER-MODULE-SET-LABEL)
     ("PROC-SHADER-MODULE-GET-COMPILATION-INFO"
      . PROC-SHADER-MODULE-GET-COMPILATION-INFO)
+    ("PROC-SAMPLER-RELEASE" . PROC-SAMPLER-RELEASE)
+    ("PROC-SAMPLER-REFERENCE" . PROC-SAMPLER-REFERENCE)
     ("PROC-SAMPLER-SET-LABEL" . PROC-SAMPLER-SET-LABEL)
+    ("PROC-RENDER-PIPELINE-RELEASE" . PROC-RENDER-PIPELINE-RELEASE)
+    ("PROC-RENDER-PIPELINE-REFERENCE" . PROC-RENDER-PIPELINE-REFERENCE)
     ("PROC-RENDER-PIPELINE-SET-LABEL" . PROC-RENDER-PIPELINE-SET-LABEL)
     ("PROC-RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT"
      . PROC-RENDER-PIPELINE-GET-BIND-GROUP-LAYOUT)
+    ("PROC-RENDER-PASS-ENCODER-RELEASE" . PROC-RENDER-PASS-ENCODER-RELEASE)
+    ("PROC-RENDER-PASS-ENCODER-REFERENCE" . PROC-RENDER-PASS-ENCODER-REFERENCE)
     ("PROC-RENDER-PASS-ENCODER-SET-VIEWPORT"
      . PROC-RENDER-PASS-ENCODER-SET-VIEWPORT)
     ("PROC-RENDER-PASS-ENCODER-SET-VERTEX-BUFFER"
@@ -5652,6 +6445,9 @@
      . PROC-RENDER-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
     ("PROC-RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY"
      . PROC-RENDER-PASS-ENCODER-BEGIN-OCCLUSION-QUERY)
+    ("PROC-RENDER-BUNDLE-ENCODER-RELEASE" . PROC-RENDER-BUNDLE-ENCODER-RELEASE)
+    ("PROC-RENDER-BUNDLE-ENCODER-REFERENCE"
+     . PROC-RENDER-BUNDLE-ENCODER-REFERENCE)
     ("PROC-RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER"
      . PROC-RENDER-BUNDLE-ENCODER-SET-VERTEX-BUFFER)
     ("PROC-RENDER-BUNDLE-ENCODER-SET-PIPELINE"
@@ -5676,24 +6472,35 @@
     ("PROC-RENDER-BUNDLE-ENCODER-DRAW-INDEXED"
      . PROC-RENDER-BUNDLE-ENCODER-DRAW-INDEXED)
     ("PROC-RENDER-BUNDLE-ENCODER-DRAW" . PROC-RENDER-BUNDLE-ENCODER-DRAW)
+    ("PROC-RENDER-BUNDLE-RELEASE" . PROC-RENDER-BUNDLE-RELEASE)
+    ("PROC-RENDER-BUNDLE-REFERENCE" . PROC-RENDER-BUNDLE-REFERENCE)
+    ("PROC-RENDER-BUNDLE-SET-LABEL" . PROC-RENDER-BUNDLE-SET-LABEL)
+    ("PROC-QUEUE-RELEASE" . PROC-QUEUE-RELEASE)
+    ("PROC-QUEUE-REFERENCE" . PROC-QUEUE-REFERENCE)
     ("PROC-QUEUE-WRITE-TEXTURE" . PROC-QUEUE-WRITE-TEXTURE)
     ("PROC-QUEUE-WRITE-BUFFER" . PROC-QUEUE-WRITE-BUFFER)
     ("PROC-QUEUE-SUBMIT" . PROC-QUEUE-SUBMIT)
     ("PROC-QUEUE-SET-LABEL" . PROC-QUEUE-SET-LABEL)
     ("PROC-QUEUE-ON-SUBMITTED-WORK-DONE" . PROC-QUEUE-ON-SUBMITTED-WORK-DONE)
+    ("PROC-QUERY-SET-RELEASE" . PROC-QUERY-SET-RELEASE)
+    ("PROC-QUERY-SET-REFERENCE" . PROC-QUERY-SET-REFERENCE)
     ("PROC-QUERY-SET-SET-LABEL" . PROC-QUERY-SET-SET-LABEL)
     ("PROC-QUERY-SET-GET-TYPE" . PROC-QUERY-SET-GET-TYPE)
     ("PROC-QUERY-SET-GET-COUNT" . PROC-QUERY-SET-GET-COUNT)
     ("PROC-QUERY-SET-DESTROY" . PROC-QUERY-SET-DESTROY)
+    ("PROC-PIPELINE-LAYOUT-RELEASE" . PROC-PIPELINE-LAYOUT-RELEASE)
+    ("PROC-PIPELINE-LAYOUT-REFERENCE" . PROC-PIPELINE-LAYOUT-REFERENCE)
     ("PROC-PIPELINE-LAYOUT-SET-LABEL" . PROC-PIPELINE-LAYOUT-SET-LABEL)
+    ("PROC-INSTANCE-RELEASE" . PROC-INSTANCE-RELEASE)
+    ("PROC-INSTANCE-REFERENCE" . PROC-INSTANCE-REFERENCE)
     ("PROC-INSTANCE-REQUEST-ADAPTER" . PROC-INSTANCE-REQUEST-ADAPTER)
     ("PROC-INSTANCE-PROCESS-EVENTS" . PROC-INSTANCE-PROCESS-EVENTS)
     ("PROC-INSTANCE-CREATE-SURFACE" . PROC-INSTANCE-CREATE-SURFACE)
+    ("PROC-DEVICE-RELEASE" . PROC-DEVICE-RELEASE)
+    ("PROC-DEVICE-REFERENCE" . PROC-DEVICE-REFERENCE)
     ("PROC-DEVICE-SET-UNCAPTURED-ERROR-CALLBACK"
      . PROC-DEVICE-SET-UNCAPTURED-ERROR-CALLBACK)
     ("PROC-DEVICE-SET-LABEL" . PROC-DEVICE-SET-LABEL)
-    ("PROC-DEVICE-SET-DEVICE-LOST-CALLBACK"
-     . PROC-DEVICE-SET-DEVICE-LOST-CALLBACK)
     ("PROC-DEVICE-PUSH-ERROR-SCOPE" . PROC-DEVICE-PUSH-ERROR-SCOPE)
     ("PROC-DEVICE-POP-ERROR-SCOPE" . PROC-DEVICE-POP-ERROR-SCOPE)
     ("PROC-DEVICE-HAS-FEATURE" . PROC-DEVICE-HAS-FEATURE)
@@ -5721,9 +6528,14 @@
     ("PROC-DEVICE-CREATE-BIND-GROUP-LAYOUT"
      . PROC-DEVICE-CREATE-BIND-GROUP-LAYOUT)
     ("PROC-DEVICE-CREATE-BIND-GROUP" . PROC-DEVICE-CREATE-BIND-GROUP)
+    ("PROC-COMPUTE-PIPELINE-RELEASE" . PROC-COMPUTE-PIPELINE-RELEASE)
+    ("PROC-COMPUTE-PIPELINE-REFERENCE" . PROC-COMPUTE-PIPELINE-REFERENCE)
     ("PROC-COMPUTE-PIPELINE-SET-LABEL" . PROC-COMPUTE-PIPELINE-SET-LABEL)
     ("PROC-COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT"
      . PROC-COMPUTE-PIPELINE-GET-BIND-GROUP-LAYOUT)
+    ("PROC-COMPUTE-PASS-ENCODER-RELEASE" . PROC-COMPUTE-PASS-ENCODER-RELEASE)
+    ("PROC-COMPUTE-PASS-ENCODER-REFERENCE"
+     . PROC-COMPUTE-PASS-ENCODER-REFERENCE)
     ("PROC-COMPUTE-PASS-ENCODER-SET-PIPELINE"
      . PROC-COMPUTE-PASS-ENCODER-SET-PIPELINE)
     ("PROC-COMPUTE-PASS-ENCODER-SET-LABEL"
@@ -5745,6 +6557,8 @@
      . PROC-COMPUTE-PASS-ENCODER-DISPATCH-WORKGROUPS)
     ("PROC-COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY"
      . PROC-COMPUTE-PASS-ENCODER-BEGIN-PIPELINE-STATISTICS-QUERY)
+    ("PROC-COMMAND-ENCODER-RELEASE" . PROC-COMMAND-ENCODER-RELEASE)
+    ("PROC-COMMAND-ENCODER-REFERENCE" . PROC-COMMAND-ENCODER-REFERENCE)
     ("PROC-COMMAND-ENCODER-WRITE-TIMESTAMP"
      . PROC-COMMAND-ENCODER-WRITE-TIMESTAMP)
     ("PROC-COMMAND-ENCODER-SET-LABEL" . PROC-COMMAND-ENCODER-SET-LABEL)
@@ -5770,7 +6584,11 @@
      . PROC-COMMAND-ENCODER-BEGIN-RENDER-PASS)
     ("PROC-COMMAND-ENCODER-BEGIN-COMPUTE-PASS"
      . PROC-COMMAND-ENCODER-BEGIN-COMPUTE-PASS)
+    ("PROC-COMMAND-BUFFER-RELEASE" . PROC-COMMAND-BUFFER-RELEASE)
+    ("PROC-COMMAND-BUFFER-REFERENCE" . PROC-COMMAND-BUFFER-REFERENCE)
     ("PROC-COMMAND-BUFFER-SET-LABEL" . PROC-COMMAND-BUFFER-SET-LABEL)
+    ("PROC-BUFFER-RELEASE" . PROC-BUFFER-RELEASE)
+    ("PROC-BUFFER-REFERENCE" . PROC-BUFFER-REFERENCE)
     ("PROC-BUFFER-UNMAP" . PROC-BUFFER-UNMAP)
     ("PROC-BUFFER-SET-LABEL" . PROC-BUFFER-SET-LABEL)
     ("PROC-BUFFER-MAP-ASYNC" . PROC-BUFFER-MAP-ASYNC)
@@ -5780,8 +6598,14 @@
     ("PROC-BUFFER-GET-MAP-STATE" . PROC-BUFFER-GET-MAP-STATE)
     ("PROC-BUFFER-GET-CONST-MAPPED-RANGE" . PROC-BUFFER-GET-CONST-MAPPED-RANGE)
     ("PROC-BUFFER-DESTROY" . PROC-BUFFER-DESTROY)
+    ("PROC-BIND-GROUP-LAYOUT-RELEASE" . PROC-BIND-GROUP-LAYOUT-RELEASE)
+    ("PROC-BIND-GROUP-LAYOUT-REFERENCE" . PROC-BIND-GROUP-LAYOUT-REFERENCE)
     ("PROC-BIND-GROUP-LAYOUT-SET-LABEL" . PROC-BIND-GROUP-LAYOUT-SET-LABEL)
+    ("PROC-BIND-GROUP-RELEASE" . PROC-BIND-GROUP-RELEASE)
+    ("PROC-BIND-GROUP-REFERENCE" . PROC-BIND-GROUP-REFERENCE)
     ("PROC-BIND-GROUP-SET-LABEL" . PROC-BIND-GROUP-SET-LABEL)
+    ("PROC-ADAPTER-RELEASE" . PROC-ADAPTER-RELEASE)
+    ("PROC-ADAPTER-REFERENCE" . PROC-ADAPTER-REFERENCE)
     ("PROC-ADAPTER-REQUEST-DEVICE" . PROC-ADAPTER-REQUEST-DEVICE)
     ("PROC-ADAPTER-HAS-FEATURE" . PROC-ADAPTER-HAS-FEATURE)
     ("PROC-ADAPTER-GET-PROPERTIES" . PROC-ADAPTER-GET-PROPERTIES)
@@ -5789,17 +6613,6 @@
     ("PROC-ADAPTER-ENUMERATE-FEATURES" . PROC-ADAPTER-ENUMERATE-FEATURES)
     ("PROC-GET-PROC-ADDRESS" . PROC-GET-PROC-ADDRESS)
     ("PROC-CREATE-INSTANCE" . PROC-CREATE-INSTANCE)
-    ("REQUEST-DEVICE-CALLBACK" . REQUEST-DEVICE-CALLBACK)
-    ("REQUEST-ADAPTER-CALLBACK" . REQUEST-ADAPTER-CALLBACK)
-    ("QUEUE-WORK-DONE-CALLBACK" . QUEUE-WORK-DONE-CALLBACK) ("PROC" . PROC)
-    ("ERROR-CALLBACK" . ERROR-CALLBACK)
-    ("DEVICE-LOST-CALLBACK" . DEVICE-LOST-CALLBACK)
-    ("CREATE-RENDER-PIPELINE-ASYNC-CALLBACK"
-     . CREATE-RENDER-PIPELINE-ASYNC-CALLBACK)
-    ("CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK"
-     . CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK)
-    ("COMPILATION-INFO-CALLBACK" . COMPILATION-INFO-CALLBACK)
-    ("BUFFER-MAP-CALLBACK" . BUFFER-MAP-CALLBACK)
     ("RENDER-PIPELINE-DESCRIPTOR" . RENDER-PIPELINE-DESCRIPTOR)
     ("FRAGMENT-STATE" . FRAGMENT-STATE) ("VERTEX-STATE" . VERTEX-STATE)
     ("RENDER-PASS-DESCRIPTOR" . RENDER-PASS-DESCRIPTOR)
@@ -5874,6 +6687,17 @@
     ("ADAPTER-PROPERTIES" . ADAPTER-PROPERTIES)
     ("CHAINED-STRUCT-OUT" . CHAINED-STRUCT-OUT)
     ("CHAINED-STRUCT" . CHAINED-STRUCT)
+    ("REQUEST-DEVICE-CALLBACK" . REQUEST-DEVICE-CALLBACK)
+    ("REQUEST-ADAPTER-CALLBACK" . REQUEST-ADAPTER-CALLBACK)
+    ("QUEUE-WORK-DONE-CALLBACK" . QUEUE-WORK-DONE-CALLBACK) ("PROC" . PROC)
+    ("ERROR-CALLBACK" . ERROR-CALLBACK)
+    ("DEVICE-LOST-CALLBACK" . DEVICE-LOST-CALLBACK)
+    ("CREATE-RENDER-PIPELINE-ASYNC-CALLBACK"
+     . CREATE-RENDER-PIPELINE-ASYNC-CALLBACK)
+    ("CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK"
+     . CREATE-COMPUTE-PIPELINE-ASYNC-CALLBACK)
+    ("COMPILATION-INFO-CALLBACK" . COMPILATION-INFO-CALLBACK)
+    ("BUFFER-MAP-CALLBACK" . BUFFER-MAP-CALLBACK)
     ("TEXTURE-USAGE-FLAGS" . TEXTURE-USAGE-FLAGS)
     ("TEXTURE-USAGE" . TEXTURE-USAGE)
     ("SHADER-STAGE-FLAGS" . SHADER-STAGE-FLAGS) ("SHADER-STAGE" . SHADER-STAGE)
@@ -5886,7 +6710,6 @@
     ("TEXTURE-SAMPLE-TYPE" . TEXTURE-SAMPLE-TYPE)
     ("TEXTURE-FORMAT" . TEXTURE-FORMAT)
     ("TEXTURE-DIMENSION" . TEXTURE-DIMENSION)
-    ("TEXTURE-COMPONENT-TYPE" . TEXTURE-COMPONENT-TYPE)
     ("TEXTURE-ASPECT" . TEXTURE-ASPECT) ("STORE-OP" . STORE-OP)
     ("STORAGE-TEXTURE-ACCESS" . STORAGE-TEXTURE-ACCESS)
     ("STENCIL-OPERATION" . STENCIL-OPERATION)
@@ -5974,93 +6797,90 @@
     ("__U_CHAR" . __U_CHAR)))
 
 (COMMON-LISP:DEFPARAMETER +CONSTANT-NAMES+
-  '(("__KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64"
-     . __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64)
-    ("__INO_T_MATCHES_INO64_T" . __INO_T_MATCHES_INO64_T)
-    ("__RLIM_T_MATCHES_RLIM64_T" . __RLIM_T_MATCHES_RLIM64_T)
-    ("__WORDSIZE" . __WORDSIZE) ("_BITS_TYPES_H" . _BITS_TYPES_H)
-    ("__WORDSIZE_TIME64_COMPAT32" . __WORDSIZE_TIME64_COMPAT32)
-    ("__OFF_T_MATCHES_OFF64_T" . __OFF_T_MATCHES_OFF64_T)
-    ("__GLIBC_USE_IEC_60559_TYPES_EXT" . __GLIBC_USE_IEC_60559_TYPES_EXT)
-    ("__STATFS_MATCHES_STATFS64" . __STATFS_MATCHES_STATFS64)
-    ("_BITS_TYPESIZES_H" . _BITS_TYPESIZES_H)
+  '(("__GLIBC_USE_DEPRECATED_GETS" . __GLIBC_USE_DEPRECATED_GETS)
+    ("__GLIBC_USE_ISOC2X" . __GLIBC_USE_ISOC2X)
+    ("__GLIBC_USE_DEPRECATED_SCANF" . __GLIBC_USE_DEPRECATED_SCANF)
+    ("_DEFAULT_SOURCE" . _DEFAULT_SOURCE)
     ("__LDOUBLE_REDIRECTS_TO_FLOAT128_ABI"
      . __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI)
-    ("__SYSCALL_WORDSIZE" . __SYSCALL_WORDSIZE)
-    ("__GLIBC_USE_IEC_60559_EXT" . __GLIBC_USE_IEC_60559_EXT)
-    ("__TIMESIZE" . __TIMESIZE) ("_STDC_PREDEF_H" . _STDC_PREDEF_H)
-    ("__STDC_IEC_559__" . __STDC_IEC_559__)
-    ("__GLIBC_USE_IEC_60559_FUNCS_EXT" . __GLIBC_USE_IEC_60559_FUNCS_EXT)
-    ("__GLIBC_USE_IEC_60559_FUNCS_EXT_C2X"
-     . __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X)
-    ("_DEFAULT_SOURCE" . _DEFAULT_SOURCE)
     ("__USE_POSIX_IMPLICITLY" . __USE_POSIX_IMPLICITLY)
     ("_POSIX_C_SOURCE" . _POSIX_C_SOURCE) ("_POSIX_SOURCE" . _POSIX_SOURCE)
     ("_ATFILE_SOURCE" . _ATFILE_SOURCE)
-    ("__USE_FORTIFY_LEVEL" . __USE_FORTIFY_LEVEL)
-    ("__GLIBC_USE_DEPRECATED_SCANF" . __GLIBC_USE_DEPRECATED_SCANF)
-    ("__USE_ATFILE" . __USE_ATFILE)
-    ("__GLIBC_USE_DEPRECATED_GETS" . __GLIBC_USE_DEPRECATED_GETS)
-    ("__GLIBC_USE_ISOC2X" . __GLIBC_USE_ISOC2X)
-    ("__GLIBC_C99_FLEXARR_AVAILABLE" . __GLIBC_C99_FLEXARR_AVAILABLE)
-    ("LIMITU64UNDEFINED" . LIMITU64UNDEFINED)
-    ("COPYSTRIDEUNDEFINED" . COPYSTRIDEUNDEFINED)
-    ("LIMITU32UNDEFINED" . LIMITU32UNDEFINED) ("WHOLEMAPSIZE" . WHOLEMAPSIZE)
-    ("WHOLESIZE" . WHOLESIZE) ("NULL" . NULL)
-    ("MIPLEVELCOUNTUNDEFINED" . MIPLEVELCOUNTUNDEFINED)
-    ("ARRAYLAYERCOUNTUNDEFINED" . ARRAYLAYERCOUNTUNDEFINED)
-    ("__HAVE_GENERIC_SELECTION" . __HAVE_GENERIC_SELECTION)
-    ("WINT_MAX" . WINT_MAX) ("WINT_MIN" . WINT_MIN) ("WCHAR_MAX" . WCHAR_MAX)
-    ("WCHAR_MIN" . WCHAR_MIN) ("_STDINT_H" . _STDINT_H) ("SIZE_MAX" . SIZE_MAX)
-    ("SIG_ATOMIC_MAX" . SIG_ATOMIC_MAX) ("SIG_ATOMIC_MIN" . SIG_ATOMIC_MIN)
-    ("__GCC_HAVE_DWARF2_CFI_ASM" . __GCC_HAVE_DWARF2_CFI_ASM)
-    ("UINT_FAST64_MAX" . UINT_FAST64_MAX)
-    ("_BITS_STDINT_INTN_H" . _BITS_STDINT_INTN_H) ("INTPTR_MIN" . INTPTR_MIN)
-    ("__WCHAR_MIN" . __WCHAR_MIN) ("INTPTR_MAX" . INTPTR_MAX)
-    ("UINTPTR_MAX" . UINTPTR_MAX) ("_BITS_WCHAR_H" . _BITS_WCHAR_H)
-    ("INTMAX_MIN" . INTMAX_MIN) ("__WCHAR_MAX" . __WCHAR_MAX)
-    ("INTMAX_MAX" . INTMAX_MAX) ("UINTMAX_MAX" . UINTMAX_MAX)
-    ("PTRDIFF_MIN" . PTRDIFF_MIN) ("PTRDIFF_MAX" . PTRDIFF_MAX)
-    ("INT_FAST32_MIN" . INT_FAST32_MIN) ("INT_FAST64_MIN" . INT_FAST64_MIN)
-    ("INT_FAST8_MAX" . INT_FAST8_MAX) ("INT_FAST16_MAX" . INT_FAST16_MAX)
-    ("INT_FAST32_MAX" . INT_FAST32_MAX) ("INT_FAST64_MAX" . INT_FAST64_MAX)
-    ("UINT_FAST8_MAX" . UINT_FAST8_MAX) ("UINT_FAST16_MAX" . UINT_FAST16_MAX)
-    ("UINT_FAST32_MAX" . UINT_FAST32_MAX) ("INT32_MIN" . INT32_MIN)
-    ("INT64_MIN" . INT64_MIN) ("INT8_MIN" . INT8_MIN) ("INT16_MIN" . INT16_MIN)
-    ("_BITS_STDINT_UINTN_H" . _BITS_STDINT_UINTN_H)
-    ("__USE_XOPEN2K8" . __USE_XOPEN2K8) ("__GLIBC__" . __GLIBC__)
-    ("__USE_POSIX199309" . __USE_POSIX199309)
-    ("__STDC_ISO_10646__" . __STDC_ISO_10646__)
-    ("__USE_POSIX199506" . __USE_POSIX199506)
-    ("__GNU_LIBRARY__" . __GNU_LIBRARY__) ("__GLIBC_MINOR__" . __GLIBC_MINOR__)
-    ("__STDC_IEC_60559_BFP__" . __STDC_IEC_60559_BFP__)
-    ("__USE_ISOC95" . __USE_ISOC95)
-    ("__STDC_IEC_559_COMPLEX__" . __STDC_IEC_559_COMPLEX__)
-    ("__USE_POSIX" . __USE_POSIX) ("__USE_POSIX2" . __USE_POSIX2)
-    ("__STDC_IEC_60559_COMPLEX__" . __STDC_IEC_60559_COMPLEX__)
-    ("UINT_LEAST64_MAX" . UINT_LEAST64_MAX) ("INT_FAST16_MIN" . INT_FAST16_MIN)
-    ("__USE_MISC" . __USE_MISC) ("__USE_XOPEN2K" . __USE_XOPEN2K)
-    ("UINT_LEAST32_MAX" . UINT_LEAST32_MAX) ("INT_FAST8_MIN" . INT_FAST8_MIN)
-    ("INT_LEAST32_MAX" . INT_LEAST32_MAX) ("INT_LEAST64_MAX" . INT_LEAST64_MAX)
-    ("UINT_LEAST16_MAX" . UINT_LEAST16_MAX)
-    ("INT_LEAST16_MIN" . INT_LEAST16_MIN) ("UINT_LEAST8_MAX" . UINT_LEAST8_MAX)
-    ("INT_LEAST32_MIN" . INT_LEAST32_MIN) ("INT_LEAST16_MAX" . INT_LEAST16_MAX)
-    ("INT_LEAST8_MIN" . INT_LEAST8_MIN) ("INT_LEAST64_MIN" . INT_LEAST64_MIN)
-    ("INT_LEAST8_MAX" . INT_LEAST8_MAX) ("INT16_MAX" . INT16_MAX)
-    ("UINT32_MAX" . UINT32_MAX) ("UINT16_MAX" . UINT16_MAX)
-    ("_FEATURES_H" . _FEATURES_H) ("UINT64_MAX" . UINT64_MAX)
-    ("__USE_ISOC11" . __USE_ISOC11) ("__USE_ISOC99" . __USE_ISOC99)
-    ("UINT8_MAX" . UINT8_MAX) ("INT8_MAX" . INT8_MAX)
-    ("_SYS_CDEFS_H" . _SYS_CDEFS_H) ("INT64_MAX" . INT64_MAX)
-    ("INT32_MAX" . INT32_MAX)
-    ("__GLIBC_USE_IEC_60559_BFP_EXT" . __GLIBC_USE_IEC_60559_BFP_EXT)
+    ("__WORDSIZE_TIME64_COMPAT32" . __WORDSIZE_TIME64_COMPAT32)
+    ("__WORDSIZE" . __WORDSIZE)
     ("__GLIBC_USE_IEC_60559_BFP_EXT_C2X" . __GLIBC_USE_IEC_60559_BFP_EXT_C2X)
+    ("__SYSCALL_WORDSIZE" . __SYSCALL_WORDSIZE) ("__TIMESIZE" . __TIMESIZE)
     ("__GLIBC_USE_LIB_EXT2" . __GLIBC_USE_LIB_EXT2)
-    ("__FD_SETSIZE" . __FD_SETSIZE) ("_BITS_TIME64_H" . _BITS_TIME64_H)))
+    ("__GLIBC_USE_IEC_60559_BFP_EXT" . __GLIBC_USE_IEC_60559_BFP_EXT)
+    ("__GLIBC_USE_IEC_60559_FUNCS_EXT_C2X"
+     . __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X)
+    ("__GLIBC_USE_IEC_60559_TYPES_EXT" . __GLIBC_USE_IEC_60559_TYPES_EXT)
+    ("__GLIBC_USE_IEC_60559_EXT" . __GLIBC_USE_IEC_60559_EXT)
+    ("__GLIBC_USE_IEC_60559_FUNCS_EXT" . __GLIBC_USE_IEC_60559_FUNCS_EXT)
+    ("_BITS_TYPES_H" . _BITS_TYPES_H) ("INT16_MAX" . INT16_MAX)
+    ("INT8_MAX" . INT8_MAX) ("INT64_MIN" . INT64_MIN) ("INT32_MIN" . INT32_MIN)
+    ("INT16_MIN" . INT16_MIN) ("INT8_MIN" . INT8_MIN)
+    ("INT_LEAST32_MIN" . INT_LEAST32_MIN) ("INT_LEAST16_MIN" . INT_LEAST16_MIN)
+    ("INT_LEAST8_MIN" . INT_LEAST8_MIN) ("UINT64_MAX" . UINT64_MAX)
+    ("UINT32_MAX" . UINT32_MAX) ("UINT16_MAX" . UINT16_MAX)
+    ("UINT8_MAX" . UINT8_MAX) ("INT64_MAX" . INT64_MAX)
+    ("INT32_MAX" . INT32_MAX) ("INT_LEAST64_MAX" . INT_LEAST64_MAX)
+    ("INT_LEAST32_MAX" . INT_LEAST32_MAX) ("INT_LEAST16_MAX" . INT_LEAST16_MAX)
+    ("INT_LEAST8_MAX" . INT_LEAST8_MAX) ("INT_LEAST64_MIN" . INT_LEAST64_MIN)
+    ("UINTMAX_MAX" . UINTMAX_MAX) ("INTMAX_MAX" . INTMAX_MAX)
+    ("PTRDIFF_MAX" . PTRDIFF_MAX)
+    ("_BITS_STDINT_UINTN_H" . _BITS_STDINT_UINTN_H)
+    ("PTRDIFF_MIN" . PTRDIFF_MIN) ("SIZE_MAX" . SIZE_MAX)
+    ("SIG_ATOMIC_MAX" . SIG_ATOMIC_MAX) ("SIG_ATOMIC_MIN" . SIG_ATOMIC_MIN)
+    ("WCHAR_MAX" . WCHAR_MAX) ("WCHAR_MIN" . WCHAR_MIN) ("WINT_MAX" . WINT_MAX)
+    ("WINT_MIN" . WINT_MIN) ("_BITS_WCHAR_H" . _BITS_WCHAR_H)
+    ("__WCHAR_MAX" . __WCHAR_MAX) ("__WCHAR_MIN" . __WCHAR_MIN)
+    ("_BITS_STDINT_INTN_H" . _BITS_STDINT_INTN_H)
+    ("__GLIBC_C99_FLEXARR_AVAILABLE" . __GLIBC_C99_FLEXARR_AVAILABLE)
+    ("NULL" . NULL) ("_SYS_CDEFS_H" . _SYS_CDEFS_H)
+    ("__STDC_IEC_60559_COMPLEX__" . __STDC_IEC_60559_COMPLEX__)
+    ("__STDC_IEC_559_COMPLEX__" . __STDC_IEC_559_COMPLEX__)
+    ("UINTPTR_MAX" . UINTPTR_MAX) ("__GNU_LIBRARY__" . __GNU_LIBRARY__)
+    ("__STDC_ISO_10646__" . __STDC_ISO_10646__)
+    ("__GLIBC_MINOR__" . __GLIBC_MINOR__) ("UINT_FAST32_MAX" . UINT_FAST32_MAX)
+    ("__GLIBC__" . __GLIBC__) ("WHOLEMAPSIZE" . WHOLEMAPSIZE)
+    ("UINT_FAST8_MAX" . UINT_FAST8_MAX) ("INT_FAST32_MIN" . INT_FAST32_MIN)
+    ("UINT_FAST16_MAX" . UINT_FAST16_MAX) ("_STDC_PREDEF_H" . _STDC_PREDEF_H)
+    ("LIMITU32UNDEFINED" . LIMITU32UNDEFINED) ("WHOLESIZE" . WHOLESIZE)
+    ("LIMITU64UNDEFINED" . LIMITU64UNDEFINED)
+    ("__STDC_IEC_559__" . __STDC_IEC_559__) ("INT_FAST16_MIN" . INT_FAST16_MIN)
+    ("__STDC_IEC_60559_BFP__" . __STDC_IEC_60559_BFP__)
+    ("MIPLEVELCOUNTUNDEFINED" . MIPLEVELCOUNTUNDEFINED)
+    ("COPYSTRIDEUNDEFINED" . COPYSTRIDEUNDEFINED) ("INTPTR_MAX" . INTPTR_MAX)
+    ("INT_FAST16_MAX" . INT_FAST16_MAX) ("UINT_LEAST8_MAX" . UINT_LEAST8_MAX)
+    ("_BITS_TYPESIZES_H" . _BITS_TYPESIZES_H) ("INT_FAST8_MIN" . INT_FAST8_MIN)
+    ("__GCC_HAVE_DWARF2_CFI_ASM" . __GCC_HAVE_DWARF2_CFI_ASM)
+    ("UINT_LEAST16_MAX" . UINT_LEAST16_MAX)
+    ("ARRAYLAYERCOUNTUNDEFINED" . ARRAYLAYERCOUNTUNDEFINED)
+    ("_STDINT_H" . _STDINT_H)
+    ("__HAVE_GENERIC_SELECTION" . __HAVE_GENERIC_SELECTION)
+    ("__USE_ISOC95" . __USE_ISOC95) ("__USE_ISOC99" . __USE_ISOC99)
+    ("__USE_POSIX" . __USE_POSIX) ("__USE_POSIX2" . __USE_POSIX2)
+    ("_FEATURES_H" . _FEATURES_H) ("__USE_XOPEN2K" . __USE_XOPEN2K)
+    ("__USE_ISOC11" . __USE_ISOC11) ("_BITS_TIME64_H" . _BITS_TIME64_H)
+    ("__USE_POSIX199309" . __USE_POSIX199309) ("__FD_SETSIZE" . __FD_SETSIZE)
+    ("UINT_LEAST32_MAX" . UINT_LEAST32_MAX) ("__USE_XOPEN2K8" . __USE_XOPEN2K8)
+    ("__OFF_T_MATCHES_OFF64_T" . __OFF_T_MATCHES_OFF64_T)
+    ("INT_FAST64_MIN" . INT_FAST64_MIN) ("UINT_LEAST64_MAX" . UINT_LEAST64_MAX)
+    ("INT_FAST8_MAX" . INT_FAST8_MAX) ("INT_FAST32_MAX" . INT_FAST32_MAX)
+    ("__USE_ATFILE" . __USE_ATFILE) ("__USE_POSIX199506" . __USE_POSIX199506)
+    ("__USE_MISC" . __USE_MISC) ("__USE_FORTIFY_LEVEL" . __USE_FORTIFY_LEVEL)
+    ("INT_FAST64_MAX" . INT_FAST64_MAX)
+    ("__STATFS_MATCHES_STATFS64" . __STATFS_MATCHES_STATFS64)
+    ("__KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64"
+     . __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64)
+    ("INTMAX_MIN" . INTMAX_MIN) ("UINT_FAST64_MAX" . UINT_FAST64_MAX)
+    ("__INO_T_MATCHES_INO64_T" . __INO_T_MATCHES_INO64_T)
+    ("INTPTR_MIN" . INTPTR_MIN)
+    ("__RLIM_T_MATCHES_RLIM64_T" . __RLIM_T_MATCHES_RLIM64_T)))
 
 (COMMON-LISP:DEFPARAMETER +ARGUMENT-NAMES+
-  '(("RENDER-BUNDLE" . RENDER-BUNDLE) ("MAX_COUNT" . MAX_COUNT)
-    ("COUNT_BUFFER_OFFSET" . COUNT_BUFFER_OFFSET)
+  '(("MAX_COUNT" . MAX_COUNT) ("COUNT_BUFFER_OFFSET" . COUNT_BUFFER_OFFSET)
     ("COUNT_BUFFER" . COUNT_BUFFER) ("COUNT" . COUNT)
     ("SIZE-BYTES" . SIZE-BYTES) ("STAGES" . STAGES) ("ENCODER" . ENCODER)
     ("CAPABILITIES" . CAPABILITIES) ("LEVEL" . LEVEL)
@@ -6078,9 +6898,10 @@
     ("FIRST-INSTANCE" . FIRST-INSTANCE) ("FIRST-VERTEX" . FIRST-VERTEX)
     ("INSTANCE-COUNT" . INSTANCE-COUNT) ("VERTEX-COUNT" . VERTEX-COUNT)
     ("RENDER-BUNDLE-ENCODER" . RENDER-BUNDLE-ENCODER)
-    ("WRITE-SIZE" . WRITE-SIZE) ("DATA-LAYOUT" . DATA-LAYOUT)
-    ("DATA-SIZE" . DATA-SIZE) ("DATA" . DATA) ("BUFFER-OFFSET" . BUFFER-OFFSET)
-    ("COMMANDS" . COMMANDS) ("COMMAND-COUNT" . COMMAND-COUNT) ("QUEUE" . QUEUE)
+    ("RENDER-BUNDLE" . RENDER-BUNDLE) ("WRITE-SIZE" . WRITE-SIZE)
+    ("DATA-LAYOUT" . DATA-LAYOUT) ("DATA-SIZE" . DATA-SIZE) ("DATA" . DATA)
+    ("BUFFER-OFFSET" . BUFFER-OFFSET) ("COMMANDS" . COMMANDS)
+    ("COMMAND-COUNT" . COMMAND-COUNT) ("QUEUE" . QUEUE)
     ("PIPELINE-LAYOUT" . PIPELINE-LAYOUT) ("OPTIONS" . OPTIONS)
     ("INSTANCE" . INSTANCE) ("FILTER" . FILTER) ("SURFACE" . SURFACE)
     ("COMPUTE-PIPELINE" . COMPUTE-PIPELINE) ("PIPELINE" . PIPELINE)
@@ -6138,6 +6959,8 @@
     ("DEPTH-STENCIL-ATTACHMENT" . DEPTH-STENCIL-ATTACHMENT)
     ("COLOR-ATTACHMENTS" . COLOR-ATTACHMENTS)
     ("COLOR-ATTACHMENT-COUNT" . COLOR-ATTACHMENT-COUNT)
+    ("DEVICE-LOST-USERDATA" . DEVICE-LOST-USERDATA)
+    ("DEVICE-LOST-CALLBACK" . DEVICE-LOST-CALLBACK)
     ("DEFAULT-QUEUE" . DEFAULT-QUEUE) ("REQUIRED-LIMITS" . REQUIRED-LIMITS)
     ("REQUIRED-FEATURES" . REQUIRED-FEATURES)
     ("REQUIRED-FEATURES-COUNT" . REQUIRED-FEATURES-COUNT) ("COMPUTE" . COMPUTE)
