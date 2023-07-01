@@ -135,7 +135,7 @@
   (a:when-let ((callback *request-adapter-callback*))
     (funcall callback status adapter message)))
 
-(defmethod instance-request-adapter ((instance webgpu-instance) surface &key callback)
+(defun instance-request-adapter (instance surface &key callback)
   (with-foreign-object (options 'ffi::request-adapter-options)
     (with-foreign-slots (((next-in-chain ffi::next-in-chain)
                           (compatible-surface ffi::compatible-surface)
@@ -144,7 +144,7 @@
                          options
                          ffi::request-adapter-options)
       (setf next-in-chain (null-pointer))
-      (setf compatible-surface (null-pointer))
+      (setf compatible-surface surface)
       (setf power-preference ffi::power-preference-undefined)
       (setf force-fallback-adapter nil))
     (let* ((obtained-adapter nil)
@@ -160,3 +160,44 @@
 
 (defun drop-adapter (adapter)
   (ffi::adapter-drop adapter))
+
+;;; * Device
+
+(defvar *request-device-callback* nil)
+
+(defcallback handle-request-device :void
+    ((status ffi::request-device-status)
+     (device ffi::device)
+     (message :string)
+     (userdata :pointer))
+  (declare (ignore userdata))
+  ;; TODO handle status
+  (a:when-let ((callback *request-device-callback*))
+    (funcall callback status device message)))
+
+(defun adapter-request-device (adapter &key callback)
+  (with-foreign-object (desc 'ffi::device-descriptor)
+    (with-foreign-slots (((next-in-chain ffi::next-in-chain)
+                          (label ffi::label)
+                          (required-features-count ffi::required-features-count)
+                          (required-limits ffi::required-limits)
+                          (default-queue ffi::default-queue))
+                         desc
+                         ffi::device-descriptor)
+      (setf next-in-chain (null-pointer))
+      (setf label "Main device")
+      (setf required-features-count 0)
+      (setf required-limits (null-pointer))
+      (setf (foreign-slot-value default-queue 'ffi::queue-descriptor 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value default-queue 'ffi::queue-descriptor 'ffi::label) "Default queue"))
+
+    (let* ((obtained-device nil)
+           (*request-device-callback* (lambda (status device message)
+                                        (setf obtained-device device)
+                                        (when callback
+                                          (funcall callback status device message)))))
+      (ffi::adapter-request-device adapter
+                                   desc
+                                   (callback handle-request-device)
+                                   (null-pointer))
+      obtained-device)))

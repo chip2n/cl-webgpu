@@ -23,4 +23,5 @@
    #:with-surface
    #:instance-request-adapter
    #:drop-adapter
-   #:with-adapter))
+   #:with-adapter
+   #:adapter-request-device))
