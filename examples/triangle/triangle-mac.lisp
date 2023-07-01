@@ -11,13 +11,13 @@
 (defvar *instance* nil)
 (defvar *surface* nil)
 
-(defun run3 ()
+(defun run ()
   (setup-repl)
   (w:with-engine
     (glfw:with-init-window (:title "Window test" :width 800 :height 600 :client-api :no-api)
       (let* ((instance (w::create-instance))
              (metal-layer (init-metal (glfw-get-cocoa-window glfw:*window*)))
-             (surface (webgpu::create-metal-surface instance metal-layer)))
+             (surface (w::create-metal-surface instance metal-layer)))
         (setf *instance* instance)
         (setf *surface* surface)
         (loop until (glfw:window-should-close-p)
@@ -27,5 +27,6 @@
                    ;; Should let wgpu swap buffers I guess
                    ;; (glfw:swap-buffers)
                    (sleep 0.016)))
+        (w:drop-instance *instance*)
         (setf *instance* nil)
         (setf *surface* nil)))))

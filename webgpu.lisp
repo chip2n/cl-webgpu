@@ -117,7 +117,7 @@
       ;; TODO support other platforms
       (make-instance 'webgpu-x11-instance :handle instance))))
 
-(defmethod create-surface ((instance webgpu-x11-instance) x11-display x11-window)
+(defmethod create-x11-surface ((instance webgpu-x11-instance) x11-display x11-window)
   ;; (cffi:with-foreign-objects ((type '(:struct ffi::chained-struct))
   ;;                             (desc '(:struct ffi::surface-descriptor))
   ;;                             (xlib-surface-desc '(:struct ffi::surface-descriptor-from-xlib-window))))
