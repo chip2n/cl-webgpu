@@ -21,4 +21,6 @@
    #:with-engine
    #:with-instance
    #:with-surface
-   #:instance-request-adapter))
+   #:instance-request-adapter
+   #:drop-adapter
+   #:with-adapter))

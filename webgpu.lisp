@@ -26,6 +26,12 @@
      (unwind-protect ,@body
        (drop-surface ,surface))))
 
+(defmacro with-adapter ((adapter instance surface) &body body)
+  (check-type adapter symbol)
+  `(let ((,adapter (instance-request-adapter ,instance ,surface)))
+     (unwind-protect ,@body
+       (drop-adapter ,adapter))))
+
 ;; * Initialization
 
 ;; NOTE This is a workaround for this issue: https://github.com/cffi/cffi/issues/262
@@ -151,3 +157,6 @@
                                      (callback handle-request-adapter)
                                      (null-pointer))
       obtained-adapter)))
+
+(defun drop-adapter (adapter)
+  (ffi::adapter-drop adapter))
