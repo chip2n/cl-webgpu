@@ -59,47 +59,19 @@
 
 ;; TODO should share code with X11 (requires specific args)
 (defmethod create-metal-surface ((instance webgpu-metal-instance) metal-layer)
-  ;; TODO
-  ;; (with-foreign-objects ((type '(:struct ffi::chained-struct))
-  ;;                             (desc '(:struct ffi::surface-descriptor))
-  ;;                             (xlib-surface-desc '(:struct ffi::surface-descriptor-from-xlib-window))))
+  (with-foreign-objects ((type 'ffi::chained-struct)
+                         (desc 'ffi::surface-descriptor)
+                         (metal-surface-desc 'ffi::surface-descriptor-from-metal-layer))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::next) (null-pointer))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-surface-descriptor-from-metal-layer)
 
-  (let ((type (foreign-alloc '(:struct ffi::chained-struct)))
-        (desc (foreign-alloc '(:struct ffi::surface-descriptor)))
-        (metal-surface-desc (foreign-alloc '(:struct ffi::surface-descriptor-from-metal-layer))))
+    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::chain) type)
+    (setf (foreign-slot-value metal-surface-desc 'ffi::surface-descriptor-from-metal-layer 'ffi::layer) metal-layer)
 
-    ;; TODO not used
-    (setf (foreign-slot-value type '(:struct ffi::chained-struct) 'ffi::next) (null-pointer))
-    (setf (foreign-slot-value type '(:struct ffi::chained-struct) 'ffi::s-type) ffi::s-type-surface-descriptor-from-metal-layer)
+    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::next-in-chain) metal-surface-desc)
+    (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::label) (null-pointer))
 
-    ;; -----------------------
-
-    (setf (foreign-slot-value
-           (foreign-slot-value metal-surface-desc '(:struct ffi::surface-descriptor-from-metal-layer) 'ffi::chain)
-           '(:struct ffi::chained-struct)
-           'ffi::next)
-          (null-pointer))
-    (setf (foreign-slot-value
-           (foreign-slot-value metal-surface-desc '(:struct ffi::surface-descriptor-from-metal-layer) 'ffi::chain)
-           '(:struct ffi::chained-struct)
-           'ffi::s-type)
-          ffi::s-type-surface-descriptor-from-metal-layer)
-    (setf (foreign-slot-value metal-surface-desc '(:struct ffi::surface-descriptor-from-metal-layer) 'ffi::layer) metal-layer)
-
-    ;; -----------------------
-
-    (setf (foreign-slot-value desc '(:struct ffi::surface-descriptor) 'ffi::next-in-chain) metal-surface-desc)
-    (setf (foreign-slot-value desc '(:struct ffi::surface-descriptor) 'ffi::label) (null-pointer))
-
-    ;; (values
-    ;;  desc
-    ;;  type
-    ;;  metal-surface-desc
-    ;;  (foreign-slot-value desc '(:struct ffi::surface-descriptor) 'ffi::next-in-chain)
-    ;;  )
-    (webgpu.ffi::instance-create-surface (slot-value instance 'handle) desc)
-    ;; desc
-    ))
+    (ffi::instance-create-surface (slot-value instance 'handle) desc)))
 
 ;;; * Linux X11
 
