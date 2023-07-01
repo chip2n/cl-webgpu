@@ -1,5 +1,13 @@
 (in-package #:webgpu.examples.triangle)
 
+(cffi:define-foreign-library metalwrapper
+  (:darwin "libmetalwrapper.dylib"))
+
+(cffi:use-foreign-library metalwrapper)
+
+(cffi:defcfun (init-metal "clwInitMetal") :pointer
+  (window :pointer))
+
 (defvar *instance* nil)
 (defvar *surface* nil)
 
@@ -8,9 +16,8 @@
   (w:with-engine
     (glfw:with-init-window (:title "Window test" :width 800 :height 600 :client-api :no-api)
       (let* ((instance (w::create-instance))
-             (x11-display (glfw-get-x11-display))
-             (x11-window (glfw-get-x11-window glfw:*window*))
-             (surface (w::create-x11-surface instance x11-display x11-window)))
+             (metal-layer (init-metal (glfw-get-cocoa-window glfw:*window*)))
+             (surface (w::create-metal-surface instance metal-layer)))
         (setf *instance* instance)
         (setf *surface* surface)
         (loop until (glfw:window-should-close-p)

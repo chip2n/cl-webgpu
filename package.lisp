@@ -16,4 +16,5 @@
    #:webgpu-x11-instance
    #:webgpu-instance
    #:webgpu-error
-   #:webgpu-init-error))
+   #:webgpu-init-error
+   #:with-engine))

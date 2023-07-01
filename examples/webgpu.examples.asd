@@ -6,4 +6,5 @@
   :serial t
   :depends-on (#:alexandria #:cl-glfw3 #:webgpu)
   :components ((:file "package")
-               (:file "triangle/triangle")))
+               (:file "core")
+               (:file "triangle/triangle-mac")))
