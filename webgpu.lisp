@@ -47,7 +47,7 @@
 
 (defclass webgpu-metal-instance (webgpu-instance) ())
 
-;;TODO basically same as X11
+;; TODO basically same as X11, reuse code?
 (defun create-metal-instance ()
   (cffi:with-foreign-object (desc 'ffi::instance-descriptor)
     (setf (cffi:foreign-slot-value desc 'ffi::instance-descriptor 'ffi::next-in-chain)
@@ -166,6 +166,33 @@
     ;;  xlib-surface-desc
     ;;  (cffi:foreign-slot-value desc '(:struct ffi::surface-descriptor) 'ffi::next-in-chain)
     ;;  )
-    (webgpu.ffi::instance-create-surface (slot-value instance 'handle) desc)
+    (ffi::instance-create-surface (slot-value instance 'handle) desc)
     ;; desc
     ))
+
+;;; * Adapter
+
+(cffi:defcallback handle-request-adapter :void
+    ((status ffi::request-adapter-status)
+     (adapter ffi::adapter)
+     (message :string)
+     (userdata :pointer))
+  (declare (ignore adapter userdata))
+  (format t "STATUS: ~A (~A)~%" status message))
+
+(defmethod instance-request-adapter ((instance webgpu-instance) surface)
+  (cffi:with-foreign-object (options 'ffi::request-adapter-options)
+    (cffi:with-foreign-slots (((next-in-chain ffi::next-in-chain)
+                               (compatible-surface ffi::compatible-surface)
+                               (power-preference ffi::power-preference)
+                               (force-fallback-adapter ffi::force-fallback-adapter))
+                              options
+                              ffi::request-adapter-options)
+      (setf next-in-chain (cffi:null-pointer))
+      (setf compatible-surface (cffi:null-pointer))
+      (setf power-preference ffi::power-preference-undefined)
+      (setf force-fallback-adapter nil))
+    (ffi::instance-request-adapter (slot-value instance 'handle)
+                                   options
+                                   (cffi:callback handle-request-adapter)
+                                   (cffi:null-pointer))))

@@ -8,6 +8,9 @@
 (cffi:defcfun (init-metal "clwInitMetal") :pointer
   (window :pointer))
 
+(defvar *instance* nil)
+(defvar *surface* nil)
+
 (defun run3 ()
   (setup-repl)
   (w:with-engine
@@ -15,10 +18,14 @@
       (let* ((instance (w::create-instance))
              (metal-layer (init-metal (glfw-get-cocoa-window glfw:*window*)))
              (surface (webgpu::create-metal-surface instance metal-layer)))
+        (setf *instance* instance)
+        (setf *surface* surface)
         (loop until (glfw:window-should-close-p)
               do (continuable
                    (handle-repl-events)
                    (glfw:poll-events)
                    ;; Should let wgpu swap buffers I guess
                    ;; (glfw:swap-buffers)
-                   (sleep 0.016)))))))
+                   (sleep 0.016)))
+        (setf *instance* nil)
+        (setf *surface* nil)))))
