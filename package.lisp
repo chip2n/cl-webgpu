@@ -6,7 +6,7 @@
   (:use #:cl))
 
 (defpackage #:webgpu
-  (:use #:cl)
+  (:use #:cl #:cffi)
   (:local-nicknames (#:a #:alexandria)
                     (#:ffi #:webgpu.ffi))
   (:export

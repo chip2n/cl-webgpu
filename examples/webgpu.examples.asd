@@ -7,4 +7,4 @@
   :depends-on (#:alexandria #:cl-glfw3 #:webgpu)
   :components ((:file "package")
                (:file "core")
-               (:file "triangle/triangle-mac")))
+               (:file "triangle/triangle")))
