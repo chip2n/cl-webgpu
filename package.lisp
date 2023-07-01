@@ -20,4 +20,5 @@
    #:webgpu-init-error
    #:with-engine
    #:with-instance
-   #:with-surface))
+   #:with-surface
+   #:instance-request-adapter))

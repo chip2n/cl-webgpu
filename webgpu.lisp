@@ -125,10 +125,9 @@
      (adapter ffi::adapter)
      (message :string)
      (userdata :pointer))
-  (declare (ignore adapter userdata))
-  ;; TODO pass status, adapter etc
+  (declare (ignore userdata))
   (a:when-let ((callback *request-adapter-callback*))
-    (funcall callback)))
+    (funcall callback status adapter message)))
 
 (defmethod instance-request-adapter ((instance webgpu-instance) surface &key callback)
   (with-foreign-object (options 'ffi::request-adapter-options)
@@ -142,8 +141,13 @@
       (setf compatible-surface (null-pointer))
       (setf power-preference ffi::power-preference-undefined)
       (setf force-fallback-adapter nil))
-    (let ((*request-adapter-callback* callback))
+    (let* ((obtained-adapter nil)
+           (*request-adapter-callback* (lambda (status adapter message)
+                                         (setf obtained-adapter adapter)
+                                         (when callback
+                                           (funcall callback status adapter message)))))
       (ffi::instance-request-adapter (slot-value instance 'handle)
                                      options
                                      (callback handle-request-adapter)
-                                     (null-pointer)))))
+                                     (null-pointer))
+      obtained-adapter)))
