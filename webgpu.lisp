@@ -117,9 +117,8 @@
      (message :string)
      (userdata :pointer))
   (declare (ignore adapter userdata))
-  (format t "STATUS: ~A (~A)~%" status message)
+  ;; TODO pass status, adapter etc
   (a:when-let ((callback *request-adapter-callback*))
-    (format t "calling callback~%")
     (funcall callback)))
 
 (defmethod instance-request-adapter ((instance webgpu-instance) surface &key callback)
