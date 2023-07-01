@@ -1,7 +1,5 @@
 (in-package #:webgpu)
 
-;; * Macros
-
 (defun setup-thread ()
   #+sbcl
   (sb-int:set-floating-point-modes :traps nil))
@@ -14,31 +12,13 @@
          (setup-thread)
          ,@body))))
 
+;; * Initialization
+
 (defmacro with-instance ((instance) &body body)
   (check-type instance symbol)
   `(let ((,instance (create-instance)))
      (unwind-protect ,@body
        (drop-instance ,instance))))
-
-(defmacro with-surface ((surface instance &rest options) &body body)
-  (check-type surface symbol)
-  `(let ((,surface (create-surface ,instance ,@options)))
-     (unwind-protect ,@body
-       (drop-surface ,surface))))
-
-(defmacro with-adapter ((adapter instance surface) &body body)
-  (check-type adapter symbol)
-  `(let ((,adapter (instance-request-adapter ,instance ,surface)))
-     (unwind-protect ,@body
-       (drop-adapter ,adapter))))
-
-(defmacro with-device ((device adapter) &body body)
-  (check-type device symbol)
-  `(let ((,device (adapter-request-device ,adapter)))
-     (unwind-protect ,@body
-       (drop-device ,device))))
-
-;; * Initialization
 
 ;; NOTE This is a workaround for this issue: https://github.com/cffi/cffi/issues/262
 (defmethod cffi::translate-aggregate-to-foreign (ptr value (type cffi::foreign-typedef))
@@ -77,6 +57,12 @@
       (make-instance 'webgpu-metal-instance :handle instance))))
 
 ;;; * Linux X11
+
+(defmacro with-surface ((surface instance &rest options) &body body)
+  (check-type surface symbol)
+  `(let ((,surface (create-surface ,instance ,@options)))
+     (unwind-protect ,@body
+       (drop-surface ,surface))))
 
 (defclass webgpu-x11-instance (webgpu-instance) ())
 
@@ -132,6 +118,12 @@
 
 (defvar *request-adapter-callback* nil)
 
+(defmacro with-adapter ((adapter instance surface) &body body)
+  (check-type adapter symbol)
+  `(let ((,adapter (instance-request-adapter ,instance ,surface)))
+     (unwind-protect ,@body
+       (drop-adapter ,adapter))))
+
 (defcallback handle-request-adapter :void
     ((status ffi::request-adapter-status)
      (adapter ffi::adapter)
@@ -170,6 +162,12 @@
 ;;; * Device
 
 (defvar *request-device-callback* nil)
+
+(defmacro with-device ((device adapter) &body body)
+  (check-type device symbol)
+  `(let ((,device (adapter-request-device ,adapter)))
+     (unwind-protect ,@body
+       (drop-device ,device))))
 
 (defcallback handle-request-device :void
     ((status ffi::request-device-status)
