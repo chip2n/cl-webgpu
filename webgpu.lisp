@@ -208,3 +208,31 @@
 
 (defun drop-device (device)
   (ffi::device-drop device))
+
+(defvar *device-uncaptured-error-callback* nil)
+
+(defcallback handle-uncaptured-error :void
+    ((type ffi::error-type)
+     (message :string)
+     (userdata :pointer))
+  (declare (ignore userdata))
+  (a:when-let ((callback *device-uncaptured-error-callback*))
+    (funcall callback type message)))
+
+(defun device-set-uncaptured-error-callback (device callback)
+  (let ((*device-uncaptured-error-callback* callback))
+    (ffi::device-set-uncaptured-error-callback device (callback handle-uncaptured-error) (null-pointer))))
+
+(defvar *device-lost-callback* nil)
+
+(defcallback handle-device-lost :void
+    ((reason ffi::device-lost-reason)
+     (message :string)
+     (userdata :pointer))
+  (declare (ignore userdata))
+  (a:when-let ((callback *device-lost-callback*))
+    (funcall callback reason message)))
+
+(defun device-set-device-lost-callback (device callback)
+  (let ((*device-lost-callback* callback))
+    (ffi::device-set-device-lost-callback device (callback handle-device-lost) (null-pointer))))

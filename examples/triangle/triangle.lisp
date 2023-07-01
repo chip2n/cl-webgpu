@@ -20,6 +20,8 @@
                    (setf *adapter* adapter)
                    (w:with-device (device adapter)
                      (setf *device* device)
+                     (w:device-set-uncaptured-error-callback device (lambda (type msg) (format t "Uncaptured device error (~A): ~A~%" type msg)))
+                     (w:device-set-device-lost-callback device (lambda (reason msg) (format t "Device lost (~A): ~A~%" reason msg)))
                      (loop until (glfw:window-should-close-p)
                            do (continuable
                                 (handle-repl-events)

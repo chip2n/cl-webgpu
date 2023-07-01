@@ -26,4 +26,6 @@
    #:with-adapter
    #:adapter-request-device
    #:drop-device
-   #:with-device))
+   #:with-device
+   #:device-set-uncaptured-error-callback
+   #:device-set-device-lost-callback))
