@@ -47,7 +47,6 @@
 
 (defclass webgpu-metal-instance (webgpu-instance) ())
 
-;; TODO basically same as X11, reuse code?
 (defun create-metal-instance ()
   (with-foreign-object (desc 'ffi::instance-descriptor)
     (setf (foreign-slot-value desc 'ffi::instance-descriptor 'ffi::next-in-chain)
@@ -57,8 +56,7 @@
         (error 'webgpu-init-error))
       (make-instance 'webgpu-metal-instance :handle instance))))
 
-;; TODO should share code with X11 (requires specific args)
-(defmethod create-metal-surface ((instance webgpu-metal-instance) metal-layer)
+(defun create-metal-surface (instance metal-layer)
   (with-foreign-objects ((type 'ffi::chained-struct)
                          (desc 'ffi::surface-descriptor)
                          (metal-surface-desc 'ffi::surface-descriptor-from-metal-layer))
@@ -77,8 +75,6 @@
 
 (defclass webgpu-x11-instance (webgpu-instance) ())
 
-;; TODO This currently creates X11 instance, but should create an appropriate
-;; instance for current platform
 (defun create-x11-instance ()
   (with-foreign-object (desc 'ffi::instance-descriptor)
     ;; (setf (foreign-slot-value desc 'ffi::instance-descriptor 'ffi::next-in-chain) extras)
@@ -86,13 +82,12 @@
     (let ((instance (ffi::create-instance desc)))
       (when (null-pointer-p instance)
         (error 'webgpu-init-error))
-      ;; TODO support other platforms
       (make-instance 'webgpu-x11-instance :handle instance))))
 
-(defmethod create-x11-surface ((instance webgpu-x11-instance) x11-display x11-window)
+(defun create-x11-surface (instance x11-display x11-window)
   (with-foreign-objects ((type 'ffi::chained-struct)
-                              (desc 'ffi::surface-descriptor)
-                              (xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window))
+                         (desc 'ffi::surface-descriptor)
+                         (xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window))
     (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::next) (null-pointer))
     (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-surface-descriptor-from-xlib-window)
 
