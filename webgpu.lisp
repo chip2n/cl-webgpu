@@ -9,14 +9,10 @@
 ;; TODO shouldn't move to main thread on Linux
 (defmacro with-engine (&body body)
   `(trivial-main-thread:with-body-in-main-thread (:blocking nil)
-     (handler-case
-         (progn
-           (setup-thread)
-           ,@body)
-       (error (c)
-         ;; We invoke the debugger manually here, because trivial-main-thread
-         ;; only marks the task created as :errored
-         (invoke-debugger c)))))
+     (handler-bind ((error #'invoke-debugger))
+       (progn
+         (setup-thread)
+         ,@body))))
 
 ;; * Initialization
 
