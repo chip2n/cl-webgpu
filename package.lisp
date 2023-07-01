@@ -24,4 +24,6 @@
    #:instance-request-adapter
    #:drop-adapter
    #:with-adapter
-   #:adapter-request-device))
+   #:adapter-request-device
+   #:drop-device
+   #:with-device))

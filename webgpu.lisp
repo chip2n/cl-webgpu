@@ -32,6 +32,12 @@
      (unwind-protect ,@body
        (drop-adapter ,adapter))))
 
+(defmacro with-device ((device adapter) &body body)
+  (check-type device symbol)
+  `(let ((,device (adapter-request-device ,adapter)))
+     (unwind-protect ,@body
+       (drop-device ,device))))
+
 ;; * Initialization
 
 ;; NOTE This is a workaround for this issue: https://github.com/cffi/cffi/issues/262
@@ -201,3 +207,6 @@
                                    (callback handle-request-device)
                                    (null-pointer))
       obtained-device)))
+
+(defun drop-device (device)
+  (ffi::device-drop device))

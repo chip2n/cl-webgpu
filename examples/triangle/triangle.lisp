@@ -3,6 +3,7 @@
 (defvar *instance* nil)
 (defvar *surface* nil)
 (defvar *adapter* nil)
+(defvar *device* nil)
 
 (defun run ()
   (setup-repl)
@@ -17,16 +18,19 @@
                  (setf *surface* surface)
                  (w:with-adapter (adapter instance surface)
                    (setf *adapter* adapter)
-                   (loop until (glfw:window-should-close-p)
-                         do (continuable
-                              (handle-repl-events)
-                              (glfw:poll-events)
-                              ;; Should let wgpu swap buffers I guess
-                              ;; (glfw:swap-buffers)
-                              (sleep 0.016))))))
+                   (w:with-device (device adapter)
+                     (setf *device* device)
+                     (loop until (glfw:window-should-close-p)
+                           do (continuable
+                                (handle-repl-events)
+                                (glfw:poll-events)
+                                ;; Should let wgpu swap buffers I guess
+                                ;; (glfw:swap-buffers)
+                                (sleep 0.016)))))))
              (cleanup))))))
 
 (defun cleanup ()
   (setf *instance* nil)
   (setf *surface* nil)
-  (setf *adapter* nil))
+  (setf *adapter* nil)
+  (setf *device* nil))
