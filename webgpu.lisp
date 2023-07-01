@@ -1,6 +1,6 @@
 (in-package #:webgpu)
 
-;; * Entrypoint
+;; * Macros
 
 (defun setup-thread ()
   #+sbcl
@@ -19,6 +19,12 @@
   `(let ((,instance (create-instance)))
      (unwind-protect ,@body
        (drop-instance ,instance))))
+
+(defmacro with-surface ((surface instance &rest options) &body body)
+  (check-type surface symbol)
+  `(let ((,surface (create-surface ,instance ,@options)))
+     (unwind-protect ,@body
+       (drop-surface ,surface))))
 
 ;; * Initialization
 
@@ -73,7 +79,9 @@
 
 ;;; * Surface
 
-(defun create-x11-surface (instance x11-display x11-window)
+(defmethod create-surface ((instance webgpu-x11-instance) &key xdisplay xwindow)
+  (assert xdisplay)
+  (assert xwindow)
   (with-foreign-objects ((type 'ffi::chained-struct)
                          (desc 'ffi::surface-descriptor)
                          (xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window))
@@ -81,15 +89,16 @@
     (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-surface-descriptor-from-xlib-window)
 
     (setf (foreign-slot-value xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window 'ffi::chain) type)
-    (setf (foreign-slot-value xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window 'ffi::display) x11-display)
-    (setf (foreign-slot-value xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window 'ffi::window) x11-window)
+    (setf (foreign-slot-value xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window 'ffi::display) xdisplay)
+    (setf (foreign-slot-value xlib-surface-desc 'ffi::surface-descriptor-from-xlib-window 'ffi::window) xwindow)
 
     (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::next-in-chain) xlib-surface-desc)
     (setf (foreign-slot-value desc 'ffi::surface-descriptor 'ffi::label) (null-pointer))
 
     (ffi::instance-create-surface (slot-value instance 'handle) desc)))
 
-(defun create-metal-surface (instance metal-layer)
+(defmethod create-surface ((instance webgpu-metal-instance) &key metal-layer)
+  (assert metal-layer)
   (with-foreign-objects ((type 'ffi::chained-struct)
                          (desc 'ffi::surface-descriptor)
                          (metal-surface-desc 'ffi::surface-descriptor-from-metal-layer))
@@ -104,8 +113,8 @@
 
     (ffi::instance-create-surface (slot-value instance 'handle) desc)))
 
-(defun surface-release (surface)
-  (ffi::surface-release surface))
+(defun drop-surface (surface)
+  (ffi::surface-drop surface))
 
 ;;; * Adapter
 

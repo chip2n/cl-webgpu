@@ -13,9 +13,11 @@
    #:create-instance
    #:drop-instance
    #:create-surface
+   #:drop-surface
    #:webgpu-x11-instance
    #:webgpu-instance
    #:webgpu-error
    #:webgpu-init-error
    #:with-engine
-   #:with-instance))
+   #:with-instance
+   #:with-surface))
