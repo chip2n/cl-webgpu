@@ -1,5 +1,5 @@
 (defpackage #:webgpu.prelude
-  (:use #:cl)
+  (:use #:cl #:arrow-macros)
   (:local-nicknames (#:a #:alexandria)))
 
 (defpackage #:webgpu.ffi
@@ -28,4 +28,5 @@
    #:drop-device
    #:with-device
    #:device-set-uncaptured-error-callback
-   #:device-set-device-lost-callback))
+   #:device-set-device-lost-callback
+   #:create-shader-module))

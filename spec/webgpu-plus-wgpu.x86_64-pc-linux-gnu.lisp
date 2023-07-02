@@ -1068,8 +1068,8 @@
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-WINDOWS-H-W-N-D 2)
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-XLIB-WINDOW 3)
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-CANVAS-H-T-M-L-SELECTOR 4)
-  (S-TYPE-SHADER-MODULE-S-P-I-R-V-DESCRIPTOR 5)
-  (S-TYPE-SHADER-MODULE-W-G-S-L-DESCRIPTOR 6)
+  (S-TYPE-SHADER-MODULE-SPIRV-DESCRIPTOR 5)
+  (S-TYPE-SHADER-MODULE-WGSL-DESCRIPTOR 6)
   (S-TYPE-PRIMITIVE-DEPTH-CLIP-CONTROL 7)
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-WAYLAND-SURFACE 8)
   (S-TYPE-SURFACE-DESCRIPTOR-FROM-ANDROID-NATIVE-WINDOW 9)
@@ -1880,26 +1880,26 @@
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:906:16"
-(CFFI:DEFCSTRUCT (SHADER-MODULE-S-P-I-R-V-DESCRIPTOR :SIZE 32)
+(CFFI:DEFCSTRUCT (SHADER-MODULE-SPIRV-DESCRIPTOR :SIZE 32)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (CODE-SIZE UINT32_T :OFFSET 16)
   (CODE (:POINTER UINT32_T) :OFFSET 24))
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:910:3"
-(CFFI:DEFCTYPE SHADER-MODULE-S-P-I-R-V-DESCRIPTOR
-               (:STRUCT SHADER-MODULE-S-P-I-R-V-DESCRIPTOR))
+(CFFI:DEFCTYPE SHADER-MODULE-SPIRV-DESCRIPTOR
+               (:STRUCT SHADER-MODULE-SPIRV-DESCRIPTOR))
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:913:16"
-(CFFI:DEFCSTRUCT (SHADER-MODULE-W-G-S-L-DESCRIPTOR :SIZE 24)
+(CFFI:DEFCSTRUCT (SHADER-MODULE-WGSL-DESCRIPTOR :SIZE 24)
   (CHAIN CHAINED-STRUCT :OFFSET 0)
   (CODE :STRING :OFFSET 16))
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:916:3"
-(CFFI:DEFCTYPE SHADER-MODULE-W-G-S-L-DESCRIPTOR
-               (:STRUCT SHADER-MODULE-W-G-S-L-DESCRIPTOR))
+(CFFI:DEFCTYPE SHADER-MODULE-WGSL-DESCRIPTOR
+               (:STRUCT SHADER-MODULE-WGSL-DESCRIPTOR))
 
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:918:16"
@@ -4619,52 +4619,44 @@
   (TEXTURE-VIEW TEXTURE-VIEW))
 
 
-;; "/usr/include/bits/wchar.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_WCHAR_H 1)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:57:9"
+(ALEXANDRIA:DEFINE-CONSTANT LIMITU32UNDEFINED 4294967295)
 
 
-;; "/usr/include/bits/wchar.h:34:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MAX 2147483647)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:58:9"
+(ALEXANDRIA:DEFINE-CONSTANT LIMITU64UNDEFINED 18446744073709551615)
 
 
-;; "/usr/include/bits/wchar.h:46:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MIN -2147483648)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:60:9"
+(ALEXANDRIA:DEFINE-CONSTANT WHOLEMAPSIZE 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:118:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT32_MIN -2147483648)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:59:9"
+(ALEXANDRIA:DEFINE-CONSTANT MIPLEVELCOUNTUNDEFINED 4294967295)
 
 
-;; "/usr/include/stdint.h:117:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT16_MIN -32768)
-
-
-;; "/usr/include/stdint.h:116:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT8_MIN -128)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:56:9"
+(ALEXANDRIA:DEFINE-CONSTANT COPYSTRIDEUNDEFINED 4294967295)
 
 
 ;; "/usr/include/stdint.h:23:9"
 (ALEXANDRIA:DEFINE-CONSTANT _STDINT_H 1)
 
 
-;; "/usr/include/bits/stdint-intn.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_INTN_H 1)
-
-
-;; "/usr/include/bits/stdint-uintn.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_UINTN_H 1)
-
-
 ;; "/usr/include/stdint.h:227:11"
 (ALEXANDRIA:DEFINE-CONSTANT SIZE_MAX 18446744073709551615)
 
 
-;; "/usr/include/stdint.h:240:11"
-(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MAX 2147483647)
-
-
 ;; "/usr/include/stdint.h:239:11"
 (ALEXANDRIA:DEFINE-CONSTANT WCHAR_MIN -2147483648)
+
+
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:61:9"
+(ALEXANDRIA:DEFINE-CONSTANT WHOLESIZE 18446744073709551615)
+
+
+;; "/usr/include/stdint.h:240:11"
+(ALEXANDRIA:DEFINE-CONSTANT WCHAR_MAX 2147483647)
 
 
 ;; "/usr/include/stdint.h:244:10"
@@ -4675,301 +4667,167 @@
 (ALEXANDRIA:DEFINE-CONSTANT WINT_MAX 4294967295)
 
 
-;; "/usr/include/stdint.h:148:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST64_MAX -1)
+;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:55:9"
+(ALEXANDRIA:DEFINE-CONSTANT ARRAYLAYERCOUNTUNDEFINED 4294967295)
 
-
-;; "/usr/include/stdint.h:152:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MIN -128)
-
-
-;; "/usr/include/stdint.h:146:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST16_MAX 65535)
-
-
-;; "/usr/include/stdint.h:147:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST32_MAX 4294967295)
-
-
-;; "/usr/include/stdint.h:154:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:136:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MIN -2147483648)
-
-
-;; "/usr/include/stdint.h:137:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:134:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MIN -128)
-
-
-;; "/usr/include/stdint.h:135:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MIN -32768)
-
-
-;; "/usr/include/bits/typesizes.h:43:9"
-
-;; "/usr/include/stdint.h:142:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MAX 9223372036854775807)
-
-
-;; "/usr/include/bits/typesizes.h:42:9"
-
-;; "/usr/include/bits/typesizes.h:41:9"
-
-;; "/usr/include/stdint.h:139:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MAX 127)
-
-
-;; "/usr/include/bits/typesizes.h:40:9"
-
-;; "/usr/include/stdint.h:140:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MAX 32767)
-
-
-;; "/usr/include/bits/typesizes.h:39:9"
-
-;; "<command line>:1:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GCC_HAVE_DWARF2_CFI_ASM 1)
-
-
-;; "/usr/include/stdint.h:122:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT16_MAX 32767)
-
-
-;; "/usr/include/stdint.h:123:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT32_MAX 2147483647)
-
-
-;; "/usr/include/stdint.h:119:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT64_MIN -9223372036854775808)
-
-
-;; "/usr/include/stdint.h:121:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT8_MAX 127)
-
-
-;; "/usr/include/stdint.h:130:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT64_MAX -1)
-
-
-;; "/usr/include/stdint.h:127:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT8_MAX 255)
-
-
-;; "/usr/include/stdc-predef.h:43:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_BFP__ 201404)
-
-
-;; "/usr/include/stdc-predef.h:52:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559_COMPLEX__ 1)
-
-
-;; "/usr/include/features.h:482:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC__ 2)
-
-
-;; "/usr/include/stdc-predef.h:62:9"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_ISO_10646__ 201706)
-
-
-;; "/usr/include/stdint.h:124:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT64_MAX 9223372036854775807)
-
-
-;; "/usr/include/bits/libc-header-start.h:71:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT 0)
-
-
-;; "/usr/include/stdint.h:129:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT32_MAX 4294967295)
-
-
-;; "/usr/include/features.h:19:9"
-(ALEXANDRIA:DEFINE-CONSTANT _FEATURES_H 1)
-
-
-;; "/usr/include/stdint.h:141:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MAX 2147483647)
-
-
-;; "/usr/include/stdc-predef.h:53:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_COMPLEX__ 201404)
-
-
-;; "/usr/include/features.h:326:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX 1)
-
-
-;; "/usr/include/bits/libc-header-start.h:42:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_LIB_EXT2 0)
-
-
-;; "/usr/include/features.h:251:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC11 1)
-
-
-;; "/usr/include/sys/cdefs.h:79:11"
-
-;; "/usr/include/features.h:346:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC99 1)
-
-
-;; "/usr/include/features.h:338:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199506 1)
-
-
-;; "/usr/include/features.h:344:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC95 1)
-
-
-;; "/usr/include/features.h:334:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199309 1)
-
-
-;; "/usr/include/features.h:342:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K 1)
-
-
-;; "/usr/include/features.h:330:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX2 1)
-
-
-;; "/usr/include/sys/cdefs.h:20:9"
-(ALEXANDRIA:DEFINE-CONSTANT _SYS_CDEFS_H 1)
-
-
-;; "/usr/include/features.h:433:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_FORTIFY_LEVEL 0)
-
-
-;; "/usr/include/features.h:483:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_MINOR__ 37)
-
-
-;; "/usr/include/features.h:350:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K8 1)
-
-
-;; "/usr/include/features.h:245:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_ISOC2X 0)
-
-
-;; "/usr/include/features.h:478:9"
-(ALEXANDRIA:DEFINE-CONSTANT __GNU_LIBRARY__ 6)
-
-
-;; "/usr/include/sys/cdefs.h:80:11"
-
-;; "/usr/include/features.h:441:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_GETS 0)
-
-
-;; "/usr/include/sys/cdefs.h:341:10"
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:57:9"
-(ALEXANDRIA:DEFINE-CONSTANT LIMITU32UNDEFINED 4294967295)
-
-
-;; "/usr/include/features.h:396:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_MISC 1)
-
-
-;; "/usr/include/stdint.h:145:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST8_MAX 255)
-
-
-;; "/usr/include/features.h:400:10"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_ATFILE 1)
-
-
-;; "/usr/include/stdint.h:128:10"
-(ALEXANDRIA:DEFINE-CONSTANT UINT16_MAX 65535)
-
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:56:9"
-(ALEXANDRIA:DEFINE-CONSTANT COPYSTRIDEUNDEFINED 4294967295)
-
-;; Skipped "__bool_true_false_are_defined" due to filters
-
-;; "/usr/include/sys/cdefs.h:128:9"
-
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:60:9"
-(ALEXANDRIA:DEFINE-CONSTANT WHOLEMAPSIZE 18446744073709551615)
-
-
-;; "/usr/include/features.h:464:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_SCANF 0)
-
-
-;; "/usr/include/bits/time64.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TIME64_H 1)
-
-
-;; "/usr/include/bits/time64.h:30:10"
 ;; Skipped "false" due to filters
+;; Skipped "__bool_true_false_are_defined" due to filters
+;; Skipped "true" due to filters
 
-;; "/usr/include/features.h:237:10"
-(ALEXANDRIA:DEFINE-CONSTANT _DEFAULT_SOURCE 1)
-
-;; Skipped "bool" due to filters
-
-;; "/usr/include/bits/types.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPES_H 1)
+;; "/usr/include/sys/cdefs.h:656:10"
+(ALEXANDRIA:DEFINE-CONSTANT __HAVE_GENERIC_SELECTION 1)
 
 
 ;; "/usr/lib/clang/15.0.7/include/stddef.h:89:11"
 (ALEXANDRIA:DEFINE-CONSTANT NULL 0)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:55:9"
-(ALEXANDRIA:DEFINE-CONSTANT ARRAYLAYERCOUNTUNDEFINED 4294967295)
+;; "/usr/include/sys/cdefs.h:497:10"
+
+;; "/usr/include/bits/wordsize.h:4:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE 64)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:59:9"
-(ALEXANDRIA:DEFINE-CONSTANT MIPLEVELCOUNTUNDEFINED 4294967295)
+;; "/usr/include/bits/wordsize.h:14:10"
+(ALEXANDRIA:DEFINE-CONSTANT __SYSCALL_WORDSIZE 64)
 
-;; Skipped "true" due to filters
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:61:9"
-(ALEXANDRIA:DEFINE-CONSTANT WHOLESIZE 18446744073709551615)
+;; "/usr/include/bits/wordsize.h:12:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE_TIME64_COMPAT32 1)
 
+
+;; "/usr/include/bits/long-double.h:21:9"
+(ALEXANDRIA:DEFINE-CONSTANT __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0)
+
+
+;; "/usr/include/bits/timesize.h:26:10"
+(ALEXANDRIA:DEFINE-CONSTANT __TIMESIZE 64)
+
+
+;; "/usr/include/bits/typesizes.h:34:10"
+
+;; "/usr/include/sys/cdefs.h:310:10"
+
+;; "/usr/include/bits/typesizes.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPESIZES_H 1)
+
+
+;; "/usr/include/stdc-predef.h:19:9"
+(ALEXANDRIA:DEFINE-CONSTANT _STDC_PREDEF_H 1)
+
+
+;; "/usr/include/bits/typesizes.h:35:10"
+
+;; "/usr/include/bits/typesizes.h:38:9"
+
+;; "/usr/include/sys/cdefs.h:317:10"
+
+;; "/usr/include/stdc-predef.h:42:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559__ 1)
+
+
+;; "/usr/include/sys/cdefs.h:323:10"
+
+;; "/usr/include/sys/cdefs.h:333:10"
+
+;; "/usr/include/sys/cdefs.h:332:10"
+
+;; "/usr/include/bits/types.h:129:10"
+
+;; "/usr/include/bits/types.h:128:10"
+
+;; "/usr/include/bits/types.h:131:10"
+
+;; "/usr/include/sys/cdefs.h:399:10"
+
+;; "/usr/include/sys/cdefs.h:408:10"
+
+;; "/usr/include/bits/types.h:132:10"
+
+;; "/usr/include/bits/types.h:130:10"
+
+;; "/usr/include/bits/types.h:133:10"
+
+;; "/usr/include/bits/types.h:135:10"
+
+;; "/usr/include/sys/cdefs.h:426:10"
+
+;; "/usr/include/bits/types.h:134:10"
+
+;; "/tmp/tmpAAURSO1-tmp.h:47:12"
+
+;; "/usr/include/sys/cdefs.h:435:10"
+
+;; "/usr/include/bits/types.h:109:9"
+
+;; "/usr/include/sys/cdefs.h:457:11"
+
+;; "/usr/include/bits/types.h:111:9"
+
+;; "/usr/include/bits/types.h:114:9"
+
+;; "/usr/include/sys/cdefs.h:463:10"
+
+;; "/usr/include/bits/types.h:113:9"
+
+;; "/usr/include/sys/cdefs.h:458:11"
+
+;; "/usr/include/bits/types.h:112:9"
+
+;; "/usr/include/features.h:396:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_MISC 1)
+
+
+;; "/usr/include/features.h:400:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ATFILE 1)
+
+
+;; "/usr/include/features.h:433:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_FORTIFY_LEVEL 0)
+
+
+;; "/usr/include/features.h:245:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_ISOC2X 0)
+
+
+;; "/usr/include/features.h:441:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_GETS 0)
+
+
+;; "/usr/include/features.h:464:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_DEPRECATED_SCANF 0)
+
+
+;; "/usr/include/sys/cdefs.h:341:10"
+
+;; "/usr/include/bits/types.h:110:9"
+
+;; "/usr/include/sys/cdefs.h:128:9"
 
 ;; "/usr/include/bits/libc-header-start.h:109:10"
 (ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_TYPES_EXT 0)
 
 
-;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:58:9"
-(ALEXANDRIA:DEFINE-CONSTANT LIMITU64UNDEFINED 18446744073709551615)
-
-
 ;; "/usr/include/sys/cdefs.h:283:10"
 
-;; "/usr/include/features.h:286:11"
-(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX_IMPLICITLY 1)
+;; "/usr/include/features.h:237:10"
+(ALEXANDRIA:DEFINE-CONSTANT _DEFAULT_SOURCE 1)
 
 
-;; "/usr/include/bits/libc-header-start.h:94:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT 0)
+;; "/usr/include/bits/types.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPES_H 1)
 
+;; Skipped "bool" due to filters
 
-;; "/usr/include/features.h:352:10"
-(ALEXANDRIA:DEFINE-CONSTANT _ATFILE_SOURCE 1)
-
-
-;; "/usr/include/bits/libc-header-start.h:100:10"
-(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X 0)
-
+;; "/usr/include/bits/typesizes.h:43:9"
 
 ;; "/usr/include/bits/libc-header-start.h:77:10"
 (ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT_C2X 0)
 
 
 ;; "/usr/include/sys/cdefs.h:218:10"
+
+;; "/usr/include/bits/typesizes.h:42:9"
 
 ;; "/usr/include/features.h:289:10"
 (ALEXANDRIA:DEFINE-CONSTANT _POSIX_SOURCE 1)
@@ -4987,192 +4845,310 @@
 (ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_EXT 0)
 
 
-;; "/usr/include/bits/wordsize.h:14:10"
-(ALEXANDRIA:DEFINE-CONSTANT __SYSCALL_WORDSIZE 64)
+;; "/usr/include/bits/typesizes.h:39:9"
 
+;; "/usr/include/bits/typesizes.h:40:9"
+
+;; "<command line>:1:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GCC_HAVE_DWARF2_CFI_ASM 1)
+
+
+;; "/usr/include/features.h:286:11"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX_IMPLICITLY 1)
+
+
+;; "/usr/include/bits/libc-header-start.h:94:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT 0)
+
+
+;; "/usr/include/bits/typesizes.h:41:9"
+
+;; "/usr/include/features.h:352:10"
+(ALEXANDRIA:DEFINE-CONSTANT _ATFILE_SOURCE 1)
+
+
+;; "/usr/include/bits/libc-header-start.h:100:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X 0)
+
+
+;; "/usr/include/bits/typesizes.h:58:9"
+
+;; "/usr/include/bits/typesizes.h:59:9"
+
+;; "/usr/include/bits/typesizes.h:60:9"
 
 ;; "/usr/include/bits/typesizes.h:62:9"
 
-;; "/usr/include/bits/wordsize.h:12:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE_TIME64_COMPAT32 1)
-
-
 ;; "/usr/include/bits/typesizes.h:63:9"
-
-;; "/usr/include/bits/long-double.h:21:9"
-(ALEXANDRIA:DEFINE-CONSTANT __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0)
-
 
 ;; "/usr/include/bits/typesizes.h:64:9"
 
 ;; "/usr/include/bits/typesizes.h:65:9"
 
-;; "/usr/include/bits/timesize.h:26:10"
-(ALEXANDRIA:DEFINE-CONSTANT __TIMESIZE 64)
+;; "/usr/include/features.h:482:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC__ 2)
 
-
-;; "/usr/include/bits/typesizes.h:58:9"
-
-;; "/usr/include/sys/cdefs.h:497:10"
-
-;; "/usr/include/bits/typesizes.h:59:9"
-
-;; "/usr/include/bits/wordsize.h:4:10"
-(ALEXANDRIA:DEFINE-CONSTANT __WORDSIZE 64)
-
-
-;; "/usr/include/bits/typesizes.h:60:9"
-
-;; "/usr/include/bits/typesizes.h:61:9"
-
-;; "/usr/include/bits/typesizes.h:53:9"
-
-;; "/usr/include/stdc-predef.h:42:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559__ 1)
-
-
-;; "/usr/include/bits/typesizes.h:54:9"
-
-;; "/usr/include/sys/cdefs.h:323:10"
-
-;; "/usr/include/bits/typesizes.h:55:9"
-
-;; "/usr/include/sys/cdefs.h:333:10"
-
-;; "/usr/include/bits/typesizes.h:56:9"
-
-;; "/usr/include/sys/cdefs.h:332:10"
-
-;; "/usr/include/bits/typesizes.h:34:10"
 
 ;; "/usr/include/bits/typesizes.h:45:10"
 
-;; "/usr/include/sys/cdefs.h:310:10"
+;; "/usr/include/features.h:478:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GNU_LIBRARY__ 6)
 
-;; "/usr/include/bits/typesizes.h:24:9"
-(ALEXANDRIA:DEFINE-CONSTANT _BITS_TYPESIZES_H 1)
-
-
-;; "/usr/include/bits/typesizes.h:57:9"
 
 ;; "/usr/include/bits/typesizes.h:46:10"
 
-;; "/usr/include/stdc-predef.h:19:9"
-(ALEXANDRIA:DEFINE-CONSTANT _STDC_PREDEF_H 1)
+;; "/usr/include/bits/libc-header-start.h:71:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_IEC_60559_BFP_EXT 0)
+
+
+;; "/usr/include/stdc-predef.h:62:9"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_ISO_10646__ 201706)
 
 
 ;; "/usr/include/bits/typesizes.h:51:9"
 
-;; "/usr/include/bits/typesizes.h:38:9"
-
-;; "/usr/include/bits/typesizes.h:35:10"
-
 ;; "/usr/include/bits/typesizes.h:52:9"
 
-;; "/usr/include/sys/cdefs.h:317:10"
+;; "/usr/include/stdc-predef.h:53:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_COMPLEX__ 201404)
+
+
+;; "/usr/include/stdc-predef.h:52:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_559_COMPLEX__ 1)
+
+
+;; "/usr/include/bits/libc-header-start.h:42:10"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_USE_LIB_EXT2 0)
+
+
+;; "/usr/include/bits/typesizes.h:54:9"
+
+;; "/usr/include/stdc-predef.h:43:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STDC_IEC_60559_BFP__ 201404)
+
+
+;; "/usr/include/bits/typesizes.h:55:9"
+
+;; "/usr/include/bits/typesizes.h:74:9"
+
+;; "/usr/include/bits/typesizes.h:56:9"
+
+;; "/usr/include/sys/cdefs.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _SYS_CDEFS_H 1)
+
 
 ;; "/usr/include/bits/typesizes.h:87:10"
 (ALEXANDRIA:DEFINE-CONSTANT __RLIM_T_MATCHES_RLIM64_T 1)
 
 
-;; "/usr/include/sys/cdefs.h:408:10"
+;; "/usr/include/bits/typesizes.h:57:9"
 
-;; "/usr/include/bits/types.h:134:10"
+;; "/usr/include/features.h:483:9"
+(ALEXANDRIA:DEFINE-CONSTANT __GLIBC_MINOR__ 37)
 
-;; "/usr/include/bits/types.h:132:10"
-
-;; "/usr/include/bits/types.h:133:10"
-
-;; "/usr/include/bits/typesizes.h:90:10"
-(ALEXANDRIA:DEFINE-CONSTANT __STATFS_MATCHES_STATFS64 1)
-
-
-;; "/usr/include/bits/typesizes.h:93:10"
-(ALEXANDRIA:DEFINE-CONSTANT __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1)
-
-
-;; "/tmp/tmp5GEXGEG5-tmp.h:143:12"
-
-;; "/usr/include/bits/typesizes.h:103:9"
-(ALEXANDRIA:DEFINE-CONSTANT __FD_SETSIZE 1024)
-
-
-;; "/usr/include/bits/types.h:135:10"
-
-;; "/usr/include/bits/types.h:129:10"
-
-;; "/usr/include/bits/typesizes.h:74:9"
-
-;; "/usr/include/bits/typesizes.h:75:9"
-
-;; "/usr/include/bits/types.h:128:10"
-
-;; "/usr/include/bits/types.h:131:10"
 
 ;; "/usr/include/bits/typesizes.h:81:10"
 (ALEXANDRIA:DEFINE-CONSTANT __OFF_T_MATCHES_OFF64_T 1)
 
 
-;; "/usr/include/bits/types.h:130:10"
+;; "/usr/include/bits/typesizes.h:66:9"
 
-;; "/usr/include/sys/cdefs.h:399:10"
+;; "/usr/include/bits/typesizes.h:67:9"
 
-;; "/usr/include/bits/typesizes.h:84:10"
-(ALEXANDRIA:DEFINE-CONSTANT __INO_T_MATCHES_INO64_T 1)
+;; "/usr/include/bits/typesizes.h:68:9"
+
+;; "/usr/include/sys/cdefs.h:79:11"
+
+;; "/usr/include/bits/typesizes.h:69:9"
+
+;; "/usr/include/bits/typesizes.h:90:10"
+(ALEXANDRIA:DEFINE-CONSTANT __STATFS_MATCHES_STATFS64 1)
 
 
-;; "/usr/include/sys/cdefs.h:457:11"
-
-;; "/usr/include/bits/types.h:112:9"
+;; "/usr/include/sys/cdefs.h:80:11"
 
 ;; "/usr/include/bits/typesizes.h:70:9"
 
 ;; "/usr/include/bits/typesizes.h:71:9"
 
-;; "/usr/include/bits/types.h:111:9"
-
-;; "/usr/include/sys/cdefs.h:463:10"
-
-;; "/usr/include/bits/types.h:114:9"
-
 ;; "/usr/include/bits/typesizes.h:72:9"
+
+;; "/usr/include/bits/typesizes.h:103:9"
+(ALEXANDRIA:DEFINE-CONSTANT __FD_SETSIZE 1024)
+
+
+;; "/usr/include/bits/typesizes.h:53:9"
 
 ;; "/usr/include/bits/typesizes.h:73:9"
 
-;; "/usr/include/sys/cdefs.h:458:11"
-
-;; "/usr/include/bits/types.h:113:9"
-
-;; "/usr/include/bits/typesizes.h:66:9"
-
-;; "/usr/include/sys/cdefs.h:426:10"
-
-;; "/usr/include/bits/typesizes.h:67:9"
-
-;; "/usr/include/bits/types.h:109:9"
-
-;; "/usr/include/bits/types.h:110:9"
-
-;; "/usr/include/sys/cdefs.h:435:10"
-
-;; "/usr/include/bits/typesizes.h:68:9"
-
-;; "/usr/include/bits/typesizes.h:69:9"
-
-;; "/usr/include/stdint.h:223:10"
-(ALEXANDRIA:DEFINE-CONSTANT SIG_ATOMIC_MAX 2147483647)
+;; "/usr/include/bits/typesizes.h:93:10"
+(ALEXANDRIA:DEFINE-CONSTANT __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1)
 
 
-;; "/usr/include/stdint.h:222:10"
-(ALEXANDRIA:DEFINE-CONSTANT SIG_ATOMIC_MIN -2147483648)
+;; "/usr/include/features.h:350:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K8 1)
 
 
-;; "/usr/include/stdint.h:209:11"
-(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MIN -9223372036854775808)
+;; "/usr/include/stdint.h:148:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST64_MAX -1)
 
 
-;; "/usr/include/stdint.h:210:11"
-(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MAX 9223372036854775807)
+;; "/usr/include/bits/typesizes.h:75:9"
+
+;; "/usr/include/stdint.h:152:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MIN -128)
+
+
+;; "/usr/include/bits/typesizes.h:61:9"
+
+;; "/usr/include/stdint.h:146:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST16_MAX 65535)
+
+
+;; "/usr/include/features.h:342:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_XOPEN2K 1)
+
+
+;; "/usr/include/stdint.h:147:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST32_MAX 4294967295)
+
+
+;; "/usr/include/bits/time64.h:30:10"
+
+;; "/usr/include/bits/time64.h:24:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_TIME64_H 1)
+
+
+;; "/usr/include/features.h:338:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199506 1)
+
+
+;; "/usr/include/features.h:334:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX199309 1)
+
+
+;; "/usr/include/features.h:326:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX 1)
+
+
+;; "/usr/include/bits/typesizes.h:84:10"
+(ALEXANDRIA:DEFINE-CONSTANT __INO_T_MATCHES_INO64_T 1)
+
+
+;; "/usr/include/stdint.h:154:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MIN -9223372036854775808)
+
+
+;; "/usr/include/features.h:344:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC95 1)
+
+
+;; "/usr/include/features.h:251:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC11 1)
+
+
+;; "/usr/include/features.h:19:9"
+(ALEXANDRIA:DEFINE-CONSTANT _FEATURES_H 1)
+
+
+;; "/usr/include/stdint.h:124:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT64_MAX 9223372036854775807)
+
+
+;; "/usr/include/features.h:330:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_POSIX2 1)
+
+
+;; "/usr/include/features.h:346:10"
+(ALEXANDRIA:DEFINE-CONSTANT __USE_ISOC99 1)
+
+
+;; "/usr/include/stdint.h:127:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT8_MAX 255)
+
+
+;; "/usr/include/stdint.h:128:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT16_MAX 65535)
+
+
+;; "/usr/include/stdint.h:130:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT64_MAX -1)
+
+
+;; "/usr/include/stdint.h:122:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT16_MAX 32767)
+
+
+;; "/usr/include/stdint.h:123:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT32_MAX 2147483647)
+
+
+;; "/usr/include/stdint.h:119:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT64_MIN -9223372036854775808)
+
+
+;; "/usr/include/stdint.h:142:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:129:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT32_MAX 4294967295)
+
+
+;; "/usr/include/stdint.h:139:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MAX 127)
+
+
+;; "/usr/include/stdint.h:121:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT8_MAX 127)
+
+
+;; "/usr/include/stdint.h:141:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MAX 2147483647)
+
+
+;; "/usr/include/stdint.h:136:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST32_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:145:10"
+(ALEXANDRIA:DEFINE-CONSTANT UINT_LEAST8_MAX 255)
+
+
+;; "/usr/include/stdint.h:137:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST64_MIN -9223372036854775808)
+
+
+;; "/usr/include/stdint.h:134:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST8_MIN -128)
+
+
+;; "/usr/include/stdint.h:135:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MIN -32768)
+
+
+;; "/usr/include/stdint.h:140:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_LEAST16_MAX 32767)
+
+
+;; "/usr/include/stdint.h:118:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT32_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:117:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT16_MIN -32768)
+
+
+;; "/usr/include/stdint.h:116:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT8_MIN -128)
+
+
+;; "/usr/include/bits/stdint-uintn.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_UINTN_H 1)
+
+
+;; "/usr/include/bits/stdint-intn.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_STDINT_INTN_H 1)
 
 
 ;; "/usr/include/stdint.h:202:10"
@@ -5187,12 +5163,60 @@
 (ALEXANDRIA:DEFINE-CONSTANT INTMAX_MIN -9223372036854775808)
 
 
-;; "/usr/include/stdint.h:186:11"
-(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MIN -9223372036854775808)
+;; "/usr/include/stdint.h:188:11"
+(ALEXANDRIA:DEFINE-CONSTANT UINTPTR_MAX 18446744073709551615)
 
 
 ;; "/usr/include/stdint.h:187:11"
 (ALEXANDRIA:DEFINE-CONSTANT INTPTR_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:223:10"
+(ALEXANDRIA:DEFINE-CONSTANT SIG_ATOMIC_MAX 2147483647)
+
+
+;; "/usr/include/stdint.h:222:10"
+(ALEXANDRIA:DEFINE-CONSTANT SIG_ATOMIC_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:210:11"
+(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:209:11"
+(ALEXANDRIA:DEFINE-CONSTANT PTRDIFF_MIN -9223372036854775808)
+
+
+;; "/usr/include/stdint.h:170:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MAX 9223372036854775807)
+
+
+;; "/usr/include/bits/wchar.h:20:9"
+(ALEXANDRIA:DEFINE-CONSTANT _BITS_WCHAR_H 1)
+
+
+;; "/usr/include/stdint.h:165:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MAX 9223372036854775807)
+
+
+;; "/usr/include/bits/wchar.h:34:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MAX 2147483647)
+
+
+;; "/usr/include/bits/wchar.h:46:10"
+(ALEXANDRIA:DEFINE-CONSTANT __WCHAR_MIN -2147483648)
+
+
+;; "/usr/include/stdint.h:162:10"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MAX 127)
+
+
+;; "/usr/include/stdint.h:164:11"
+(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MAX 9223372036854775807)
+
+
+;; "/usr/include/stdint.h:186:11"
+(ALEXANDRIA:DEFINE-CONSTANT INTPTR_MIN -9223372036854775808)
 
 
 ;; "/usr/include/stdint.h:181:10"
@@ -5211,32 +5235,8 @@
 (ALEXANDRIA:DEFINE-CONSTANT UINT_FAST8_MAX 255)
 
 
-;; "/usr/include/stdint.h:165:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST32_MAX 9223372036854775807)
-
-
-;; "/usr/include/stdint.h:164:11"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST16_MAX 9223372036854775807)
-
-
-;; "/usr/include/stdint.h:162:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST8_MAX 127)
-
-
-;; "/usr/include/stdint.h:188:11"
-(ALEXANDRIA:DEFINE-CONSTANT UINTPTR_MAX 18446744073709551615)
-
-
-;; "/usr/include/stdint.h:170:10"
-(ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MAX 9223372036854775807)
-
-
 ;; "/usr/include/stdint.h:160:10"
 (ALEXANDRIA:DEFINE-CONSTANT INT_FAST64_MIN -9223372036854775808)
-
-
-;; "/usr/include/sys/cdefs.h:656:10"
-(ALEXANDRIA:DEFINE-CONSTANT __HAVE_GENERIC_SELECTION 1)
 
 
 ;; "/usr/include/stdint.h:155:11"
@@ -5513,8 +5513,8 @@
     ("SURFACE-DESCRIPTOR" . SURFACE-DESCRIPTOR)
     ("STORAGE-TEXTURE-BINDING-LAYOUT" . STORAGE-TEXTURE-BINDING-LAYOUT)
     ("STENCIL-FACE-STATE" . STENCIL-FACE-STATE)
-    ("SHADER-MODULE-W-G-S-L-DESCRIPTOR" . SHADER-MODULE-W-G-S-L-DESCRIPTOR)
-    ("SHADER-MODULE-S-P-I-R-V-DESCRIPTOR" . SHADER-MODULE-S-P-I-R-V-DESCRIPTOR)
+    ("SHADER-MODULE-WGSL-DESCRIPTOR" . SHADER-MODULE-WGSL-DESCRIPTOR)
+    ("SHADER-MODULE-SPIRV-DESCRIPTOR" . SHADER-MODULE-SPIRV-DESCRIPTOR)
     ("SHADER-MODULE-COMPILATION-HINT" . SHADER-MODULE-COMPILATION-HINT)
     ("SAMPLER-DESCRIPTOR" . SAMPLER-DESCRIPTOR)
     ("SAMPLER-BINDING-LAYOUT" . SAMPLER-BINDING-LAYOUT)
@@ -5842,8 +5842,8 @@
     ("SURFACE-DESCRIPTOR" . SURFACE-DESCRIPTOR)
     ("STORAGE-TEXTURE-BINDING-LAYOUT" . STORAGE-TEXTURE-BINDING-LAYOUT)
     ("STENCIL-FACE-STATE" . STENCIL-FACE-STATE)
-    ("SHADER-MODULE-W-G-S-L-DESCRIPTOR" . SHADER-MODULE-W-G-S-L-DESCRIPTOR)
-    ("SHADER-MODULE-S-P-I-R-V-DESCRIPTOR" . SHADER-MODULE-S-P-I-R-V-DESCRIPTOR)
+    ("SHADER-MODULE-WGSL-DESCRIPTOR" . SHADER-MODULE-WGSL-DESCRIPTOR)
+    ("SHADER-MODULE-SPIRV-DESCRIPTOR" . SHADER-MODULE-SPIRV-DESCRIPTOR)
     ("SHADER-MODULE-COMPILATION-HINT" . SHADER-MODULE-COMPILATION-HINT)
     ("SAMPLER-DESCRIPTOR" . SAMPLER-DESCRIPTOR)
     ("SAMPLER-BINDING-LAYOUT" . SAMPLER-BINDING-LAYOUT)
@@ -5974,91 +5974,86 @@
     ("__U_CHAR" . __U_CHAR)))
 
 (COMMON-LISP:DEFPARAMETER +CONSTANT-NAMES+
-  '(("INT_FAST32_MIN" . INT_FAST32_MIN)
-    ("__HAVE_GENERIC_SELECTION" . __HAVE_GENERIC_SELECTION)
-    ("INT_FAST64_MIN" . INT_FAST64_MIN) ("INT_FAST64_MAX" . INT_FAST64_MAX)
-    ("UINTPTR_MAX" . UINTPTR_MAX) ("INT_FAST8_MAX" . INT_FAST8_MAX)
-    ("INT_FAST16_MAX" . INT_FAST16_MAX) ("INT_FAST32_MAX" . INT_FAST32_MAX)
+  '(("INT_FAST32_MIN" . INT_FAST32_MIN) ("INT_FAST64_MIN" . INT_FAST64_MIN)
     ("UINT_FAST8_MAX" . UINT_FAST8_MAX) ("UINT_FAST16_MAX" . UINT_FAST16_MAX)
     ("UINT_FAST32_MAX" . UINT_FAST32_MAX) ("UINT_FAST64_MAX" . UINT_FAST64_MAX)
-    ("INTPTR_MAX" . INTPTR_MAX) ("INTPTR_MIN" . INTPTR_MIN)
+    ("INTPTR_MIN" . INTPTR_MIN) ("INT_FAST16_MAX" . INT_FAST16_MAX)
+    ("INT_FAST8_MAX" . INT_FAST8_MAX) ("__WCHAR_MIN" . __WCHAR_MIN)
+    ("__WCHAR_MAX" . __WCHAR_MAX) ("INT_FAST32_MAX" . INT_FAST32_MAX)
+    ("_BITS_WCHAR_H" . _BITS_WCHAR_H) ("INT_FAST64_MAX" . INT_FAST64_MAX)
+    ("PTRDIFF_MIN" . PTRDIFF_MIN) ("PTRDIFF_MAX" . PTRDIFF_MAX)
+    ("SIG_ATOMIC_MIN" . SIG_ATOMIC_MIN) ("SIG_ATOMIC_MAX" . SIG_ATOMIC_MAX)
+    ("INTPTR_MAX" . INTPTR_MAX) ("UINTPTR_MAX" . UINTPTR_MAX)
     ("INTMAX_MIN" . INTMAX_MIN) ("INTMAX_MAX" . INTMAX_MAX)
-    ("UINTMAX_MAX" . UINTMAX_MAX) ("PTRDIFF_MAX" . PTRDIFF_MAX)
-    ("PTRDIFF_MIN" . PTRDIFF_MIN) ("SIG_ATOMIC_MIN" . SIG_ATOMIC_MIN)
-    ("SIG_ATOMIC_MAX" . SIG_ATOMIC_MAX)
+    ("UINTMAX_MAX" . UINTMAX_MAX) ("_BITS_STDINT_INTN_H" . _BITS_STDINT_INTN_H)
+    ("_BITS_STDINT_UINTN_H" . _BITS_STDINT_UINTN_H) ("INT8_MIN" . INT8_MIN)
+    ("INT16_MIN" . INT16_MIN) ("INT32_MIN" . INT32_MIN)
+    ("INT_LEAST16_MAX" . INT_LEAST16_MAX) ("INT_LEAST16_MIN" . INT_LEAST16_MIN)
+    ("INT_LEAST8_MIN" . INT_LEAST8_MIN) ("INT_LEAST64_MIN" . INT_LEAST64_MIN)
+    ("UINT_LEAST8_MAX" . UINT_LEAST8_MAX) ("INT_LEAST32_MIN" . INT_LEAST32_MIN)
+    ("INT_LEAST32_MAX" . INT_LEAST32_MAX) ("INT8_MAX" . INT8_MAX)
+    ("INT_LEAST8_MAX" . INT_LEAST8_MAX) ("UINT32_MAX" . UINT32_MAX)
+    ("INT_LEAST64_MAX" . INT_LEAST64_MAX) ("INT64_MIN" . INT64_MIN)
+    ("INT32_MAX" . INT32_MAX) ("INT16_MAX" . INT16_MAX)
+    ("UINT64_MAX" . UINT64_MAX) ("UINT16_MAX" . UINT16_MAX)
+    ("UINT8_MAX" . UINT8_MAX) ("__USE_ISOC99" . __USE_ISOC99)
+    ("__USE_POSIX2" . __USE_POSIX2) ("INT64_MAX" . INT64_MAX)
+    ("_FEATURES_H" . _FEATURES_H) ("__USE_ISOC11" . __USE_ISOC11)
+    ("__USE_ISOC95" . __USE_ISOC95) ("INT_FAST16_MIN" . INT_FAST16_MIN)
     ("__INO_T_MATCHES_INO64_T" . __INO_T_MATCHES_INO64_T)
-    ("__OFF_T_MATCHES_OFF64_T" . __OFF_T_MATCHES_OFF64_T)
-    ("__FD_SETSIZE" . __FD_SETSIZE)
+    ("__USE_POSIX" . __USE_POSIX) ("__USE_POSIX199309" . __USE_POSIX199309)
+    ("__USE_POSIX199506" . __USE_POSIX199506)
+    ("_BITS_TIME64_H" . _BITS_TIME64_H) ("UINT_LEAST32_MAX" . UINT_LEAST32_MAX)
+    ("__USE_XOPEN2K" . __USE_XOPEN2K) ("UINT_LEAST16_MAX" . UINT_LEAST16_MAX)
+    ("INT_FAST8_MIN" . INT_FAST8_MIN) ("UINT_LEAST64_MAX" . UINT_LEAST64_MAX)
+    ("__USE_XOPEN2K8" . __USE_XOPEN2K8)
     ("__KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64"
      . __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64)
+    ("__FD_SETSIZE" . __FD_SETSIZE)
     ("__STATFS_MATCHES_STATFS64" . __STATFS_MATCHES_STATFS64)
+    ("__OFF_T_MATCHES_OFF64_T" . __OFF_T_MATCHES_OFF64_T)
+    ("__GLIBC_MINOR__" . __GLIBC_MINOR__)
     ("__RLIM_T_MATCHES_RLIM64_T" . __RLIM_T_MATCHES_RLIM64_T)
-    ("_STDC_PREDEF_H" . _STDC_PREDEF_H)
-    ("_BITS_TYPESIZES_H" . _BITS_TYPESIZES_H)
-    ("__STDC_IEC_559__" . __STDC_IEC_559__) ("__WORDSIZE" . __WORDSIZE)
-    ("__TIMESIZE" . __TIMESIZE)
-    ("__LDOUBLE_REDIRECTS_TO_FLOAT128_ABI"
-     . __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI)
-    ("__WORDSIZE_TIME64_COMPAT32" . __WORDSIZE_TIME64_COMPAT32)
-    ("__SYSCALL_WORDSIZE" . __SYSCALL_WORDSIZE)
-    ("__GLIBC_USE_IEC_60559_EXT" . __GLIBC_USE_IEC_60559_EXT)
-    ("_POSIX_C_SOURCE" . _POSIX_C_SOURCE)
-    ("__GLIBC_C99_FLEXARR_AVAILABLE" . __GLIBC_C99_FLEXARR_AVAILABLE)
-    ("_POSIX_SOURCE" . _POSIX_SOURCE)
-    ("__GLIBC_USE_IEC_60559_BFP_EXT_C2X" . __GLIBC_USE_IEC_60559_BFP_EXT_C2X)
+    ("_SYS_CDEFS_H" . _SYS_CDEFS_H)
+    ("__STDC_IEC_60559_BFP__" . __STDC_IEC_60559_BFP__)
+    ("__GLIBC_USE_LIB_EXT2" . __GLIBC_USE_LIB_EXT2)
+    ("__STDC_IEC_559_COMPLEX__" . __STDC_IEC_559_COMPLEX__)
+    ("__STDC_IEC_60559_COMPLEX__" . __STDC_IEC_60559_COMPLEX__)
+    ("__STDC_ISO_10646__" . __STDC_ISO_10646__)
+    ("__GLIBC_USE_IEC_60559_BFP_EXT" . __GLIBC_USE_IEC_60559_BFP_EXT)
+    ("__GNU_LIBRARY__" . __GNU_LIBRARY__) ("__GLIBC__" . __GLIBC__)
     ("__GLIBC_USE_IEC_60559_FUNCS_EXT_C2X"
      . __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X)
     ("_ATFILE_SOURCE" . _ATFILE_SOURCE)
     ("__GLIBC_USE_IEC_60559_FUNCS_EXT" . __GLIBC_USE_IEC_60559_FUNCS_EXT)
     ("__USE_POSIX_IMPLICITLY" . __USE_POSIX_IMPLICITLY)
-    ("LIMITU64UNDEFINED" . LIMITU64UNDEFINED)
-    ("__GLIBC_USE_IEC_60559_TYPES_EXT" . __GLIBC_USE_IEC_60559_TYPES_EXT)
-    ("WHOLESIZE" . WHOLESIZE)
-    ("MIPLEVELCOUNTUNDEFINED" . MIPLEVELCOUNTUNDEFINED)
-    ("ARRAYLAYERCOUNTUNDEFINED" . ARRAYLAYERCOUNTUNDEFINED) ("NULL" . NULL)
-    ("_BITS_TYPES_H" . _BITS_TYPES_H) ("_DEFAULT_SOURCE" . _DEFAULT_SOURCE)
-    ("_BITS_TIME64_H" . _BITS_TIME64_H)
-    ("__GLIBC_USE_DEPRECATED_SCANF" . __GLIBC_USE_DEPRECATED_SCANF)
-    ("WHOLEMAPSIZE" . WHOLEMAPSIZE)
-    ("COPYSTRIDEUNDEFINED" . COPYSTRIDEUNDEFINED) ("UINT16_MAX" . UINT16_MAX)
-    ("__USE_ATFILE" . __USE_ATFILE) ("UINT_LEAST8_MAX" . UINT_LEAST8_MAX)
-    ("__USE_MISC" . __USE_MISC) ("LIMITU32UNDEFINED" . LIMITU32UNDEFINED)
-    ("__GLIBC_USE_DEPRECATED_GETS" . __GLIBC_USE_DEPRECATED_GETS)
-    ("__GNU_LIBRARY__" . __GNU_LIBRARY__)
-    ("__GLIBC_USE_ISOC2X" . __GLIBC_USE_ISOC2X)
-    ("__USE_XOPEN2K8" . __USE_XOPEN2K8) ("__GLIBC_MINOR__" . __GLIBC_MINOR__)
-    ("__USE_FORTIFY_LEVEL" . __USE_FORTIFY_LEVEL)
-    ("_SYS_CDEFS_H" . _SYS_CDEFS_H) ("__USE_POSIX2" . __USE_POSIX2)
-    ("__USE_XOPEN2K" . __USE_XOPEN2K) ("__USE_POSIX199309" . __USE_POSIX199309)
-    ("__USE_ISOC95" . __USE_ISOC95) ("__USE_POSIX199506" . __USE_POSIX199506)
-    ("__USE_ISOC99" . __USE_ISOC99) ("__USE_ISOC11" . __USE_ISOC11)
-    ("__GLIBC_USE_LIB_EXT2" . __GLIBC_USE_LIB_EXT2)
-    ("__USE_POSIX" . __USE_POSIX)
-    ("__STDC_IEC_60559_COMPLEX__" . __STDC_IEC_60559_COMPLEX__)
-    ("INT_LEAST32_MAX" . INT_LEAST32_MAX) ("_FEATURES_H" . _FEATURES_H)
-    ("UINT32_MAX" . UINT32_MAX)
-    ("__GLIBC_USE_IEC_60559_BFP_EXT" . __GLIBC_USE_IEC_60559_BFP_EXT)
-    ("INT64_MAX" . INT64_MAX) ("__STDC_ISO_10646__" . __STDC_ISO_10646__)
-    ("__GLIBC__" . __GLIBC__)
-    ("__STDC_IEC_559_COMPLEX__" . __STDC_IEC_559_COMPLEX__)
-    ("__STDC_IEC_60559_BFP__" . __STDC_IEC_60559_BFP__)
-    ("UINT8_MAX" . UINT8_MAX) ("UINT64_MAX" . UINT64_MAX)
-    ("INT8_MAX" . INT8_MAX) ("INT64_MIN" . INT64_MIN) ("INT32_MAX" . INT32_MAX)
-    ("INT16_MAX" . INT16_MAX)
     ("__GCC_HAVE_DWARF2_CFI_ASM" . __GCC_HAVE_DWARF2_CFI_ASM)
-    ("INT_LEAST16_MAX" . INT_LEAST16_MAX) ("INT_LEAST8_MAX" . INT_LEAST8_MAX)
-    ("INT_LEAST64_MAX" . INT_LEAST64_MAX) ("INT_LEAST16_MIN" . INT_LEAST16_MIN)
-    ("INT_LEAST8_MIN" . INT_LEAST8_MIN) ("INT_LEAST64_MIN" . INT_LEAST64_MIN)
-    ("INT_LEAST32_MIN" . INT_LEAST32_MIN) ("INT_FAST16_MIN" . INT_FAST16_MIN)
-    ("UINT_LEAST32_MAX" . UINT_LEAST32_MAX)
-    ("UINT_LEAST16_MAX" . UINT_LEAST16_MAX) ("INT_FAST8_MIN" . INT_FAST8_MIN)
-    ("UINT_LEAST64_MAX" . UINT_LEAST64_MAX) ("WINT_MAX" . WINT_MAX)
-    ("WINT_MIN" . WINT_MIN) ("WCHAR_MIN" . WCHAR_MIN) ("WCHAR_MAX" . WCHAR_MAX)
-    ("SIZE_MAX" . SIZE_MAX) ("_BITS_STDINT_UINTN_H" . _BITS_STDINT_UINTN_H)
-    ("_BITS_STDINT_INTN_H" . _BITS_STDINT_INTN_H) ("_STDINT_H" . _STDINT_H)
-    ("INT8_MIN" . INT8_MIN) ("INT16_MIN" . INT16_MIN) ("INT32_MIN" . INT32_MIN)
-    ("__WCHAR_MIN" . __WCHAR_MIN) ("__WCHAR_MAX" . __WCHAR_MAX)
-    ("_BITS_WCHAR_H" . _BITS_WCHAR_H)))
+    ("__GLIBC_USE_IEC_60559_EXT" . __GLIBC_USE_IEC_60559_EXT)
+    ("_POSIX_C_SOURCE" . _POSIX_C_SOURCE)
+    ("__GLIBC_C99_FLEXARR_AVAILABLE" . __GLIBC_C99_FLEXARR_AVAILABLE)
+    ("_POSIX_SOURCE" . _POSIX_SOURCE)
+    ("__GLIBC_USE_IEC_60559_BFP_EXT_C2X" . __GLIBC_USE_IEC_60559_BFP_EXT_C2X)
+    ("_BITS_TYPES_H" . _BITS_TYPES_H) ("_DEFAULT_SOURCE" . _DEFAULT_SOURCE)
+    ("__GLIBC_USE_IEC_60559_TYPES_EXT" . __GLIBC_USE_IEC_60559_TYPES_EXT)
+    ("__GLIBC_USE_DEPRECATED_SCANF" . __GLIBC_USE_DEPRECATED_SCANF)
+    ("__GLIBC_USE_DEPRECATED_GETS" . __GLIBC_USE_DEPRECATED_GETS)
+    ("__GLIBC_USE_ISOC2X" . __GLIBC_USE_ISOC2X)
+    ("__USE_FORTIFY_LEVEL" . __USE_FORTIFY_LEVEL)
+    ("__USE_ATFILE" . __USE_ATFILE) ("__USE_MISC" . __USE_MISC)
+    ("__STDC_IEC_559__" . __STDC_IEC_559__) ("_STDC_PREDEF_H" . _STDC_PREDEF_H)
+    ("_BITS_TYPESIZES_H" . _BITS_TYPESIZES_H) ("__TIMESIZE" . __TIMESIZE)
+    ("__LDOUBLE_REDIRECTS_TO_FLOAT128_ABI"
+     . __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI)
+    ("__WORDSIZE_TIME64_COMPAT32" . __WORDSIZE_TIME64_COMPAT32)
+    ("__SYSCALL_WORDSIZE" . __SYSCALL_WORDSIZE) ("__WORDSIZE" . __WORDSIZE)
+    ("NULL" . NULL) ("__HAVE_GENERIC_SELECTION" . __HAVE_GENERIC_SELECTION)
+    ("ARRAYLAYERCOUNTUNDEFINED" . ARRAYLAYERCOUNTUNDEFINED)
+    ("WINT_MAX" . WINT_MAX) ("WINT_MIN" . WINT_MIN) ("WCHAR_MAX" . WCHAR_MAX)
+    ("WHOLESIZE" . WHOLESIZE) ("WCHAR_MIN" . WCHAR_MIN) ("SIZE_MAX" . SIZE_MAX)
+    ("_STDINT_H" . _STDINT_H) ("COPYSTRIDEUNDEFINED" . COPYSTRIDEUNDEFINED)
+    ("MIPLEVELCOUNTUNDEFINED" . MIPLEVELCOUNTUNDEFINED)
+    ("WHOLEMAPSIZE" . WHOLEMAPSIZE) ("LIMITU64UNDEFINED" . LIMITU64UNDEFINED)
+    ("LIMITU32UNDEFINED" . LIMITU32UNDEFINED)))
 
 (COMMON-LISP:DEFPARAMETER +ARGUMENT-NAMES+
   '(("RENDER-BUNDLE" . RENDER-BUNDLE) ("MAX_COUNT" . MAX_COUNT)

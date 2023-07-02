@@ -5,7 +5,7 @@
   :version "0.0.1"
   :serial t
   :defsystem-depends-on (:cffi/c2ffi)
-  :depends-on (#:alexandria #:cffi #:cffi/c2ffi #:cffi-libffi #:trivial-main-thread #:bordeaux-threads)
+  :depends-on (#:alexandria #:cffi #:cffi/c2ffi #:cffi-libffi #:trivial-main-thread #:bordeaux-threads #:str #:arrow-macros)
   :components ((:file "package")
                (:file "prelude")
                (:module "spec"

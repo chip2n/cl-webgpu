@@ -236,3 +236,20 @@
 (defun device-set-device-lost-callback (device callback)
   (let ((*device-lost-callback* callback))
     (ffi::device-set-device-lost-callback device (callback handle-device-lost) (null-pointer))))
+
+;;; * Shaders
+
+(defun create-shader-module (device source &key label)
+  (with-foreign-objects ((type 'ffi::chained-struct)
+                         (desc 'ffi::shader-module-descriptor)
+                         (wgsl-desc 'ffi::shader-module-wgsl-descriptor))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::next) (null-pointer))
+    (setf (foreign-slot-value type 'ffi::chained-struct 'ffi::s-type) ffi::s-type-shader-module-wgsl-descriptor)
+
+    (setf (foreign-slot-value wgsl-desc 'ffi::shader-module-wgsl-descriptor 'ffi::chain) type)
+    (setf (foreign-slot-value wgsl-desc 'ffi::shader-module-wgsl-descriptor 'ffi::code) source)
+
+    (setf (foreign-slot-value desc 'ffi::shader-module-descriptor 'ffi::next-in-chain) wgsl-desc)
+    (setf (foreign-slot-value desc 'ffi::shader-module-descriptor 'ffi::label) (or label (null-pointer)))
+
+    (ffi::device-create-shader-module device desc)))

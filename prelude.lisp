@@ -7,10 +7,16 @@
      (setf name (subseq name 4)))
     ((alexandria:starts-with-subseq "WGPU" name)
      (setf name (remove #\_ (subseq name 4)))))
-  (string-upcase (cffi/c2ffi:maybe-camelcase-to-dash-separated name)))
+  (->> name
+    (cffi/c2ffi:maybe-camelcase-to-dash-separated)
+    (string-upcase)
+    (str:replace-all "W-G-S-L" "WGSL")
+    (str:replace-all "S-P-I-R-V" "SPIRV")))
 
 #+nil
 (progn
   (ffi-name-transformer "WGPUPowerPreference_Undefined" nil)
   (ffi-name-transformer "WGPUSType_SurfaceDescriptorFromMetalLayer" nil)
+  (ffi-name-transformer "WGPUShaderModuleWGSLDescriptor" nil)
+  (ffi-name-transformer "WGPUSType_ShaderModuleSPIRVDescriptor" nil)
   )
