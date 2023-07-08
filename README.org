@@ -3,10 +3,10 @@
 Common Lisp bindings to WebGPU (via [[https://github.com/gfx-rs/wgpu-native][wgpu-native]]) (WIP)
 
 High-level bindings are in the ~webgpu~ package (currently only supports Linux
-and X11).
+and X11). They're pretty much unusable at this point.
 
 Low-level bindings are in the ~webgpu.ffi~ package (auto generated using
-~cffi/c2ffi~).
+~cffi/c2ffi~) and should be usable.
 
 ** Setup
 

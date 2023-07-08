@@ -339,14 +339,16 @@
 
 ;; * Swap chain
 
-(defun create-swap-chain (device surface color-format &key label)
+(defun create-swap-chain (device surface color-format width height &key label)
   (with-foreign-objects ((desc 'ffi::swap-chain-descriptor))
     (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::next-in-chain) (null-pointer))
     (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::label) (or label (null-pointer)))
+    ;; (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::usage) 16)
+    ;; (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::usage) ffi::texture-usage-render-attachment)
     (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::usage) (foreign-enum-value 'ffi::texture-usage 'ffi::texture-usage-render-attachment))
     (set-enum-slot desc 'ffi::swap-chain-descriptor 'ffi::format color-format)
-    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::width) 800) ; TODO
-    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::height) 600) ; TODO
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::width) width)
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::height) height)
     (set-enum-slot desc 'ffi::swap-chain-descriptor 'ffi::present-mode 'ffi::present-mode-fifo)
 
     (ffi::device-create-swap-chain device surface desc)))
@@ -354,6 +356,10 @@
 (declaim (inline get-current-texture-view))
 (defun get-current-texture-view (swap-chain)
   (ffi::swap-chain-get-current-texture-view swap-chain))
+
+(declaim (inline swap-chain-present))
+(defun swap-chain-present (swap-chain)
+  (ffi::swap-chain-present swap-chain))
 
 ;; * Command encoder
 
@@ -380,11 +386,11 @@
     (setf (foreign-slot-value clear-color 'ffi::color 'ffi::b) 0d0)
     (setf (foreign-slot-value clear-color 'ffi::color 'ffi::a) 1d0)
 
-    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::view) texture)
-    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::resolve-target) (null-pointer))
-    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::load-op) ffi::load-op-clear)
-    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::store-op) ffi::store-op-store)
-    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::clear-value) clear-color)
+    (setf (foreign-slot-value color-attachment 'ffi::render-pass-color-attachment 'ffi::view) texture)
+    (setf (foreign-slot-value color-attachment 'ffi::render-pass-color-attachment 'ffi::resolve-target) (null-pointer))
+    (setf (foreign-slot-value color-attachment 'ffi::render-pass-color-attachment 'ffi::load-op) ffi::load-op-clear)
+    (setf (foreign-slot-value color-attachment 'ffi::render-pass-color-attachment 'ffi::store-op) ffi::store-op-store)
+    (setf (foreign-slot-value color-attachment 'ffi::render-pass-color-attachment 'ffi::clear-value) clear-color)
 
     (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::next-in-chain) (null-pointer))
     (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::label) (or label (null-pointer)))
@@ -408,6 +414,22 @@
 (declaim (inline render-pass-encoder-end))
 (defun render-pass-encoder-end (encoder)
   (ffi::render-pass-encoder-end encoder))
+
+;; * Queue
+
+(declaim (inline get-queue))
+(defun get-queue (device)
+  (ffi::device-get-queue device))
+
+(declaim (inline queue-submit))
+(defun queue-submit (queue command-buffer)
+  (ffi::queue-submit queue 1 command-buffer))
+
+;; * Texture
+
+(declaim (inline texture-view-drop))
+(defun texture-view-drop (texture-view)
+  (ffi::texture-view-drop texture-view))
 
 ;; * Utils
 

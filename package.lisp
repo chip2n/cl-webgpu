@@ -40,4 +40,8 @@
    #:command-encoder-finish
    #:render-pass-encoder-set-pipeline
    #:render-pass-encoder-end
-   #:render-pass-encoder-draw))
+   #:render-pass-encoder-draw
+   #:queue-submit
+   #:texture-view-drop
+   #:swap-chain-present
+   #:get-queue))
