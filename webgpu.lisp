@@ -347,6 +347,10 @@
 
     (ffi::device-create-swap-chain device surface desc)))
 
+(declaim (inline get-current-texture-view))
+(defun get-current-texture-view (swap-chain)
+  (ffi::swap-chain-get-current-texture-view swap-chain))
+
 ;; * Utils
 
 ;; Due to generated typedefs by C2FFI (and what I assume is a bug), we can't

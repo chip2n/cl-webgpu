@@ -33,4 +33,5 @@
    #:surface-get-preferred-format
    #:create-render-pipeline
    #:shader-module-get-compilation-info
-   #:create-swap-chain))
+   #:create-swap-chain
+   #:get-current-texture-view))
