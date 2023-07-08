@@ -363,6 +363,14 @@
     (setf (foreign-slot-value desc 'ffi::command-encoder-descriptor 'ffi::label) (or label (null-pointer)))
     (ffi::device-create-command-encoder device desc)))
 
+(defun command-encoder-finish (encoder &key label)
+  (with-foreign-objects ((desc 'ffi::command-buffer-descriptor))
+    (setf (foreign-slot-value desc 'ffi::command-buffer-descriptor 'ffi::next-in-chain) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::command-buffer-descriptor 'ffi::label) (or label (null-pointer)))
+    (ffi::command-encoder-finish encoder desc)))
+
+;; * Render pass
+
 (defun begin-render-pass (encoder texture &key label)
   (with-foreign-objects ((desc 'ffi::render-pass-descriptor)
                          (color-attachment 'ffi::render-pass-color-attachment)
@@ -388,6 +396,18 @@
     (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::timestamp-writes) (null-pointer))
 
     (ffi::command-encoder-begin-render-pass encoder desc)))
+
+(declaim (inline render-pass-encoder-set-pipeline))
+(defun render-pass-encoder-set-pipeline (encoder pipeline)
+  (ffi::render-pass-encoder-set-pipeline encoder pipeline))
+
+(declaim (inline render-pass-encoder-draw))
+(defun render-pass-encoder-draw (encoder vertex-count instance-count first-vertex first-instance)
+  (ffi::render-pass-encoder-draw encoder vertex-count instance-count first-vertex first-instance))
+
+(declaim (inline render-pass-encoder-end))
+(defun render-pass-encoder-end (encoder)
+  (ffi::render-pass-encoder-end encoder))
 
 ;; * Utils
 

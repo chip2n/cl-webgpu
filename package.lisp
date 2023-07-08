@@ -36,4 +36,8 @@
    #:create-swap-chain
    #:get-current-texture-view
    #:create-command-encoder
-   #:begin-render-pass))
+   #:begin-render-pass
+   #:command-encoder-finish
+   #:render-pass-encoder-set-pipeline
+   #:render-pass-encoder-end
+   #:render-pass-encoder-draw))
