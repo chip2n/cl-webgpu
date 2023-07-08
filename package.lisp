@@ -34,4 +34,5 @@
    #:create-render-pipeline
    #:shader-module-get-compilation-info
    #:create-swap-chain
-   #:get-current-texture-view))
+   #:get-current-texture-view
+   #:create-command-encoder))

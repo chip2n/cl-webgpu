@@ -351,6 +351,14 @@
 (defun get-current-texture-view (swap-chain)
   (ffi::swap-chain-get-current-texture-view swap-chain))
 
+;; * Command encoder
+
+(defun create-command-encoder (device &key label)
+  (with-foreign-objects ((desc 'ffi::command-encoder-descriptor))
+    (setf (foreign-slot-value desc 'ffi::command-encoder-descriptor 'ffi::next-in-chain) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::command-encoder-descriptor 'ffi::label) (or label (null-pointer)))
+    (ffi::device-create-command-encoder device desc)))
+
 ;; * Utils
 
 ;; Due to generated typedefs by C2FFI (and what I assume is a bug), we can't
