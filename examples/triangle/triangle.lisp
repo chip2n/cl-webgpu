@@ -4,6 +4,7 @@
 (defvar *surface* nil)
 (defvar *adapter* nil)
 (defvar *device* nil)
+(defvar *shader* nil)
 
 (defvar *shader-src* "
 @vertex
@@ -35,6 +36,9 @@ fn fs_main() -> @location(0) vec4<f32> {
                      (setf *device* device)
                      (w:device-set-uncaptured-error-callback device (lambda (type msg) (format t "Uncaptured device error (~A): ~A~%" type msg)))
                      (w:device-set-device-lost-callback device (lambda (reason msg) (format t "Device lost (~A): ~A~%" reason msg)))
+
+                     (setf *shader* (w:create-shader-module device *shader-src* :label "Main shader"))
+
                      (loop until (glfw:window-should-close-p)
                            do (continuable
                                 (handle-repl-events)
@@ -48,4 +52,5 @@ fn fs_main() -> @location(0) vec4<f32> {
   (setf *instance* nil)
   (setf *surface* nil)
   (setf *adapter* nil)
-  (setf *device* nil))
+  (setf *device* nil)
+  (setf *shader* nil))

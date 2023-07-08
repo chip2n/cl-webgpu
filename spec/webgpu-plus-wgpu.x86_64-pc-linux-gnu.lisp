@@ -904,8 +904,8 @@
 
 ;; "/home/chip/dev/cl-webgpu/spec/webgpu.h:263:14"
 (CFFI:DEFCENUM FRONT-FACE
-  (FRONTFACECCW 0)
-  (FRONTFACECW 1)
+  (FRONT-FACE-CCW 0)
+  (FRONT-FACE-CW 1)
   (FRONT-FACE-FORCE32 2147483647))
 
 

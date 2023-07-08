@@ -29,4 +29,8 @@
    #:with-device
    #:device-set-uncaptured-error-callback
    #:device-set-device-lost-callback
-   #:create-shader-module))
+   #:create-shader-module
+   #:surface-get-preferred-format
+   #:create-render-pipeline
+   #:shader-module-get-compilation-info
+   #:create-swap-chain))

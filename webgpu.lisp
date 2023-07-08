@@ -114,6 +114,9 @@
 (defun drop-surface (surface)
   (ffi::surface-drop surface))
 
+(defun surface-get-preferred-format (surface adapter)
+  (ffi::surface-get-preferred-format surface adapter))
+
 ;;; * Adapter
 
 (defvar *request-adapter-callback* nil)
@@ -253,3 +256,105 @@
     (setf (foreign-slot-value desc 'ffi::shader-module-descriptor 'ffi::label) (or label (null-pointer)))
 
     (ffi::device-create-shader-module device desc)))
+
+(defvar *handle-compilation-info-callback* nil)
+
+(defcallback handle-compilation-info :void
+    ((status ffi::compilation-info-request-status)
+     (compilation-info (:pointer ffi::compilation-info))
+     (userdata :pointer))
+  (declare (ignore userdata))
+  (format t "Got the compilation info (~A)~%" status)
+  (a:when-let ((callback *handle-compilation-info-callback*))
+    (funcall callback status compilation-info)))
+
+;; NOTE: This is not yet implemented in wgpu-native as of 2023-07-07
+(defun shader-module-get-compilation-info (shader-module callback)
+  (let ((*handle-compilation-info-callback* (lambda (status info)
+                                              (format t "Bro~%")
+                                              (funcall callback status info))))
+    (ffi::shader-module-get-compilation-info shader-module (callback handle-compilation-info) (null-pointer))))
+
+;;; * Pipelines
+
+(defun create-render-pipeline (device shader-module color-format)
+  (with-foreign-objects ((desc 'ffi::render-pipeline-descriptor)
+                         (pipeline-layout-desc 'ffi::pipeline-layout-descriptor)
+                         (color-target-state 'ffi::color-target-state)
+                         (vertex-state 'ffi::vertex-state)
+                         (fragment-state 'ffi::fragment-state)
+                         (primitive-state 'ffi::primitive-state)
+                         (multisample-state 'ffi::multisample-state))
+    (setf (foreign-slot-value pipeline-layout-desc 'ffi::pipeline-layout-descriptor 'ffi::next-in-chain) (null-pointer))
+    (setf (foreign-slot-value pipeline-layout-desc 'ffi::pipeline-layout-descriptor 'ffi::label) "Pipeline layout")
+    (setf (foreign-slot-value pipeline-layout-desc 'ffi::pipeline-layout-descriptor 'ffi::bind-group-layout-count) 0)
+    (setf (foreign-slot-value pipeline-layout-desc 'ffi::pipeline-layout-descriptor 'ffi::bind-group-layouts) (null-pointer))
+
+    (let ((pipeline-layout (ffi::device-create-pipeline-layout device pipeline-layout-desc)))
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::module) shader-module)
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::entry-point) "vs_main")
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::constant-count) 0)
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::constants) (null-pointer))
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::buffer-count) 0)
+      (setf (foreign-slot-value vertex-state 'ffi::vertex-state 'ffi::buffers) (null-pointer))
+
+      (setf (foreign-slot-value color-target-state 'ffi::color-target-state 'ffi::next-in-chain) (null-pointer))
+      (set-enum-slot color-target-state 'ffi::color-target-state 'ffi::format color-format)
+      (setf (foreign-slot-value color-target-state 'ffi::color-target-state 'ffi::blend) (null-pointer))
+      (setf (foreign-slot-value color-target-state 'ffi::color-target-state 'ffi::write-mask) ffi::color-write-mask-all)
+
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::module) shader-module)
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::entry-point) "fs_main")
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::constant-count) 0)
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::constants) (null-pointer))
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::target-count) 1)
+      (setf (foreign-slot-value fragment-state 'ffi::fragment-state 'ffi::targets) color-target-state)
+
+      (setf (foreign-slot-value primitive-state 'ffi::primitive-state 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value primitive-state 'ffi::primitive-state 'ffi::topology) ffi::primitive-topology-triangle-list)
+      (set-enum-slot primitive-state 'ffi::primitive-state 'ffi::strip-index-format 'ffi::index-format-undefined)
+      (set-enum-slot primitive-state 'ffi::primitive-state 'ffi::front-face 'ffi::front-face-ccw)
+
+      (setf (foreign-slot-value multisample-state 'ffi::multisample-state 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value multisample-state 'ffi::multisample-state 'ffi::count) 1)
+      (setf (foreign-slot-value multisample-state 'ffi::multisample-state 'ffi::mask) 4294967295)
+      (setf (foreign-slot-value multisample-state 'ffi::multisample-state 'ffi::alpha-to-coverage-enabled) nil)
+
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::next-in-chain) (null-pointer))
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::label) "Main pipeline")
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::layout) pipeline-layout)
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::vertex) vertex-state)
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::primitive) primitive-state)
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::depth-stencil) (null-pointer))
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::multisample) multisample-state)
+      (setf (foreign-slot-value desc 'ffi::render-pipeline-descriptor 'ffi::fragment) fragment-state)
+
+      (ffi::device-create-render-pipeline device desc))))
+
+;; * Swap chain
+
+(defun create-swap-chain (device surface color-format &key label)
+  (with-foreign-objects ((desc 'ffi::swap-chain-descriptor))
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::next-in-chain) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::label) (or label (null-pointer)))
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::usage) (foreign-enum-value 'ffi::texture-usage 'ffi::texture-usage-render-attachment))
+    (set-enum-slot desc 'ffi::swap-chain-descriptor 'ffi::format color-format)
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::width) 800) ; TODO
+    (setf (foreign-slot-value desc 'ffi::swap-chain-descriptor 'ffi::height) 600) ; TODO
+    (set-enum-slot desc 'ffi::swap-chain-descriptor 'ffi::present-mode 'ffi::present-mode-fifo)
+
+    (ffi::device-create-swap-chain device surface desc)))
+
+;; * Utils
+
+;; Due to generated typedefs by C2FFI (and what I assume is a bug), we can't
+;; SETF through FOREIGN-SLOT-VALUE directly. So we workaround this by using the
+;; backing types for the enum.
+(defun set-enum-slot (ptr type slot-name value)
+  (let* ((slot-info (cffi::get-slot-info type slot-name))
+         (offset (cffi::slot-offset slot-info))
+         (slot-type (cffi::parse-type (cffi::slot-type slot-info))))
+    (setf (mem-ref ptr (cffi::canonicalize slot-type) offset)
+          (cffi:foreign-enum-value slot-type value))))

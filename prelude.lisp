@@ -8,6 +8,8 @@
     ((alexandria:starts-with-subseq "WGPU" name)
      (setf name (remove #\_ (subseq name 4)))))
   (->> name
+    (str:replace-all "FrontFaceCCW" "FrontFaceCcw")
+    (str:replace-all "FrontFaceCW" "FrontFaceCw")
     (cffi/c2ffi:maybe-camelcase-to-dash-separated)
     (string-upcase)
     (str:replace-all "W-G-S-L" "WGSL")
@@ -19,4 +21,5 @@
   (ffi-name-transformer "WGPUSType_SurfaceDescriptorFromMetalLayer" nil)
   (ffi-name-transformer "WGPUShaderModuleWGSLDescriptor" nil)
   (ffi-name-transformer "WGPUSType_ShaderModuleSPIRVDescriptor" nil)
+  (ffi-name-transformer "WGPUFrontFace_CCW" nil)
   )
