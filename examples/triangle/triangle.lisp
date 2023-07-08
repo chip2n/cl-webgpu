@@ -5,6 +5,9 @@
 (defvar *adapter* nil)
 (defvar *device* nil)
 (defvar *shader* nil)
+(defvar *pipeline* nil)
+(defvar *encoder* nil)
+(defvar *swap-chain* nil)
 
 (defvar *shader-src* "
 @vertex
@@ -38,14 +41,18 @@ fn fs_main() -> @location(0) vec4<f32> {
                      (w:device-set-device-lost-callback device (lambda (reason msg) (format t "Device lost (~A): ~A~%" reason msg)))
 
                      (setf *shader* (w:create-shader-module device *shader-src* :label "Main shader"))
+                     (let ((color-format (w:surface-get-preferred-format *surface* *adapter*)))
+                       (setf *pipeline* (w:create-render-pipeline *device* *shader* color-format))
+                       (setf *encoder* (w:create-command-encoder device))
+                       (setf *swap-chain* (w:create-swap-chain device surface color-format))
 
-                     (loop until (glfw:window-should-close-p)
-                           do (continuable
-                                (handle-repl-events)
-                                (glfw:poll-events)
-                                ;; Should let wgpu swap buffers I guess
-                                ;; (glfw:swap-buffers)
-                                (sleep 0.016)))))))
+                       (loop until (glfw:window-should-close-p)
+                             do (continuable
+                                  (handle-repl-events)
+                                  (glfw:poll-events)
+                                  ;; Should let wgpu swap buffers I guess
+                                  ;; (glfw:swap-buffers)
+                                  (sleep 0.016))))))))
              (cleanup))))))
 
 (defun cleanup ()
@@ -53,4 +60,7 @@ fn fs_main() -> @location(0) vec4<f32> {
   (setf *surface* nil)
   (setf *adapter* nil)
   (setf *device* nil)
-  (setf *shader* nil))
+  (setf *shader* nil)
+  (setf *pipeline* nil)
+  (setf *encoder* nil)
+  (setf *swap-chain* nil))

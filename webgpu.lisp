@@ -1,5 +1,9 @@
 (in-package #:webgpu)
 
+;; NOTE: These are super unfinished. The goal is to expose functions to create
+;; various descriptors (on the stack and on the heap). Currently we hard code a
+;; bunch of stuff.
+
 (defun setup-thread ()
   #+sbcl
   (sb-int:set-floating-point-modes :traps nil))
@@ -358,6 +362,32 @@
     (setf (foreign-slot-value desc 'ffi::command-encoder-descriptor 'ffi::next-in-chain) (null-pointer))
     (setf (foreign-slot-value desc 'ffi::command-encoder-descriptor 'ffi::label) (or label (null-pointer)))
     (ffi::device-create-command-encoder device desc)))
+
+(defun begin-render-pass (encoder texture &key label)
+  (with-foreign-objects ((desc 'ffi::render-pass-descriptor)
+                         (color-attachment 'ffi::render-pass-color-attachment)
+                         (clear-color 'ffi::color))
+    (setf (foreign-slot-value clear-color 'ffi::color 'ffi::r) 0d0)
+    (setf (foreign-slot-value clear-color 'ffi::color 'ffi::g) 1d0)
+    (setf (foreign-slot-value clear-color 'ffi::color 'ffi::b) 0d0)
+    (setf (foreign-slot-value clear-color 'ffi::color 'ffi::a) 1d0)
+
+    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::view) texture)
+    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::resolve-target) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::load-op) ffi::load-op-clear)
+    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::store-op) ffi::store-op-store)
+    (setf (foreign-slot-value desc 'ffi::render-pass-color-attachment 'ffi::clear-value) clear-color)
+
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::next-in-chain) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::label) (or label (null-pointer)))
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::color-attachment-count) 1)
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::color-attachments) color-attachment)
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::depth-stencil-attachment) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::occlusion-query-set) (null-pointer))
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::timestamp-write-count) 0)
+    (setf (foreign-slot-value desc 'ffi::render-pass-descriptor 'ffi::timestamp-writes) (null-pointer))
+
+    (ffi::command-encoder-begin-render-pass encoder desc)))
 
 ;; * Utils
 
